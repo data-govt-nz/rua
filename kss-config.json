@@ -1,0 +1,14 @@
+{
+"title": "example kss",
+"source": "sass/",
+"destination": "styleguide/",
+"builder": "template/",
+"css" : [
+    "../css/screen.css"
+  ],
+"js" : [
+    "../js/accordion.js",
+    "https://code.jquery.com/jquery-2.2.4.js",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  ]
+}
