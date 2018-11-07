@@ -1,15 +1,15 @@
 // Accordion
 //
-// Accordions are used to hide and show information. 
+// Accordions are used to hide and show information.
 // They help people scan web content easily so they only see what they need to.
 //
-// Styleguide: Components.Accordion
+// Styleguide: InformationComponents.Accordion
 
 // Accordion single
 //
 // Experimental: A single accordion item that conceals information that is only relevant for a sub-set of users.
 //
-// Markup: 
+// Markup:
 // <details class="accordion-item" role="group" id="details-0">
 //     <summary class="accordion-item-button accordion-trigger" role="button" aria-controls="details-0" aria-expanded="false">
 //         <span class="accordion-item__wrap-title">
@@ -27,9 +27,8 @@
 //     </div>
 // </details>
 //
-// Weight: -1
-//
-// Styleguide: Components.Accordion.Single
+// Styleguide: InformationComponents.Accordion.Single
+
 .accordion-item {
 	border-top: 1px solid grey;
 	margin: 0px;
@@ -177,14 +176,14 @@ details.accordion-heading-open {
 
 // Accordion list
 //
-// Deprecated: A stacked list of headings that can be clicked to show or hide content. 
+// Deprecated: A stacked list of headings that can be clicked to show or hide content.
 // For example, a list of sections with hidden sub-sections.
 // There's a caret icon and text label (where space allows) next to each accordion heading.
 // July 13, 2007.
 //
 // Markup:
 // <ul class="links-list accordion-list">
-// <li>				
+// <li>
 //     <details class="accordion-item" role="group" id="details-0">
 //         <summary class="accordion-item-button accordion-trigger" role="button" aria-controls="details-0" aria-expanded="false">
 //             <span class="accordion-item__wrap-title">
@@ -202,7 +201,7 @@ details.accordion-heading-open {
 //         </div>
 //     </details>
 // </li>
-// <li>				
+// <li>
 //     <details class="accordion-item" role="group" id="details-0">
 //         <summary class="accordion-item-button accordion-trigger" role="button" aria-controls="details-0" aria-expanded="false">
 //             <span class="accordion-item__wrap-title">
@@ -219,12 +218,12 @@ details.accordion-heading-open {
 //             </ul>
 //         </div>
 //     </details>
-// </li>                              
+// </li>
 // </ul>
-// 
+//
 // Weight: -1
 //
-// Styleguide: Components.Accordion.List
+// Styleguide: InformationComponents.Accordion.List
 
 .links-list.accordion-list {
     margin: 2rem 0 0 0;
@@ -250,7 +249,7 @@ details.accordion-heading-open {
 // - if it's information that's important to most users
 // - if you only want to shorten a page.
 //
-// Styleguide: Components.Accordion.Usage
+// Styleguide: InformationComponents.Accordion.Usage
 
 // Usability guidance
 //
@@ -260,7 +259,7 @@ details.accordion-heading-open {
 //   You could write 'if' headings, such as 'If you'll use your marriage certificate overseas'.
 // - It must be possible to print the accordion information.
 //
-// Styleguide: Components.Accordion.Usability
+// Styleguide: InformationComponents.Accordion.Usability
 
 // Accessibility
 //
@@ -277,7 +276,7 @@ details.accordion-heading-open {
 // - If placed on a non-white background, ensure the contrast between the accordion text and its background still meets
 //   the [AAA contrast and luminosity ratio standard of 4.5:1](http:www.rte.ie).
 //
-// Styleguide: Components.Accordion.Accessibility
+// Styleguide: InformationComponents.Accordion.Accessibility
 
 // Rationale
 //
@@ -287,7 +286,7 @@ details.accordion-heading-open {
 //
 // The heading has been styled as a link so users know to select it to get more information and the hover state reinforces the interactive and link-like behaviour of the component.
 //
-// Styleguide: Components.Accordion.Rationale
+// Styleguide: InformationComponents.Accordion.Rationale
 
 
 

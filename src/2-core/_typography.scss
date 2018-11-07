@@ -1,0 +1,112 @@
+
+// Typography
+//
+// @todo
+//
+// Font family: Fira Sans
+//
+// Font weights:
+//
+// Markup:
+// <p>Regular: 400</p>
+// <p class="weight-regular">
+// ABCDEĒFGHIĪJKLMNOŌPQRSTUŪVWXYZ</br>
+// aābcdeēfghiījklmnoōpqrstuūvwxz</br>
+// 1234567890,.? !@#$%^&*()”:;’=÷×</br>
+// ¼ ½ ¾ € £ ¥ ©
+// </p>
+// <p>Medium: 500</p>
+// <p class="weight-medium">
+// ABCDEĒFGHIĪJKLMNOŌPQRSTUŪVWXYZ</br>
+// aābcdeēfghiījklmnoōpqrstuūvwxz</br>
+// 1234567890,.? !@#$%^&*()”:;’=÷×</br>
+// ¼ ½ ¾ € £ ¥ ©
+// </p>
+// <p>Bold: 500</p>
+// <p class="weight-bold">
+// ABCDEĒFGHIĪJKLMNOŌPQRSTUŪVWXYZ</br>
+// aābcdeēfghiījklmnoōpqrstuūvwxz</br>
+// 1234567890,.? !@#$%^&*()”:;’=÷×</br>
+// ¼ ½ ¾ € £ ¥ ©
+// </p>
+//
+// Weight: -4
+//
+// Styleguide: Core.Typography
+
+body{
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 18px;
+  }
+}
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+) !default;
+
+
+@each $label, $weight in $font-weights {
+  @include selector(
+    $label: 'weight',
+    $value: $label
+  ){
+    font-weight: $weight
+  }
+}
+
+
+// Alignment
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.text-nowrap{
+  white-space: nowrap;
+}
+
+// Transformation
+.text-lowercase{
+  text-transform: lowercase;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  @extend .text-uppercase;
+}
+
+// Addresses
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}

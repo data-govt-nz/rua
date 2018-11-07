@@ -1,0 +1,84 @@
+// Border
+// Styleguide: Core.Border
+//
+// @todo
+//
+// Markup:
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-none">
+//  radius-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-lg">
+//  radius-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-full">
+//  radius-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-none">
+//  radius-t-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-lg">
+//  radius-t-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-full">
+//  radius-t-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-none">
+//  radius-r-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-lg">
+//  radius-r-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-full">
+//  radius-r-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-none">
+//  radius-b-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-lg">
+//  radius-b-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-full">
+//  radius-b-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-none">
+//  radius-l-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-lg">
+//  radius-l-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-full">
+//  radius-l-full
+// </div>
+
+@each $breakpoint in $breakpoint-classes {
+  @include breakpoint($breakpoint) {
+    @each $abbr, $side in $border-radius-sides {
+      @each $name, $size in $border-radius {
+        @include selector(
+          $breakpoint: $breakpoint,
+          $label: 'radius',
+          $side: $abbr,
+          $value: $name
+        ){
+          @if $side == all {
+            border-radius: $size;
+          } @else if $side == top {
+            border-top-left-radius: $size;
+            border-top-right-radius: $size;
+          } @else if $side == right {
+            border-top-right-radius: $size;
+            border-bottom-right-radius: $size;
+          } @else if $side == bottom {
+            border-bottom-left-radius: $size;
+            border-bottom-right-radius: $size;
+          } @else if $side == left {
+            border-top-left-radius: $size;
+            border-bottom-left-radius: $size;
+          } @else {
+            border-#{$side}-radius: $size;
+          }
+        }
+      }
+    }
+  }
+}

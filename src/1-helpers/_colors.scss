@@ -1,0 +1,71 @@
+// Global colors
+$color-astral: #307D99 !default;
+$color-big-stone: #182B46 !default;
+$color-pale-sky: #666C7F !default;
+$color-french-gray: #B7B8C4 !default;
+$color-heather: #C3CED8 !default;
+$color-athens-gray: #ECEFF2 !default;
+$color-iceberg: #D8EDF2 !default;
+$color-loafer: #F0F2D8 !default;
+$color-harp: #DAEDDF !default;
+$color-cinderella: #FEE8E2 !default;
+$color-prelude: #E9E2EF !default;
+
+// Secondary/Accent colors
+$color-pacific-blue: #01B3C4 !default;
+$color-eminence: #6F2B91 !default;
+$color-apple: #51AE32 !default;
+$color-red-ribbon: #EE1846 !default;
+
+// Grays
+$gray-darker: $color-big-stone !default;
+$gray-dark: $color-pale-sky !default;
+$gray: $color-french-gray !default;
+$gray-light: $color-heather !default;
+$gray-lighter: $color-athens-gray !default;
+
+$brand-primary: $color-astral !default;
+$brand-secondary: $color-pacific-blue !default;
+$brand-success: $color-iceberg !default;
+$brand-info: $color-harp !default;
+$brand-warning: $color-loafer !default;
+$brand-danger: $color-red-ribbon !default;
+
+$colors: (
+  'astral': $color-astral,
+  'big-stone': $color-big-stone,
+  'pale-sky': $color-pale-sky,
+  'french-gray': $color-french-gray,
+  'heather': $color-heather,
+  'athens-gray': $color-athens-gray,
+  'iceberg': $color-iceberg,
+  'loafer': $color-loafer,
+  'harp': $color-harp,
+  'cinderella': $color-cinderella,
+  'prelude': $color-prelude,
+  'pacific-blue': $color-pacific-blue,
+  'eminence': $color-eminence,
+  'apple': $color-apple,
+  'red-ribbon': $color-red-ribbon,
+  'primary': $brand-primary,
+  'secondary': $brand-secondary,
+  'success': $brand-success,
+  'info': $brand-info,
+  'warning': $brand-warning,
+  'danger': $brand-danger,
+  'black': $color-big-stone,
+  'gray-darker': $gray-darker,
+  'gray-dark': $gray-dark,
+  'gray': $gray,
+  'gray-light': $gray-light,
+  'gray-lighter': $gray-lighter,
+  'white': #fff
+) !default;
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @error 'colors: key (#{$key}) not found.';
+  }
+}

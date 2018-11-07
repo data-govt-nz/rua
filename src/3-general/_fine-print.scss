@@ -1,0 +1,15 @@
+// Fine print
+//
+// @todo
+//
+// Markup:
+// <small>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</small>
+//
+// Styleguide: General.FinePrint
+
+small,
+.small {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $color-pale-sky
+}

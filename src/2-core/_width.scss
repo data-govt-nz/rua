@@ -1,0 +1,38 @@
+// Width
+//
+// @todo
+//
+// Markup:
+// <div class="bg-primary padding-sm margin-b-sm color-white mxw-xs">
+//  .mw-xs
+// </div>
+// <div class="bg-primary padding-sm margin-b-sm color-white mxw-sm">
+//  .mw-sm
+// </div>
+// <div class="bg-primary padding-sm margin-b-sm color-white mxw-md">
+//  .mw-md
+// </div>
+// <div class="bg-primary padding-sm margin-b-sm color-white mxw-lg">
+//  .mw-lg
+// </div>
+//
+// Weight: -1
+//
+// Styleguide: Core.Width
+
+$max-widths: (
+  'xs': 100px,
+  'sm': 300px,
+  'md': 600px,
+  'lg': 720px
+) !default;
+
+@each $label, $width in $max-widths {
+  @include selector(
+    $label: 'mxw',
+    $value: $label
+  ){
+    max-width: $width
+  }
+}
+

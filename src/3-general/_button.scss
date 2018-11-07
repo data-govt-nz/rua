@@ -1,0 +1,132 @@
+// Button
+//
+// @todo
+//
+// Markup:
+// <button class="button">
+//   Button
+// </button>
+// <input type='submit' value="Submit">
+// <button class="button secondary">
+//   Secondary Button
+// </button>
+// <input type='submit' value="Secondary Submit" class="secondary">
+//
+// Styleguide: General.Button
+
+@mixin button-base {
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  padding: $button-padding;
+  border: 2px solid transparent;
+  transition: $button-transition;
+  font-family: $button-font-family;
+  text-transform: $button-text-transform;
+  font-size: $button-font-size;
+  font-weight: $button-weight;
+  border-radius: $button-radius;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  line-height: 1;
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+@mixin button-primary {
+  color: $button-color;
+  background-color: $button-background;
+  &:hover,
+  &:focus{
+    background-color: $button-background-hover;
+  }
+}
+
+@mixin button-secondary {
+  color: $button-background;
+  border-color: $button-background;
+  background: $button-color;
+  &:hover,
+  &:focus{
+    color: $button-background-hover;
+    border-color: $button-background-hover;
+  }
+}
+
+/// Expands a button to make it full-width.
+/// @param {Boolean} $full [true] - Set to `true` to enable the full width behavior. Set to `false` to reverse this behavior.
+@mixin button-width($full: true) {
+  @if $full {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @else {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+/// Adds disabled styles to a button by fading the element, reseting the cursor, and disabling pointer events.
+/// @param {Color} $background [$button-background] - Background color of the disabled button.
+/// @param {Color} $color [$button-color] - Text color of the disabled button. Set to `auto` to have the mixin automatically generate a color based on the background color.
+@mixin button-disabled(
+  $background: $button-background,
+  $color: $button-color
+) {
+  @if $color == auto {
+    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
+  }
+
+  opacity: $button-opacity-disabled;
+  cursor: not-allowed;
+
+  &
+  &:hover,
+  &:focus {
+    background-color: $background;
+    color: $color;
+    box-shadow: none;
+  }
+}
+
+.button {
+  @include button-base;
+  @include button-primary;
+
+  &.secondary {
+    @include button-secondary;
+  }
+
+  // Disabled style
+  &.state-disabled,
+  &[disabled] {
+    @include button-disabled;
+  }
+}
+
+a.button { // sass-lint:disable-line no-qualifying-elements
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Reset styles on button-like inputs
+[type='submit'],
+[type='button'] {
+  @include button-base;
+  @include button-primary;
+
+  appearance: none;
+
+  &.secondary {
+    @include button-secondary;
+  }
+}

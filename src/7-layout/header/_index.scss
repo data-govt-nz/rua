@@ -1,0 +1,31 @@
+.site-header{
+  &__menu{
+
+  }
+  &__menu-item{
+    padding: 20px 10px;
+    color: color('pale-sky');
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      background-color: color('secondary');
+      transition: 0.3s all ease;
+    }
+    &:hover,
+    &:focus {
+      color: color('secondary');
+    }
+    &:hover,
+    &:focus,
+    &.is-active {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}

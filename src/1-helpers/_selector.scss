@@ -1,0 +1,25 @@
+@function selector($breakpoint: 'default', $label: null, $value: null, $side: 'all') {
+  @if isset($label) and isset($value) {
+    @if $breakpoint != 'default' {
+      $breakpoint: #{$breakpoint}-;
+    } @else {
+      $breakpoint: '';
+    }
+    @if $side != 'all' {
+      $side: -#{$side};
+    } @else {
+      $side: '';
+    }
+    @return '.#{$breakpoint}#{$label}#{$side}-#{$value}';
+  }
+  @return null;
+}
+
+@mixin selector($breakpoint: 'default', $label: null, $value: null, $side: 'all') {
+  $selector: selector($breakpoint, $label, $value, $side);
+  @if isset($selector) {
+    #{$selector} {
+      @content;
+    }
+  }
+}
