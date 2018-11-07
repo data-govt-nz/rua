@@ -50,6 +50,7 @@ $select-radius: 1.5em !default;
   margin: 0 0 $form-spacing;
   padding: $input-padding;
 
+  -webkit-appearance: none;
   appearance: none;
   border: $input-border;
   border-radius: $select-radius;
