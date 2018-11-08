@@ -23,7 +23,10 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
+    "gulp-webpack": "^1.5.0",
     "kss": "^3.0.0-beta.23",
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.10.0",
+    "prismjs": "^1.15.0",
+    "webpack": "^4.25.1"
   }
 }

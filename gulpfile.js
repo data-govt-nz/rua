@@ -12,19 +12,26 @@ sass.compiler = require('node-sass')
 const watch = require('gulp-watch')
 
 const kssConfig = require('./kss-config.json')
+
+const webpack = require('gulp-webpack')
+const webpackConfig = require('./webpack.config.js')
+
 const browserSync = require('browser-sync').create()
 
 const config = {
   path: {
-    css: './dist/css'
+    css: './dist/css',
+    js: './dist/js'
   },
-  browsers: ['last 2 versions']
+  browsers: [
+    'last 5 versions'
+  ]
 }
 
 const tasks = [
   'assets',
   'styles',
-  // 'scripts',
+  'scripts',
   'styleguide:assets',
   'styleguide:build'
 ]
@@ -40,6 +47,12 @@ gulp.task('styles', function () {
       path.basename += '.min';
     }))
     .pipe(gulp.dest(config.path.css))
+})
+
+gulp.task('scripts', function() {
+  return gulp.src('./src/rua.js')
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest(config.path.js))
 })
 
 gulp.task('assets', function () {
