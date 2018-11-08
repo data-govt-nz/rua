@@ -10,6 +10,14 @@ $border-radius-sides: (
   tl: 'top-left'
 ) !default;
 
+$border-sides: (
+  all: all,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+) !default;
+
 @function border-radius($key) {
   @if map-has-key($border-radius, $key) {
     @return map-get($border-radius, $key);

@@ -1,5 +1,4 @@
 // Border
-// Styleguide: Core.Border
 //
 // @todo
 //
@@ -49,6 +48,20 @@
 // <div class="bg-primary color-white padding-sm margin-b-sm radius-l-full">
 //  radius-l-full
 // </div>
+// <div class="color-black padding-sm margin-b-sm border-dot">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-solid">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-b-dot">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-b-solid">
+//  border-dot
+// </div>
+//
+// Styleguide: Core.Border
 
 @each $breakpoint in $breakpoint-classes {
   @include breakpoint($breakpoint) {
@@ -78,6 +91,35 @@
             border-#{$side}-radius: $size;
           }
         }
+      }
+    }
+  }
+}
+
+$border-styles: (
+  'dot': 1px dotted color('gray-light'),
+  'solid': 3px solid color('secondary')
+) !default;
+
+@function border($key) {
+  @if map-has-key($border-styles, $key) {
+    @return map-get($border-styles, $key);
+  } @else {
+    @error 'border: key (#{$key}) not found.';
+  }
+}
+
+@each $abbr, $side in $border-sides {
+  @each $name, $style in $border-styles {
+    @include selector(
+      $label: 'border',
+      $side: $abbr,
+      $value: $name
+    ){
+      @if $side == all {
+        border: $style;
+      } @else {
+        border-#{$side}: $style;
       }
     }
   }

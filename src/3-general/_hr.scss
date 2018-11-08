@@ -1,0 +1,11 @@
+hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 0;
+  border: 0;
+  border-bottom: border('solid');
+  &.dot{
+    border-bottom: border('dot');
+  }
+}
+
