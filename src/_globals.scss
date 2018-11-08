@@ -305,7 +305,7 @@ $breakpoint-classes: (default sm md lg) !default;
 //** Number of columns in the grid.
 $grid-columns: 12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 35px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint: breakpoint('sm') !default;
