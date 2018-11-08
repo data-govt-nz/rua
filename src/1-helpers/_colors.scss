@@ -66,6 +66,6 @@ $colors: (
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
   } @else {
-    @error 'colors: key (#{$key}) not found.';
+    @error 'color: key (#{$key}) not found.';
   }
 }

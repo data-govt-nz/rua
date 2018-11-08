@@ -12,6 +12,14 @@
 //
 // Styleguide: General.Headings
 
+@function header($key) {
+  @if map-has-key($headings, $key) {
+    @return map-get($headings, $key);
+  } @else {
+    @error 'header: key (#{$key}) not found.';
+  }
+}
+
 @each $selector, $sizes in $headings {
   #{$selector},
   .#{$selector} {

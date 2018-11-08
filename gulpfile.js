@@ -22,6 +22,7 @@ const config = {
 }
 
 const tasks = [
+  'assets',
   'styles',
   // 'scripts',
   'styleguide:assets',
@@ -39,6 +40,13 @@ gulp.task('styles', function () {
       path.basename += '.min';
     }))
     .pipe(gulp.dest(config.path.css))
+})
+
+gulp.task('assets', function () {
+  return gulp.src('./src/8-assets/**/*')
+    .pipe(copy('./dist/assets/', {
+      prefix: 2
+    }))
 })
 
 gulp.task('styleguide:clean', function () {
@@ -64,15 +72,15 @@ gulp.task('styleguide:serve', function() {
       server: {
           baseDir: "./styleguide"
       }
-  });
-});
+  })
+})
 
 gulp.task('watch', function () {
   browserSync.init({
     server: {
         baseDir: "./styleguide"
     }
-  });
+  })
   return watch('./src/**/*', gulp.series(tasks))
 })
 
