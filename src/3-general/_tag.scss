@@ -4,6 +4,7 @@
 //
 // Markup:
 // <span class="tag">Tag 1</span>
+// <a href="#" class="tag">Tag 1</a>
 //
 // Styleguide: General.Tag
 
@@ -40,6 +41,7 @@ $tag-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
 }
 
 @mixin tag-link {
+  text-decoration: none;
   cursor: pointer;
   &:hover,
   &:focus {
@@ -57,7 +59,7 @@ a.tag { // sass-lint:disable-line no-qualifying-elements
   @include tag-link;
 }
 
-// tags Group
+// Tags Group
 //
 // @todo
 //
@@ -68,7 +70,7 @@ a.tag { // sass-lint:disable-line no-qualifying-elements
 //   <span class="tag">Tag 3</span>
 // </div>
 //
-// Styleguide: General.tag.tagsGroup
+// Styleguide: General.Tag.TagsGroup
 
 $tags-gap: 4px !default;
 $tags-justify: (
