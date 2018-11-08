@@ -130,3 +130,140 @@ a.button { // sass-lint:disable-line no-qualifying-elements
     @include button-secondary;
   }
 }
+
+// Buttons Group
+//
+// @todo
+//
+// Markup:
+// <div class="buttons">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+// <div class="buttons sm-direction-vertical">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+// <div class="buttons sm-align-right">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+//
+// Styleguide: General.Button.ButtonsGroup
+
+$buttons-gap: 10px !default;
+$buttons-justify: (
+  'left': start,
+  'right': end,
+  'center': center,
+  'justify': space-between,
+  'spaced': space-around,
+);
+
+$buttons-alignment: (
+  'top': start,
+  'bottom': end,
+  'middle': center,
+  'stretch': stretch,
+);
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 -$buttons-gap;
+  clear: both;
+  width: calc(100% + #{$buttons-gap * 2});
+  &:first-child{
+    margin-top: -$buttons-gap;
+  }
+  &:last-child{
+    margin-bottom: -$buttons-gap;
+  }
+  li{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a,
+  .button{
+    margin: 0;
+    display: block;
+  }
+  & > select,
+  & > input{
+    width: auto;
+    margin: $buttons-gap;
+  }
+  & > li,
+  & > a,
+  & > .button{
+    margin: $buttons-gap;
+  }
+
+  @each $breakpoint in $breakpoint-classes {
+    @include breakpoint($breakpoint) {
+      @each $name, $value in $buttons-justify {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          justify-content: $value
+        }
+      }
+
+      @each $name, $value in $buttons-alignment {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          align-items: $value;
+        }
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'vertical'
+      ){
+        flex-direction: column;
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'horizontal'
+      ){
+        flex-direction: row;
+      }
+    }
+  }
+}

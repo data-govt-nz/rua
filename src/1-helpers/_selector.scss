@@ -15,10 +15,10 @@
   @return null;
 }
 
-@mixin selector($breakpoint: 'default', $label: null, $value: null, $side: 'all') {
+@mixin selector($breakpoint: 'default', $label: null, $value: null, $side: 'all', $prefix: '') {
   $selector: selector($breakpoint, $label, $value, $side);
   @if isset($selector) {
-    #{$selector} {
+    #{$prefix}#{$selector} {
       @content;
     }
   }
