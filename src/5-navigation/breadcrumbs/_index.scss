@@ -1,0 +1,75 @@
+// Breadcrumbs
+//
+// @todo
+//
+// <nav aria-label="You are here:" role="navigation">
+//   <ul class="breadcrumbs">
+//     <li><a href="#">Home</a></li>
+//     <li><a href="#">Library</a></li>
+//     <li class="disabled">Disabled</li>
+//     <li aria-label="Current: Data">
+//       Data
+//     </li>
+//   </ul>
+// </nav>
+//
+// Styleguide: NavigationComponents.Breadcrumbs
+
+$breadcrumbs-margin: 0 0 10px 0 !default;
+$breadcrumbs-item-font-size: 14px !default;
+$breadcrumbs-item-color: color('gray-dark') !default;
+$breadcrumbs-item-color-current: color('gray-dark') !default;
+$breadcrumbs-item-color-disabled: color('gray') !default;
+$breadcrumbs-item-margin: 0.75rem !default;
+$breadcrumbs-item-separator-item: '/' !default;
+
+/// Adds styles for a breadcrumbs container, along with the styles for the `<li>` and `<a>` elements inside of it.
+@mixin breadcrumbs-container {
+  display: block;
+  margin: $breadcrumbs-margin;
+  list-style: none;
+
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  // Item wrapper
+  li {
+    float: left;
+    padding: 0;
+
+    font-size: $breadcrumbs-item-font-size;
+    color: $breadcrumbs-item-color-current;
+    cursor: default;
+
+    &:not(:last-child) {
+      &::after {
+        position: relative;
+        margin: 0 $breadcrumbs-item-margin;
+        opacity: 1;
+        content: $breadcrumbs-item-separator-item;
+      }
+    }
+  }
+
+  // Page links
+  a {
+    color: $breadcrumbs-item-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.breadcrumbs {
+  @include breadcrumbs-container;
+
+  .disabled {
+    color: $breadcrumbs-item-color-disabled;
+    cursor: not-allowed;
+  }
+}
+
