@@ -1,0 +1,38 @@
+.site-back-to-top {
+  // @todo add icon
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: $link-color;
+  color: color('white');
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(#000, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+
+  position: fixed;
+  right: 45px;
+  bottom: 45px;
+
+  transition: background-color 0.3s ease;
+
+  &:focus,
+  &:hover {
+    color: color('white');
+    background-color: $link-hover-color;
+  }
+}
+
+@include breakpoint(sm down) {
+  // Remove back to top while keyboard is active on mobile.
+  body:focus-within {
+    .site-back-to-top {
+      display: none;
+    }
+  }
+}
