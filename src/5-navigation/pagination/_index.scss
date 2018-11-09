@@ -69,7 +69,7 @@ $pagination-arrows: true !default;
         }
       }
 
-      @include breakpoint(medium) {
+      @include breakpoint(md) {
         display: inline-block;
       }
     }
