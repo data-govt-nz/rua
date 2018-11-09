@@ -1,0 +1,169 @@
+// Pagination
+//
+// @todo
+//
+// <nav aria-label="Pagination">
+//   <ul class="pagination">
+//     <li class="pagination-previous disabled" aria-label="Previous page"></li>
+//     <li class="current" aria-label="You're on page 1">1</li>
+//     <li><a href="#" aria-label="Page 2">2</a></li>
+//     <li><a href="#" aria-label="Page 3">3</a></li>
+//     <li><a href="#" aria-label="Page 4">4</a></li>
+//     <li class="ellipsis" aria-hidden="true"></li>
+//     <li><a href="#" aria-label="Page 21">21</a></li>
+//     <li class="pagination-next"><a href="" aria-label="Next page"></a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide: NavigationComponents.Pagination
+
+
+$pagination-font-size: 16px !default;
+$pagination-border-width: 2px !default;
+$pagination-item-size: 32px !default;
+$pagination-margin-bottom: 10px !default;
+$pagination-item-color: color('primary') !default;
+$pagination-item-spacing: 1px !default;
+$pagination-radius: border-radius('full') !default;
+$pagination-item-background-hover: color('gray-lighter') !default;
+$pagination-item-border-current: color('secondary') !default;
+$pagination-item-color-disabled: color('gray') !default;
+$pagination-mobile-items: false !default;
+$pagination-mobile-current-item: false !default;
+$pagination-arrows: true !default;
+
+/// Adds styles for a pagination container. Apply this to a `<ul>`.
+@mixin pagination-container (
+  $margin-bottom: $pagination-margin-bottom,
+  $font-size: $pagination-font-size,
+  $spacing: $pagination-item-spacing,
+  $radius: $pagination-radius,
+  $color: $pagination-item-color,
+  $background-hover: $pagination-item-background-hover
+) {
+  @include clearfix;
+  margin-left: 0;
+  margin-bottom: $margin-bottom;
+
+  // List item
+  li {
+    margin-right: $spacing;
+    border-radius: $radius;
+    font-size: $font-size;
+    padding: 0;
+
+    @if $pagination-mobile-items {
+      display: inline-block;
+    }
+    @else {
+      display: none;
+
+      &:last-child,
+      &:first-child {
+        display: inline-block;
+      }
+
+      @if $pagination-mobile-current-item {
+        &.current {
+          display: inline-block;
+        }
+      }
+
+      @include breakpoint(medium) {
+        display: inline-block;
+      }
+    }
+  }
+
+  // Page links
+  a,
+  button {
+    display: block;
+    padding: 0;
+    border-radius: $radius;
+    color: $color;
+    text-decoration: none;
+
+    &:hover {
+      background: $background-hover;
+    }
+  }
+}
+
+/// Adds styles for the pagination item. Apply this to an `<a>`.
+@mixin pagination-item(
+  $item-size: $pagination-item-size,
+  $border-width: $pagination-border-width
+) {
+  text-align: center;
+  line-height: $item-size - $border-width;
+  width: $item-size;
+  height: $item-size;
+  border: $border-width solid transparent;
+}
+
+/// Adds styles for the current pagination item. Apply this to an `<a>`.
+@mixin pagination-item-current (
+  $border-current: $pagination-item-border-current,
+) {
+  border-color: $border-current;
+
+  cursor: default;
+}
+
+/// Adds styles for a disabled pagination item. Apply this to an `<a>`.
+@mixin pagination-item-disabled (
+  $color: $pagination-item-color-disabled
+) {
+  color: $color;
+  cursor: not-allowed;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+/// Adds styles for an ellipsis for use in a pagination list.
+@mixin pagination-ellipsis () {
+  &::after {
+    content: '\2026';
+  }
+}
+
+.pagination {
+  @include pagination-container;
+
+  a,
+  .current,
+  .ellipsis {
+    @include pagination-item;
+  }
+
+  .current {
+    @include pagination-item-current;
+  }
+
+  .disabled {
+    @include pagination-item-disabled;
+  }
+
+  .ellipsis {
+    @include pagination-ellipsis;
+  }
+}
+
+@if $pagination-arrows {
+  .pagination-previous a::before,
+  .pagination-previous.disabled::before {
+    display: inline-block;
+    margin-right: 0.5rem;
+    content: '\00AB';
+  }
+
+  .pagination-next a::after,
+  .pagination-next.disabled::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    content: '\00BB';
+  }
+}
