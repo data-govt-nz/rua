@@ -18,6 +18,10 @@ const webpackConfig = require('./webpack.config.js')
 
 const browserSync = require('browser-sync').create()
 
+const async = require('async')
+const iconfont = require('gulp-iconfont')
+const consolidate = require('gulp-consolidate')
+
 const config = {
   path: {
     css: './dist/css',
@@ -31,10 +35,13 @@ const config = {
 const tasks = [
   'assets',
   'styles',
+  'icons',
   'scripts',
   'styleguide:assets',
   'styleguide:build'
 ]
+
+const runTimestamp = Math.round(Date.now()/1000)
 
 // Minify CSS, add vendor prefixes, save to /dist/css folder
 gulp.task('styles', function () {
@@ -60,6 +67,46 @@ gulp.task('assets', function () {
     .pipe(copy('./dist/assets/', {
       prefix: 2
     }))
+})
+
+gulp.task('icons', function(done){
+  const iconStream = gulp.src(['./src/4-icons/svgs/*.svg'])
+    .pipe(iconfont({
+      fontName: 'rua-font',
+      prependUnicode: true,
+      normalize: true,
+      fontHeight: 1001,
+      fixedWidth: true,
+      centerhorizontally: true,
+      formats: ['ttf', 'eot', 'woff'],
+      timestamp: runTimestamp
+    }))
+
+  return async.parallel([
+    function handleGlyphs (cb) {
+      iconStream.on('glyphs', function(glyphs, options) {
+        gulp.src('./src/4-icons/rua-font.css')
+          .pipe(consolidate('lodash', {
+            glyphs: glyphs,
+            fontName: 'rua-font',
+            fontPath: '../fonts/',
+            className: 'ri'
+          }))
+          .pipe(gulp.dest(config.path.css))
+          .pipe(cleanCSS())
+          .pipe(rename(function (path) {
+            path.basename += '.min';
+          }))
+          .pipe(gulp.dest(config.path.css))
+          .on('finish', cb)
+      })
+    },
+    function handleFonts (cb) {
+      iconStream
+        .pipe(gulp.dest('./dist/fonts/'))
+        .on('finish', cb)
+    }
+  ], done)
 })
 
 gulp.task('styleguide:clean', function () {

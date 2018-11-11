@@ -4,7 +4,8 @@
   "destination": "styleguide",
   "builder": "template",
   "css" : [
-      "./rua-assets/css/rua.css"
+      "./rua-assets/css/rua.css",
+      "./rua-assets/css/rua-font.css"
     ],
   "js" : [
       "./rua-assets/js/rua.js",
