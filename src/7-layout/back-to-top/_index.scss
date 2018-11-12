@@ -1,7 +1,18 @@
-.site-back-to-top {
-  // @todo add icon
+// Back to top
+//
+// @todo
+//
+// Markup:
+// <a class="site-back-to-top" href="#top">
+//   <span class="ri ri-arrow-up"></span>
+//   Top
+// </a>
+//
+// Styleguide: Layout.BackToTop
 
+.site-back-to-top {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 60px;
