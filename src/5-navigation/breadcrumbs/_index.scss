@@ -28,6 +28,7 @@ $breadcrumbs-item-separator-item: '/' !default;
 @mixin breadcrumbs-container {
   display: block;
   margin: $breadcrumbs-margin;
+  padding: 0;
   list-style: none;
 
   &::after{
