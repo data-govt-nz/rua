@@ -181,11 +181,6 @@
   appearance: none;
 }
 
-[type='color']{
-  padding: 0;
-  overflow: hidden;
-}
-
 // Text areas
 textarea {
   @include form-element;
