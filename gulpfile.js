@@ -37,8 +37,8 @@ const tasks = [
   'styles',
   'icons',
   'scripts',
-  'styleguide:assets',
-  'styleguide:build'
+  'styleguide:build',
+  'styleguide:assets'
 ]
 
 const runTimestamp = Math.round(Date.now()/1000)
@@ -116,6 +116,10 @@ gulp.task('styleguide:clean', function () {
     }))
 })
 
+gulp.task('styleguide:build', function () {
+  return kss(kssConfig)
+})
+
 gulp.task('styleguide:assets', function () {
   return gulp.src('dist/**/*')
     .pipe(copy('./styleguide/rua-assets/', {
@@ -123,16 +127,8 @@ gulp.task('styleguide:assets', function () {
     }))
 })
 
-gulp.task('styleguide:build', function () {
-  return kss(kssConfig)
-})
-
-gulp.task('styleguide:serve', function() {
-  browserSync.init({
-      server: {
-          baseDir: "./styleguide"
-      }
-  })
+gulp.task('styleguide:reload', function() {
+  browserSync.reload
 })
 
 gulp.task('watch', function () {
@@ -141,7 +137,16 @@ gulp.task('watch', function () {
         baseDir: "./styleguide"
     }
   })
-  return watch('./src/**/*', gulp.series(tasks))
+
+  tasks.push('styleguide:reload')
+
+  watch(
+    './src/**/*',
+    { ignoreInitial: false },
+    gulp.series(tasks)
+  )
+
+  watch('gulpfile.js').on('change', () => process.exit(0));
 })
 
 gulp.task('default', gulp.series(tasks))
