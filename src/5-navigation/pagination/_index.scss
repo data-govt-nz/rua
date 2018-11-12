@@ -3,21 +3,24 @@
 // @todo
 //
 // Markup:
-// <nav aria-label="Pagination">
-//   <ul class="pagination">
-//     <li class="pagination-previous disabled" aria-label="Previous page"></li>
+// <nav aria-label="Pagination" class="pagination">
+//   <span aria-label="Previous page" class="button-icon state-disabled">
+//     <span class="ri ri-arrow-left"></span>
+//   </span>
+//   <ul class="pagination__list">
 //     <li class="current" aria-label="You're on page 1">1</li>
 //     <li><a href="#" aria-label="Page 2">2</a></li>
 //     <li><a href="#" aria-label="Page 3">3</a></li>
 //     <li><a href="#" aria-label="Page 4">4</a></li>
 //     <li class="ellipsis" aria-hidden="true"></li>
 //     <li><a href="#" aria-label="Page 21">21</a></li>
-//     <li class="pagination-next"><a href="" aria-label="Next page"></a></li>
 //   </ul>
+//   <a href="" aria-label="Next page" class="button-icon">
+//     <span class="ri ri-arrow-right"></span>
+//   </a>
 // </nav>
 //
 // Styleguide: NavigationComponents.Pagination
-
 
 $pagination-font-size: 16px !default;
 $pagination-border-width: 2px !default;
@@ -29,13 +32,18 @@ $pagination-radius: border-radius('full') !default;
 $pagination-item-background-hover: color('gray-lighter') !default;
 $pagination-item-border-current: color('secondary') !default;
 $pagination-item-color-disabled: color('gray') !default;
-$pagination-mobile-items: false !default;
-$pagination-mobile-current-item: false !default;
-$pagination-arrows: true !default;
 
-/// Adds styles for a pagination container. Apply this to a `<ul>`.
 @mixin pagination-container (
   $margin-bottom: $pagination-margin-bottom,
+) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $margin-bottom;
+}
+
+/// Adds styles for a pagination list. Apply this to a `<ul>`.
+@mixin pagination-list (
   $font-size: $pagination-font-size,
   $spacing: $pagination-item-spacing,
   $radius: $pagination-radius,
@@ -43,8 +51,9 @@ $pagination-arrows: true !default;
   $background-hover: $pagination-item-background-hover
 ) {
   @include clearfix;
-  margin-left: 0;
-  margin-bottom: $margin-bottom;
+  padding: 0 em(10);
+  margin: 0;
+
 
   // List item
   li {
@@ -53,26 +62,14 @@ $pagination-arrows: true !default;
     font-size: $font-size;
     padding: 0;
 
-    @if $pagination-mobile-items {
+    display: none;
+
+    &.current {
       display: inline-block;
     }
-    @else {
-      display: none;
 
-      &:last-child,
-      &:first-child {
-        display: inline-block;
-      }
-
-      @if $pagination-mobile-current-item {
-        &.current {
-          display: inline-block;
-        }
-      }
-
-      @include breakpoint(md) {
-        display: inline-block;
-      }
+    @include breakpoint(md) {
+      display: inline-block;
     }
   }
 
@@ -133,6 +130,10 @@ $pagination-arrows: true !default;
 
 .pagination {
   @include pagination-container;
+}
+
+.pagination__list {
+  @include pagination-list;
 
   a,
   .current,
@@ -150,21 +151,5 @@ $pagination-arrows: true !default;
 
   .ellipsis {
     @include pagination-ellipsis;
-  }
-}
-
-@if $pagination-arrows {
-  .pagination-previous a::before,
-  .pagination-previous.disabled::before {
-    display: inline-block;
-    margin-right: 0.5rem;
-    content: '\00AB';
-  }
-
-  .pagination-next a::after,
-  .pagination-next.disabled::after {
-    display: inline-block;
-    margin-left: 0.5rem;
-    content: '\00BB';
   }
 }
