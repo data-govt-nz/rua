@@ -5,6 +5,14 @@
 // Markup:
 // <span class="tag">Tag 1</span>
 // <a href="#" class="tag">Tag 1</a>
+// <a href="#" class="tag">
+//   <span class="ri ri-arrow-up"></span>
+//   Increase
+// </a>
+// <a href="#" class="tag">
+//   <span class="ri ri-arrow-down"></span>
+//   Decrease
+// </a>
 //
 // Styleguide: General.Tag
 
