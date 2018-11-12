@@ -45,6 +45,7 @@ $tag-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
   cursor: pointer;
   &:hover,
   &:focus {
+    color: $tag-color;
     text-decoration: none;
     background-color: $tag-background-hover;
     box-shadow: $tag-shadow-hover;
