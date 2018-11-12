@@ -22,6 +22,7 @@ npm install rua-pattern-library
 ```bash
 npm run watch
 ```
+Note: on first run you may get an error.  Wait a few seconds for it complete building the styleguide.
 or
 ```bash
 gulp watch
