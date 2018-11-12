@@ -3,6 +3,7 @@
 ## Table of Contents
 
   1. [Installation](#installation)
+  1. [Development](#development)
   1. [Usage](#usage)
 
 ## Installation
@@ -22,13 +23,13 @@ npm install rua-pattern-library
 ```bash
 npm run watch
 ```
-Note: on first run you may get an error.  Wait a few seconds for it complete building the styleguide.
 or
 ```bash
 gulp watch
 ```
+Your default browser should open to `localhost:3000` or increment to the next available port.
 
-Your browser should open to `http://localhost:3000`
+Note: on first run you may get an error `cannot GET /`.  Try running `npm run build` then watch again.
 
 ## Build
 
