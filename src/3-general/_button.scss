@@ -10,6 +10,12 @@
 // <button class="button secondary">
 //   Secondary Button
 // </button>
+// <button class="button">
+//   <span class="ri ri-envelope"></span>Button with icon
+// </button>
+// <button class="button">
+//   <span class="ri ri-search"></span>Search
+// </button>
 // <input type='submit' value="Secondary Submit" class="secondary">
 //
 // Styleguide: General.Button
@@ -20,7 +26,6 @@
   position: relative;
   text-align: center;
   vertical-align: middle;
-  padding: $button-padding;
   border: 2px solid transparent;
   transition: $button-transition;
   font-family: $button-font-family;
@@ -30,10 +35,23 @@
   border-radius: $button-radius;
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
   line-height: 1;
+  padding: vertical-padding(
+    $height: 40px,
+    $font-size: $button-font-size,
+    $line-height: 1,
+    $horizontal-padding: $button-padding,
+    $border-width: 2px
+  );
+  height: em(40);
   cursor: pointer;
   &:hover,
   &:focus{
     box-shadow: $button-shadow-hover;
+  }
+
+  // button icon styles
+  .ri::before {
+    margin: em(5px);
   }
 }
 
@@ -42,6 +60,7 @@
   background-color: $button-background;
   &:hover,
   &:focus{
+    color: $button-color;
     background-color: $button-background-hover;
   }
 }
@@ -128,6 +147,59 @@ a.button { // sass-lint:disable-line no-qualifying-elements
 
   &.secondary {
     @include button-secondary;
+  }
+}
+
+// Button icon only
+//
+// @todo
+//
+// Markup:
+// <button class="button-icon">
+//   <span class="ri ri-arrow-left"></span>
+// </button>
+// <button class="button-icon">
+//   <span class="ri ri-arrow-right"></span>
+// </button>
+// <button class="button-icon">
+//   <span class="ri ri-chevron-down"></span>
+// </button>
+//
+// Styleguide: General.Button.Icon
+
+.button-icon {
+  @include button-secondary;
+  outline: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid;
+  transition: $button-transition;
+  font-family: $button-font-family;
+  text-transform: $button-text-transform;
+  font-size: $button-font-size;
+  font-weight: $button-weight;
+  border-radius: $button-radius;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  line-height: em(40-2px*2);
+
+  height: em(40);
+  width: em(40);
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    box-shadow: $button-shadow-hover;
+  }
+
+  &.state-disabled,
+  &[disabled] {
+    @include button-disabled;
+  }
+
+  .ri {
+    vertical-align: middle;
+    line-height: em(40);
+    display: inline-block;
   }
 }
 

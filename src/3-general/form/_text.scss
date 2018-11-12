@@ -168,16 +168,29 @@
 [type='tel'],
 [type='time'],
 [type='url'],
-[type='color'],
-textarea {
+[type='color']{
   @include form-element;
+  padding: vertical-padding(
+    $height: 40px,
+    $font-size: $input-font-size,
+    $line-height: $input-line-height,
+    $horizontal-padding: $input-padding,
+    $border-width: 2px
+  );
+  height: em(40);
   appearance: none;
+}
+
+[type='color']{
+  padding: 0;
+  overflow: hidden;
 }
 
 // Text areas
 textarea {
+  @include form-element;
   max-width: 100%;
-  padding-top: get-side($input-padding, 'top') * 2;
+  min-height: em(40*2);
   // Remove border-radius on bottom right where resize handle is.
   border-bottom-right-radius: 0;
   &[rows] {

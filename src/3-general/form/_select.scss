@@ -43,14 +43,10 @@ $select-radius: 1.5em !default;
 $select-arrow-position: get-side($input-padding, 'right')/2;
 
 @mixin form-select {
-  // $height: ($input-font-size * unitless-calc($input-line-height)) + (get-side($input-padding, 'top') + get-side($input-padding, 'bottom')) - rem(1);
-
-  // height: $height;
-
   width: 100%;
 
   margin: 0 0 $form-spacing;
-  padding: $input-padding;
+  // padding: $input-padding;
 
   -webkit-appearance:none;
   -moz-appearance:none;
@@ -64,6 +60,15 @@ $select-arrow-position: get-side($input-padding, 'right')/2;
   font-weight: $input-font-weight;
   line-height: $input-line-height;
   color: $input-color;
+
+  padding: vertical-padding(
+    $height: 40px,
+    $font-size: $input-font-size,
+    $line-height: $input-line-height,
+    $horizontal-padding: get-side($input-padding, 'right'),
+    $border-width: 2px
+  );
+  height: em(40);
 
   @if $select-triangle-color != transparent {
     @include background-triangle($select-triangle-color);
