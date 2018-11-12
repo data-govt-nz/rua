@@ -245,7 +245,7 @@
   $horizontal-padding: em($horizontal-padding);
   $border-width: em(get-side($border-width, 'top')) + em(get-side($border-width, 'bottom'));
   $height: em($height) - ($font-size * $line-height) - $border-width - 1em;
-  @debug $height;
+
   @if $height < 0 {
     $height: 0;
   }
