@@ -161,7 +161,7 @@ $table-cell-font-size: 14px !default;
 $button-font-family: inherit !default;
 $button-text-transform: inherit !default;
 $button-weight: 500 !default;
-$button-padding: 1.5em !default;
+$button-padding: 1em !default;
 $button-background: color('primary') !default;
 $button-background-hover: scale-color($button-background, $lightness: -15%) !default;
 $button-color: color('white') !default;

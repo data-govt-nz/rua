@@ -52,8 +52,12 @@
   }
 
   // button icon styles
-  .ri::before {
-    margin: em(5px);
+  .ri:first-child {
+    margin-right: em(5px);
+  }
+
+  .ri:last-child {
+    margin-right: em(5px);
   }
 }
 
