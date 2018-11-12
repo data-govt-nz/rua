@@ -4,12 +4,7 @@
 //
 // Styleguide: Core
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
+@import 'scafolding';
 @import 'colors';
 @import 'spacing';
 @import 'typography';
