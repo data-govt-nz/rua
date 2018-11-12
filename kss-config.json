@@ -2,7 +2,7 @@
   "title": "Rua pattern library",
   "source": "src",
   "destination": "styleguide",
-  "builder": "template",
+  "builder": "kss-template",
   "css" : [
       "./rua-assets/css/rua.css",
       "./rua-assets/css/rua-font.css"
