@@ -21,7 +21,7 @@ $breadcrumbs-item-font-size: 14px !default;
 $breadcrumbs-item-color: color('gray-dark') !default;
 $breadcrumbs-item-color-current: color('gray-dark') !default;
 $breadcrumbs-item-color-disabled: color('gray') !default;
-$breadcrumbs-item-margin: 0.75rem !default;
+$breadcrumbs-item-margin: rem(10) !default;
 $breadcrumbs-item-separator-item: '/' !default;
 
 /// Adds styles for a breadcrumbs container, along with the styles for the `<li>` and `<a>` elements inside of it.
