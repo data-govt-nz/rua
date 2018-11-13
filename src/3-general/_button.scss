@@ -38,7 +38,7 @@
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
   line-height: 1;
   padding: vertical-padding(
-    $height: 40px,
+    $height: em(40),
     $font-size: $button-font-size,
     $line-height: 1,
     $horizontal-padding: $button-padding,

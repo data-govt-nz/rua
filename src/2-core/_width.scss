@@ -21,10 +21,10 @@
 // Styleguide: Core.Width
 
 $max-widths: (
-  'xs': 100px,
-  'sm': 300px,
-  'md': 600px,
-  'lg': 720px
+  'xs': rem(100),
+  'sm': rem(300),
+  'md': rem(600),
+  'lg': rem(720)
 ) !default;
 
 @each $label, $width in $max-widths {

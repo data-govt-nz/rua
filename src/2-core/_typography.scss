@@ -35,13 +35,13 @@
 // Styleguide: Core.Typography
 
 body{
-  font-size: $font-size-base;
+  font-size: rem($font-size-base);
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   color: $text-color;
 
   @media (min-width: $screen-md-min) {
-    font-size: 18px;
+    font-size: rem(18);
   }
 }
 

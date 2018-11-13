@@ -26,7 +26,7 @@
 
 input[type="radio"],
 input[type="checkbox"] {
-  width: 13px;
-  height: 13px;
+  width: rem(13);
+  height: rem(13);
   margin-top: 0.6em;
 }

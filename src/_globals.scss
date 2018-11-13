@@ -167,7 +167,7 @@ $button-background-hover: scale-color($button-background, $lightness: -15%) !def
 $button-color: color('white') !default;
 $button-color-alt: color('black') !default;
 $button-radius: border-radius('full') !default;
-$button-font-size: 16px;
+$button-font-size: rem(16);
 $button-opacity-disabled: 0.25 !default;
 $button-background-hover-lightness: -20% !default;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
@@ -183,7 +183,7 @@ $form-spacing: 4px !default;
 $input-color: color('black') !default;
 $input-placeholder-color: color('gray-darker') !default;
 $input-font-family: inherit !default;
-$input-font-size: 16px !default;
+$input-font-size: rem(16) !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: $line-height-base !default;
 $input-background: color('white') !default;

@@ -62,7 +62,7 @@ $select-arrow-position: get-side($input-padding, 'right')/2;
   color: $input-color;
 
   padding: vertical-padding(
-    $height: 40px,
+    $height: em(40),
     $font-size: $input-font-size,
     $line-height: $input-line-height,
     $horizontal-padding: get-side($input-padding, 'right'),

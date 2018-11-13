@@ -155,7 +155,7 @@
 [type='color']{
   @include form-element;
   padding: vertical-padding(
-    $height: 40px,
+    $height: em(40),
     $font-size: $input-font-size,
     $line-height: $input-line-height,
     $horizontal-padding: $input-padding,
