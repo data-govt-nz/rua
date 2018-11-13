@@ -7,7 +7,7 @@ const rename = require('gulp-rename')
 const copy = require('gulp-copy')
 const clean = require('gulp-clean')
 const sass = require('gulp-sass')
-sass.compiler = require('node-sass')
+const tildeImporter = require('node-sass-tilde-importer');
 
 const watch = require('gulp-watch')
 
@@ -46,7 +46,7 @@ const runTimestamp = Math.round(Date.now()/1000)
 // Minify CSS, add vendor prefixes, save to /dist/css folder
 gulp.task('styles', function () {
   return gulp.src('./src/rua.scss', { base: './src' })
-    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass.sync({ importer: tildeImporter }).on('error', sass.logError))
     .pipe(autoprefixer({ browsers: config.browsers, cascade: false }))
     .pipe(gulp.dest(config.path.css))
     .pipe(cleanCSS())
@@ -95,7 +95,7 @@ gulp.task('icons', function(done){
           .pipe(gulp.dest(config.path.css))
           .pipe(cleanCSS())
           .pipe(rename(function (path) {
-            path.basename += '.min';
+            path.basename += '.min'
           }))
           .pipe(gulp.dest(config.path.css))
           .on('finish', cb)
