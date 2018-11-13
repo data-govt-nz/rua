@@ -1,3 +1,29 @@
+// Radio and checkbox
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//    <div class="field">
+//      <label for="radio">radio</label>
+//      <input type="radio" id="radio">
+//    </div>
+//    <div class="field">
+//      <label for="checkbox">checkbox</label>
+//      <input type="checkbox" id="checkbox">
+//    </div>
+//    <div class="field">
+//      <label for="radio-disabled">radio disabled</label>
+//      <input type="radio" id="radio-disabled" disabled>
+//    </div>
+//    <div class="field">
+//      <label for="checkbox-disabled">checkbox disabled</label>
+//      <input type="checkbox" id="checkbox-disabled" disabled>
+//    </div>
+//  </div>
+//
+// Styleguide: General.Form.RadioCheckbox
+
 input[type="radio"],
 input[type="checkbox"] {
   width: 13px;
