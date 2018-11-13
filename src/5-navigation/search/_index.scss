@@ -9,14 +9,14 @@
 //   </label>
 //   <div class="context-switch">
 //     <div class="field">
-//       <input type="radio">
-//       <label>
+//       <input name="context" type="radio" id="search-website-content" value="website-content">
+//       <label for="search-website-content">
 //         Website content
 //       </label>
 //     </div>
 //     <div class="field">
-//       <input type="radio">
-//       <label>
+//       <input name="context" type="radio" id="search-datasets" value="datasets">
+//       <label for="search-datasets">
 //         Datasets
 //       </label>
 //     </div>
@@ -36,6 +36,7 @@
 
 
 .search-form {
+  flex-direction: column;
   &,
   .field {
     display: flex;
@@ -44,6 +45,9 @@
   label,
   input {
     margin-right: 15px;
+  }
+  @include breakpoint(md) {
+    flex-direction: row;
   }
 }
 
