@@ -35,14 +35,6 @@ $input-error-color: color('danger') !default;
 @mixin input-error {
   border-color: $input-error-color;
   border-top-left-radius: 0;
-  // &:not(:focus) {
-  //   border-color: $background;
-  //   background-color: mix($background, color('white'), $background-lighten);
-
-  //   &::placeholder {
-  //     color: $background;
-  //   }
-  // }
 }
 
 // input error element
