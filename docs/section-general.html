@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rua pattern library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="./rua-assets/css/rua.css">
+<link rel="stylesheet" href="./rua-assets/css/rua-font.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Rua pattern library</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Rua pattern library</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-core.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Core</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-general.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">General</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-headings">
+                        <span class="kss-nav__ref">2.1</span>
+                        <span class="kss-nav__name">Headings</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-bodytext">
+                        <span class="kss-nav__ref">2.2</span>
+                        <span class="kss-nav__name">Body text</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-bodytext-excerpt">
+                        <span class="kss-nav__ref">2.2.1</span>
+                        <span class="kss-nav__name">Excerpt</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-bodytext-lead">
+                        <span class="kss-nav__ref">2.2.2</span>
+                        <span class="kss-nav__name">Lead</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-lists">
+                        <span class="kss-nav__ref">2.3</span>
+                        <span class="kss-nav__name">Lists</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-button">
+                        <span class="kss-nav__ref">2.4</span>
+                        <span class="kss-nav__name">Button</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-button-buttonsgroup">
+                        <span class="kss-nav__ref">2.4.1</span>
+                        <span class="kss-nav__name">Buttons Group</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-button-icon">
+                        <span class="kss-nav__ref">2.4.2</span>
+                        <span class="kss-nav__name">Button icon only</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-tag">
+                        <span class="kss-nav__ref">2.5</span>
+                        <span class="kss-nav__name">Tag</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-tag-tagsgroup">
+                        <span class="kss-nav__ref">2.5.1</span>
+                        <span class="kss-nav__name">Tags Group</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-form">
+                        <span class="kss-nav__ref">2.6</span>
+                        <span class="kss-nav__name">Form</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-form-text">
+                        <span class="kss-nav__ref">2.6.1</span>
+                        <span class="kss-nav__name">Text</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-form-radiocheckbox">
+                        <span class="kss-nav__ref">2.6.2</span>
+                        <span class="kss-nav__name">Radio and checkbox</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-form-select">
+                        <span class="kss-nav__ref">2.6.3</span>
+                        <span class="kss-nav__name">Select</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-form-upload">
+                        <span class="kss-nav__ref">2.6.4</span>
+                        <span class="kss-nav__name">Upload</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-form-validation">
+                        <span class="kss-nav__ref">2.6.5</span>
+                        <span class="kss-nav__name">Validation</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-fineprint">
+                        <span class="kss-nav__ref">2.7</span>
+                        <span class="kss-nav__name">Fine print</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-datetime">
+                        <span class="kss-nav__ref">2.8</span>
+                        <span class="kss-nav__name">Date time</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-general.html#kssref-general-datetime-timeago">
+                        <span class="kss-nav__ref">2.8.1</span>
+                        <span class="kss-nav__name">Time ago</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-general.html#kssref-general-author">
+                        <span class="kss-nav__ref">2.9</span>
+                        <span class="kss-nav__name">Author</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-icons.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Icons</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-navigationcomponents.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Navigation components</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-informationcomponents.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Information components</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Layout</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-general">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_index.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">2</span>
+                  <span class="kss-section__name">General</span>
+                </h1>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-headings">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_headings.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-headings">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.1</span>
+                  <span class="kss-section__name">Headings</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-bodytext">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_body-text.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-bodytext">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.2</span>
+                  <span class="kss-section__name">Body text</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
+<p>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p&gt;Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+&lt;p&gt;Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-bodytext-excerpt">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_body-text.scss</span>, line <span>23</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-bodytext-excerpt">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.2.1</span>
+                  <span class="kss-section__name">Excerpt</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><p class="excerpt">Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;excerpt&quot;&gt;Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-bodytext-lead">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_body-text.scss</span>, line <span>13</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-bodytext-lead">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.2.2</span>
+                  <span class="kss-section__name">Lead</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><p class="lead">Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.</p>
+<p>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;lead&quot;&gt;Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p&gt;Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-lists">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_lists.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-lists">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.3</span>
+                  <span class="kss-section__name">Lists</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><ul>
+  <li>Consectetur Risus Euismod Tortor</li>
+  <li>Dapibus Tortor Sollicitudin</li>
+  <li>Fringilla Dapibus Ultricies Tellus<ul>
+      <li>Dapibus Tortor Sollicitudin</li>
+      <li>Fringilla Dapibus Ultricies Tellus</li>
+      <li>Mollis Porta Purus Lorem</li>
+      <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+    </ul>
+  </li>
+  <li>Mollis Porta Purus Lorem</li>
+  <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+</ul>
+<ol>
+  <li>Consectetur Risus Euismod Tortor</li>
+  <li>Dapibus Tortor Sollicitudin</li>
+  <li>Fringilla Dapibus Ultricies Tellus<ol>
+      <li>Dapibus Tortor Sollicitudin</li>
+      <li>Fringilla Dapibus Ultricies Tellus</li>
+      <li>Mollis Porta Purus Lorem</li>
+      <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+    </ol>
+  </li>
+  <li>Mollis Porta Purus Lorem</li>
+  <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+</ol></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;ul&gt;
+  &lt;li&gt;Consectetur Risus Euismod Tortor&lt;/li&gt;
+  &lt;li&gt;Dapibus Tortor Sollicitudin&lt;/li&gt;
+  &lt;li&gt;Fringilla Dapibus Ultricies Tellus&lt;ul&gt;
+      &lt;li&gt;Dapibus Tortor Sollicitudin&lt;/li&gt;
+      &lt;li&gt;Fringilla Dapibus Ultricies Tellus&lt;/li&gt;
+      &lt;li&gt;Mollis Porta Purus Lorem&lt;/li&gt;
+      &lt;li&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mollis Porta Purus Lorem&lt;/li&gt;
+  &lt;li&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Consectetur Risus Euismod Tortor&lt;/li&gt;
+  &lt;li&gt;Dapibus Tortor Sollicitudin&lt;/li&gt;
+  &lt;li&gt;Fringilla Dapibus Ultricies Tellus&lt;ol&gt;
+      &lt;li&gt;Dapibus Tortor Sollicitudin&lt;/li&gt;
+      &lt;li&gt;Fringilla Dapibus Ultricies Tellus&lt;/li&gt;
+      &lt;li&gt;Mollis Porta Purus Lorem&lt;/li&gt;
+      &lt;li&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mollis Porta Purus Lorem&lt;/li&gt;
+  &lt;li&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-button">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_button.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-button">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.4</span>
+                  <span class="kss-section__name">Button</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="button">
+  Button
+</button>
+<input type='submit' value="Submit">
+<button class="button secondary">
+  Secondary Button
+</button>
+<button class="button">
+  <span class="ri ri-envelope"></span>
+  <span>Button with icon</span>
+</button>
+<button class="button">
+  <span>Button right with icon</span>
+  <span class="ri ri-arrow-right"></span>
+</button>
+<button class="button">
+  <span class="ri ri-search"></span>
+  <span>Search</span>
+</button>
+<input type='submit' value="Secondary Submit" class="secondary"></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot;&gt;
+  Button
+&lt;/button&gt;
+&lt;input type&#x3D;&#x27;submit&#x27; value&#x3D;&quot;Submit&quot;&gt;
+&lt;button class&#x3D;&quot;button secondary&quot;&gt;
+  Secondary Button
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-envelope&quot;&gt;&lt;/span&gt;
+  &lt;span&gt;Button with icon&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot;&gt;
+  &lt;span&gt;Button right with icon&lt;/span&gt;
+  &lt;span class&#x3D;&quot;ri ri-arrow-right&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
+  &lt;span&gt;Search&lt;/span&gt;
+&lt;/button&gt;
+&lt;input type&#x3D;&#x27;submit&#x27; value&#x3D;&quot;Secondary Submit&quot; class&#x3D;&quot;secondary&quot;&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-button-buttonsgroup">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_button.scss</span>, line <span>217</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-button-buttonsgroup">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.4.1</span>
+                  <span class="kss-section__name">Buttons Group</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="buttons">
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+</div>
+<div class="buttons sm-direction-vertical">
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+</div>
+<div class="buttons sm-align-right">
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+  <button class="button">
+    Button
+  </button>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;buttons&quot;&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;buttons sm-direction-vertical&quot;&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;buttons sm-align-right&quot;&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+  &lt;button class&#x3D;&quot;button&quot;&gt;
+    Button
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-button-icon">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_button.scss</span>, line <span>164</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-button-icon">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.4.2</span>
+                  <span class="kss-section__name">Button icon only</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="button-icon">
+  <span class="ri ri-arrow-left"></span>
+</button>
+<button class="button-icon">
+  <span class="ri ri-arrow-right"></span>
+</button>
+<button class="button-icon">
+  <span class="ri ri-chevron-down"></span>
+</button></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button-icon&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-arrow-left&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;button-icon&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-arrow-right&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class&#x3D;&quot;button-icon&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-chevron-down&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-tag">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_tag.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-tag">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.5</span>
+                  <span class="kss-section__name">Tag</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><span class="tag">Tag 1</span>
+<a href="#" class="tag">Tag 1</a>
+<a href="#" class="tag">
+  <span class="ri ri-arrow-up"></span>
+  Increase
+</a>
+<a href="#" class="tag">
+  <span class="ri ri-arrow-down"></span>
+  Decrease
+</a></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;span class&#x3D;&quot;tag&quot;&gt;Tag 1&lt;/span&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;tag&quot;&gt;Tag 1&lt;/a&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;tag&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-arrow-up&quot;&gt;&lt;/span&gt;
+  Increase
+&lt;/a&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;tag&quot;&gt;
+  &lt;span class&#x3D;&quot;ri ri-arrow-down&quot;&gt;&lt;/span&gt;
+  Decrease
+&lt;/a&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-tag-tagsgroup">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_tag.scss</span>, line <span>73</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-tag-tagsgroup">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.5.1</span>
+                  <span class="kss-section__name">Tags Group</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="tags">
+  <span class="tag">Tag 1</span>
+  <a class="tag">Tag 2</a>
+  <span class="tag">Tag 3</span>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;tags&quot;&gt;
+  &lt;span class&#x3D;&quot;tag&quot;&gt;Tag 1&lt;/span&gt;
+  &lt;a class&#x3D;&quot;tag&quot;&gt;Tag 2&lt;/a&gt;
+  &lt;span class&#x3D;&quot;tag&quot;&gt;Tag 3&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-form">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_index.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.6</span>
+                  <span class="kss-section__name">Form</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-form-text">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_text.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-text">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.6.1</span>
+                  <span class="kss-section__name">Text</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="text">text</label>
+     <input type="text" id="text">
+   </div>
+   <div class="field">
+     <label for="password">password</label>
+     <input type="password" id="password">
+   </div>
+   <div class="field">
+     <label for="tel">tel</label>
+     <input type="tel" id="tel">
+   </div>
+   <div class="field">
+     <label for="date">date</label>
+     <input type="date" id="date">
+   </div>
+   <div class="field">
+     <label for="datetime">datetime</label>
+     <input type="datetime" id="datetime">
+   </div>
+   <div class="field">
+     <label for="datetime-local">datetime-local</label>
+     <input type="datetime-local" id="datetime-local">
+   </div>
+   <div class="field">
+     <label for="month">month</label>
+     <input type="month" id="month">
+   </div>
+   <div class="field">
+     <label for="week">week</label>
+     <input type="week" id="week">
+   </div>
+   <div class="field">
+     <label for="email">email</label>
+     <input type="email" id="email">
+   </div>
+   <div class="field">
+     <label for="number">number</label>
+     <input type="number" id="number">
+   </div>
+   <div class="field">
+     <label for="search">search</label>
+     <input type="search" id="search">
+   </div>
+   <div class="field">
+     <label for="time">time</label>
+     <input type="time" id="time">
+   </div>
+   <div class="field">
+     <label for="url">url</label>
+     <input type="url" id="url">
+   </div>
+   <div class="field">
+     <label for="color">color</label>
+     <input type="color" id="color">
+   </div>
+   <div class="field">
+     <label for="textarea">textarea</label>
+     <textarea id="textarea" rows="10"></textarea>
+   </div>
+   <div class="field">
+     <label for="text-placeholder">text placeholder</label>
+     <input type="text" id="text-placeholder" placeholder="Ridiculus Purus">
+   </div>
+   <div class="field">
+     <label for="textarea-placeholder">textarea placeholder</label>
+     <textarea id="textarea-placeholder" rows="10" placeholder="Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam."></textarea>
+   </div>
+   <div class="field">
+     <label for="text-disabled">text disabled</label>
+     <input type="text" id="text-disabled" disabled>
+   </div>
+   <div class="field">
+     <label for="textarea-disabled">textarea disabled</label>
+     <textarea id="textarea-disabled" rows="10" disabled></textarea>
+   </div>
+ </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text&quot;&gt;text&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;password&quot;&gt;password&lt;/label&gt;
+     &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;tel&quot;&gt;tel&lt;/label&gt;
+     &lt;input type&#x3D;&quot;tel&quot; id&#x3D;&quot;tel&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;date&quot;&gt;date&lt;/label&gt;
+     &lt;input type&#x3D;&quot;date&quot; id&#x3D;&quot;date&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;datetime&quot;&gt;datetime&lt;/label&gt;
+     &lt;input type&#x3D;&quot;datetime&quot; id&#x3D;&quot;datetime&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;datetime-local&quot;&gt;datetime-local&lt;/label&gt;
+     &lt;input type&#x3D;&quot;datetime-local&quot; id&#x3D;&quot;datetime-local&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;month&quot;&gt;month&lt;/label&gt;
+     &lt;input type&#x3D;&quot;month&quot; id&#x3D;&quot;month&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;week&quot;&gt;week&lt;/label&gt;
+     &lt;input type&#x3D;&quot;week&quot; id&#x3D;&quot;week&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;email&quot;&gt;email&lt;/label&gt;
+     &lt;input type&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;number&quot;&gt;number&lt;/label&gt;
+     &lt;input type&#x3D;&quot;number&quot; id&#x3D;&quot;number&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;search&quot;&gt;search&lt;/label&gt;
+     &lt;input type&#x3D;&quot;search&quot; id&#x3D;&quot;search&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;time&quot;&gt;time&lt;/label&gt;
+     &lt;input type&#x3D;&quot;time&quot; id&#x3D;&quot;time&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;url&quot;&gt;url&lt;/label&gt;
+     &lt;input type&#x3D;&quot;url&quot; id&#x3D;&quot;url&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;color&quot;&gt;color&lt;/label&gt;
+     &lt;input type&#x3D;&quot;color&quot; id&#x3D;&quot;color&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;textarea&quot;&gt;textarea&lt;/label&gt;
+     &lt;textarea id&#x3D;&quot;textarea&quot; rows&#x3D;&quot;10&quot;&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text-placeholder&quot;&gt;text placeholder&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text-placeholder&quot; placeholder&#x3D;&quot;Ridiculus Purus&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;textarea-placeholder&quot;&gt;textarea placeholder&lt;/label&gt;
+     &lt;textarea id&#x3D;&quot;textarea-placeholder&quot; rows&#x3D;&quot;10&quot; placeholder&#x3D;&quot;Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&quot;&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text-disabled&quot;&gt;text disabled&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text-disabled&quot; disabled&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;textarea-disabled&quot;&gt;textarea disabled&lt;/label&gt;
+     &lt;textarea id&#x3D;&quot;textarea-disabled&quot; rows&#x3D;&quot;10&quot; disabled&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-general-form-text-width">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_text.scss</span>, line <span>89</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-text-width">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">2.6.1.1</span>
+                  <span class="kss-section__name">Text width</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="text-width-small">Small</label>
+     <input type="text" id="text-width-small" class="mxw-sm">
+   </div>
+   <div class="field">
+     <label for="text-width-medium">Medium</label>
+     <input type="text" id="text-width-medium" class="mxw-md">
+   </div>
+   <div class="field">
+     <label for="text-width-large">Large</label>
+     <input type="text" id="text-width-large" class="mxw-lg">
+   </div>
+   <div class="field">
+     <label for="textarea-width-medium">Text area medium</label>
+     <textarea id="textarea-width-medium" rows="10" class="mxw-md"></textarea>
+   </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text-width-small&quot;&gt;Small&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text-width-small&quot; class&#x3D;&quot;mxw-sm&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text-width-medium&quot;&gt;Medium&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text-width-medium&quot; class&#x3D;&quot;mxw-md&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;text-width-large&quot;&gt;Large&lt;/label&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text-width-large&quot; class&#x3D;&quot;mxw-lg&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;textarea-width-medium&quot;&gt;Text area medium&lt;/label&gt;
+     &lt;textarea id&#x3D;&quot;textarea-width-medium&quot; rows&#x3D;&quot;10&quot; class&#x3D;&quot;mxw-md&quot;&gt;&lt;/textarea&gt;
+   &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-form-radiocheckbox">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_radio_checkbox.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-radiocheckbox">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.6.2</span>
+                  <span class="kss-section__name">Radio and checkbox</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="radio">radio</label>
+     <input type="radio" id="radio">
+   </div>
+   <div class="field">
+     <label for="checkbox">checkbox</label>
+     <input type="checkbox" id="checkbox">
+   </div>
+   <div class="field">
+     <label for="radio-disabled">radio disabled</label>
+     <input type="radio" id="radio-disabled" disabled>
+   </div>
+   <div class="field">
+     <label for="checkbox-disabled">checkbox disabled</label>
+     <input type="checkbox" id="checkbox-disabled" disabled>
+   </div>
+ </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;radio&quot;&gt;radio&lt;/label&gt;
+     &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;radio&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;checkbox&quot;&gt;checkbox&lt;/label&gt;
+     &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;radio-disabled&quot;&gt;radio disabled&lt;/label&gt;
+     &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;radio-disabled&quot; disabled&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;checkbox-disabled&quot;&gt;checkbox disabled&lt;/label&gt;
+     &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox-disabled&quot; disabled&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-form-select">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_select.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-select">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.6.3</span>
+                  <span class="kss-section__name">Select</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="select">select</label>
+     <select name="select">
+       <option value="1">Consectetur Risus Euismod Tortor</option>
+       <option value="2">Dapibus Tortor Sollicitudin</option>
+       <option value="3">Fringilla Dapibus Ultricies Tellus</option>
+       <option value="4">Mollis Porta Purus Lorem</option>
+       <option value="5">Dapibus Commodo Dolor Parturient Ultricies</option>
+     </select>
+   </div>
+   <div class="field">
+     <label for="select-disabled">select disabled</label>
+     <select name="select-disabled" disabled>
+       <option value="1">Consectetur Risus Euismod Tortor</option>
+       <option value="2">Dapibus Tortor Sollicitudin</option>
+       <option value="3">Fringilla Dapibus Ultricies Tellus</option>
+       <option value="4">Mollis Porta Purus Lorem</option>
+       <option value="5">Dapibus Commodo Dolor Parturient Ultricies</option>
+     </select>
+   </div>
+ </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;select&quot;&gt;select&lt;/label&gt;
+     &lt;select name&#x3D;&quot;select&quot;&gt;
+       &lt;option value&#x3D;&quot;1&quot;&gt;Consectetur Risus Euismod Tortor&lt;/option&gt;
+       &lt;option value&#x3D;&quot;2&quot;&gt;Dapibus Tortor Sollicitudin&lt;/option&gt;
+       &lt;option value&#x3D;&quot;3&quot;&gt;Fringilla Dapibus Ultricies Tellus&lt;/option&gt;
+       &lt;option value&#x3D;&quot;4&quot;&gt;Mollis Porta Purus Lorem&lt;/option&gt;
+       &lt;option value&#x3D;&quot;5&quot;&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/option&gt;
+     &lt;/select&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;select-disabled&quot;&gt;select disabled&lt;/label&gt;
+     &lt;select name&#x3D;&quot;select-disabled&quot; disabled&gt;
+       &lt;option value&#x3D;&quot;1&quot;&gt;Consectetur Risus Euismod Tortor&lt;/option&gt;
+       &lt;option value&#x3D;&quot;2&quot;&gt;Dapibus Tortor Sollicitudin&lt;/option&gt;
+       &lt;option value&#x3D;&quot;3&quot;&gt;Fringilla Dapibus Ultricies Tellus&lt;/option&gt;
+       &lt;option value&#x3D;&quot;4&quot;&gt;Mollis Porta Purus Lorem&lt;/option&gt;
+       &lt;option value&#x3D;&quot;5&quot;&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/option&gt;
+     &lt;/select&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-form-upload">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_upload.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-upload">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.6.4</span>
+                  <span class="kss-section__name">Upload</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="upload">upload</label>
+     <input type="file" id="upload">
+   </div>
+   <div class="field">
+     <label for="upload-disabled">upload disabled</label>
+     <input type="file" id="upload-disabled" disabled>
+   </div>
+ </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;upload&quot;&gt;upload&lt;/label&gt;
+     &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;upload&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;upload-disabled&quot;&gt;upload disabled&lt;/label&gt;
+     &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;upload-disabled&quot; disabled&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-form-validation">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/form/_validation.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-form-validation">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.6.5</span>
+                  <span class="kss-section__name">Validation</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="fields">
+   <div class="field">
+     <label for="error">error text</label>
+     <span class="input-message-error">This is an example of a validation error message</span>
+     <input type="text" id="upload" class="input-error">
+   </div>
+   <div class="field">
+     <label for="error-upload">error upload</label>
+     <span class="input-message-error">This is an example of a validation error message</span>
+     <input type="file" id="error-upload" class="input-error">
+   </div>
+   <div class="field">
+     <label for="error-select">select</label>
+     <span class="input-message-error">This is an example of a validation error message</span>
+     <select name="error-select" class="input-error">
+       <option value="1">Consectetur Risus Euismod Tortor</option>
+       <option value="2">Dapibus Tortor Sollicitudin</option>
+       <option value="3">Fringilla Dapibus Ultricies Tellus</option>
+       <option value="4">Mollis Porta Purus Lorem</option>
+       <option value="5">Dapibus Commodo Dolor Parturient Ultricies</option>
+     </select>
+   </div>
+ </div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;fields&quot;&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;error&quot;&gt;error text&lt;/label&gt;
+     &lt;span class&#x3D;&quot;input-message-error&quot;&gt;This is an example of a validation error message&lt;/span&gt;
+     &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;upload&quot; class&#x3D;&quot;input-error&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;error-upload&quot;&gt;error upload&lt;/label&gt;
+     &lt;span class&#x3D;&quot;input-message-error&quot;&gt;This is an example of a validation error message&lt;/span&gt;
+     &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;error-upload&quot; class&#x3D;&quot;input-error&quot;&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;field&quot;&gt;
+     &lt;label for&#x3D;&quot;error-select&quot;&gt;select&lt;/label&gt;
+     &lt;span class&#x3D;&quot;input-message-error&quot;&gt;This is an example of a validation error message&lt;/span&gt;
+     &lt;select name&#x3D;&quot;error-select&quot; class&#x3D;&quot;input-error&quot;&gt;
+       &lt;option value&#x3D;&quot;1&quot;&gt;Consectetur Risus Euismod Tortor&lt;/option&gt;
+       &lt;option value&#x3D;&quot;2&quot;&gt;Dapibus Tortor Sollicitudin&lt;/option&gt;
+       &lt;option value&#x3D;&quot;3&quot;&gt;Fringilla Dapibus Ultricies Tellus&lt;/option&gt;
+       &lt;option value&#x3D;&quot;4&quot;&gt;Mollis Porta Purus Lorem&lt;/option&gt;
+       &lt;option value&#x3D;&quot;5&quot;&gt;Dapibus Commodo Dolor Parturient Ultricies&lt;/option&gt;
+     &lt;/select&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-fineprint">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_fine-print.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-fineprint">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.7</span>
+                  <span class="kss-section__name">Fine print</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><small>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</small></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;small&gt;Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/small&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-datetime">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_time.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-datetime">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.8</span>
+                  <span class="kss-section__name">Date time</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><time datetime="2008-02-14 20:00">17 Oct 2018</time></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;time datetime&#x3D;&quot;2008-02-14 20:00&quot;&gt;17 Oct 2018&lt;/time&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-general-datetime-timeago">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_time.scss</span>, line <span>12</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-datetime-timeago">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.8.1</span>
+                  <span class="kss-section__name">Time ago</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><time datetime="2008-02-14 20:00">25 mins ago</time></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;time datetime&#x3D;&quot;2008-02-14 20:00&quot;&gt;25 mins ago&lt;/time&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-general-author">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>3-general/_author.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-general-author">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.9</span>
+                  <span class="kss-section__name">Author</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>@todo</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><span class="author">Jane Doe</span></br>
+<span class="author">By <a href="#">Jane Doe</a></span></br>
+<a class="author" href="#">Jane Doe</a></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;span class&#x3D;&quot;author&quot;&gt;Jane Doe&lt;/span&gt;&lt;/br&gt;
+&lt;span class&#x3D;&quot;author&quot;&gt;By &lt;a href&#x3D;&quot;#&quot;&gt;Jane Doe&lt;/a&gt;&lt;/span&gt;&lt;/br&gt;
+&lt;a class&#x3D;&quot;author&quot; href&#x3D;&quot;#&quot;&gt;Jane Doe&lt;/a&gt;</code></pre>
+                </article>
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="./rua-assets/js/rua.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>
