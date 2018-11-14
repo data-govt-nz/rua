@@ -1,0 +1,180 @@
+// Tag
+//
+// @todo
+//
+// Markup:
+// <span class="tag">Tag 1</span>
+// <a href="#" class="tag">Tag 1</a>
+// <a href="#" class="tag">
+//   <span class="ri ri-arrow-up"></span>
+//   Increase
+// </a>
+// <a href="#" class="tag">
+//   <span class="ri ri-arrow-down"></span>
+//   Decrease
+// </a>
+//
+// Weight: 5
+//
+// Styleguide: General.Tag
+
+$tag-font-family: inherit !default;
+$tag-text-transform: inherit !default;
+$tag-weight: 500 !default;
+$tag-padding: 0.35em 0.8em !default;
+$tag-background: color('primary') !default;
+$tag-background-hover: scale-color($tag-background, $lightness: -15%) !default;
+$tag-color: color('white') !default;
+$tag-radius: border-radius('full') !default;
+$tag-font-size: 12px;
+$tag-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
+$tag-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+
+@mixin tag-base {
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  padding: $tag-padding;
+  transition: $tag-transition;
+  font-family: $tag-font-family;
+  text-transform: $tag-text-transform;
+  font-size: $tag-font-size;
+  font-weight: $tag-weight;
+  border-radius: $tag-radius;
+  line-height: 1;
+  cursor: default;
+
+  color: $tag-color;
+  background-color: $tag-background;
+}
+
+@mixin tag-link {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $tag-color;
+    text-decoration: none;
+    background-color: $tag-background-hover;
+    box-shadow: $tag-shadow-hover;
+  }
+}
+
+.tag {
+  @include tag-base;
+}
+
+a.tag { // sass-lint:disable-line no-qualifying-elements
+  @include tag-link;
+}
+
+// Tags Group
+//
+// @todo
+//
+// Markup:
+// <div class="tags">
+//   <span class="tag">Tag 1</span>
+//   <a class="tag">Tag 2</a>
+//   <span class="tag">Tag 3</span>
+// </div>
+//
+// Styleguide: General.Tag.TagsGroup
+
+$tags-gap: 4px !default;
+$tags-justify: (
+  'left': start,
+  'right': end,
+  'center': center,
+  'justify': space-between,
+  'spaced': space-around,
+);
+
+$tags-alignment: (
+  'top': start,
+  'bottom': end,
+  'middle': center,
+  'stretch': stretch,
+);
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 -$tags-gap;
+  clear: both;
+  width: calc(100% + #{$tags-gap * 2});
+  &:first-child{
+    margin-top: -$tags-gap;
+  }
+  &:last-child{
+    margin-bottom: -$tags-gap;
+  }
+  li{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a,
+  .tag{
+    margin: 0;
+    display: block;
+  }
+  & > select,
+  & > input{
+    width: auto;
+    margin: $tags-gap;
+  }
+  & > li,
+  & > a,
+  & > .tag{
+    margin: $tags-gap;
+  }
+
+  @each $breakpoint in $breakpoint-classes {
+    @include breakpoint($breakpoint) {
+      @each $name, $value in $tags-justify {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          justify-content: $value
+        }
+      }
+
+      @each $name, $value in $tags-alignment {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          align-items: $value;
+        }
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'vertical'
+      ){
+        flex-direction: column;
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'horizontal'
+      ){
+        flex-direction: row;
+      }
+    }
+  }
+}

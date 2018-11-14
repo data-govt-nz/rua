@@ -1,0 +1,25 @@
+// Author
+//
+// @todo
+//
+// Markup:
+// <span class="author">Jane Doe</span></br>
+// <span class="author">By <a href="#">Jane Doe</a></span></br>
+// <a class="author" href="#">Jane Doe</a>
+//
+// Weight: 9
+//
+// Styleguide: General.Author
+
+.author {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $color-pale-sky;
+}
+
+a.author,
+.author a {
+  text-decoration: underline;
+  color: $color-pale-sky;
+}

@@ -1,0 +1,59 @@
+// Card
+//
+// @todo
+//
+// Markup:
+// <div class="container">
+//   <div class="row">
+//     <div class="col-md-6 col-lg-4">
+//       <div class="card"><img class="card__image" src="http://via.placeholder.com/315x240">
+//         <h4 class="card__title"><a href="#">Title of card</a></h4>
+//         <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat justo, luctus non
+//           interdum elementum, dictum ut est. In bibendum consectetur vulputate. Aenean posuere justo diam.</p><time
+//           class="datetime">25 Oct 2018&nbsp;</time><span class="author">by&nbsp;<a href="#">Jane Doe</a></span>
+//       </div>
+//     </div>
+//     <div class="col-md-6 col-lg-4">
+//       <div class="card"><img class="card__image" src="http://via.placeholder.com/315x240">
+//         <h4 class="card__title"><a href="#">Title of card</a></h4>
+//         <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat justo, luctus non
+//           interdum elementum, dictum ut est. In bibendum consectetur vulputate. Aenean posuere justo diam.</p><time
+//           class="datetime">25 Oct 2018&nbsp;</time><span class="author">by&nbsp;<a href="#">Jane Doe</a></span>
+//       </div>
+//     </div>
+//     <div class="col-md-6 col-lg-4">
+//       <div class="card"><img class="card__image" src="http://via.placeholder.com/315x240">
+//         <h4 class="card__title"><a href="#">Title of card</a></h4>
+//         <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat justo, luctus non
+//           interdum elementum, dictum ut est. In bibendum consectetur vulputate. Aenean posuere justo diam.</p><time
+//           class="datetime">25 Oct 2018&nbsp;</time><span class="author">by&nbsp;<a href="#">Jane Doe</a></span>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide: InformationComponents.Card
+
+.card {
+  margin-bottom: 4em;
+  &__image {
+    width: 100%;
+  }
+  &__title,
+  h1,
+  h2,
+  h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    $sizes: header('h4');
+    @if type-of($sizes) == map {
+      @each $bp, $size in $sizes {
+        @include breakpoint($bp) {
+          font-size: $size;
+        }
+      }
+    } @else {
+      font-size: $sizes;
+    }
+  }
+}

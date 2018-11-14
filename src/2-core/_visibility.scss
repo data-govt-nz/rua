@@ -1,0 +1,55 @@
+// Visibility
+//
+// @todo
+//
+// Markup:
+// <div aria-hidden="true">
+//  Add aria-hidden='true' attribute an element to hide from a screen reader
+// </div>
+// <div class="sr-only">
+//  Add .sr-only class an element to make it only visible to a screen reader
+// </div>
+// <div class="sr-only-focusable">
+//  Add .sr-only-focusable class an element to make it only visible to a screen reader and display if when its focused
+// </div>
+//
+// Weight: -1
+//
+// Styleguide: Core.Visibility
+
+/// Makes an element visually hidden, but still accessible to keyboards and assistive devices.
+@mixin invisible() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Only display the element when it's focused
+@mixin invisible-off() {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+// Screen reader visibility classes
+// Need a "hide-for-sr" class? Add aria-hidden='true' to the element
+.sr-only,
+.sr-only-focusable {
+  @include invisible;
+}
+
+// Only display the element when it's focused
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    @include invisible-off;
+  }
+}

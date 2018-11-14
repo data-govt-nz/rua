@@ -1,0 +1,67 @@
+// Message Box
+//
+// @todo
+//
+// Markup:
+// <div class="message mxw-md">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </div>
+// <div class="message mxw-md">
+//   <h3>Title of message</h3>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </div>
+// <div class="message error mxw-md">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </div>
+// <div class="message success mxw-md">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </div>
+// <div class="message warning mxw-md">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </div>
+//
+// Styleguide: InformationComponents.MessageBox
+
+.message {
+  display: block;
+  background-color: color('info');
+  border-radius: border-radius('full') border-radius('full') border-radius('full') 0;
+  text-align: center;
+  padding: 1.5em 2em;
+  margin: 2.4em 0;
+  color: color('pale-sky');
+  font-size: 16px;
+  // force larger headings to h3
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: color('big-stone');
+    $sizes: header('h4');
+    @if type-of($sizes) == map {
+      @each $bp, $size in $sizes {
+        @include breakpoint($bp) {
+          font-size: $size;
+        }
+      }
+    } @else {
+      font-size: $sizes;
+    }
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  &.error{
+    background-color: color('cinderella');
+  }
+  &.success{
+    background-color: color('success');
+  }
+  &.warning{
+    background-color: color('warning');
+  }
+}

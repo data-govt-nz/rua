@@ -1,0 +1,45 @@
+// Blockquote
+//
+// @todo
+//
+// Markup:
+// <blockquote>
+//   <h2>What you’ll learn</h2>
+//   <ul>
+//     <li>Why open data is useful</li>
+//     <li>Understand the benefits of using open data (inbound)</li>
+//     <li>Understand the benefits of publishing open data for others to use (outbound)</li>
+//   </ul>
+// </blockquote>
+//
+// Styleguide: InformationComponents.Blockquote
+
+blockquote,
+.blockquote {
+  margin: 2.4em 0;
+  border-left: 4px solid color('secondary');
+  border-top-right-radius: border-radius('full');
+  border-bottom-right-radius: border-radius('full');
+  padding: 1.5em 2em;
+  background: color('gray-lighter') url('../assets/tic-tac-toe.png');
+
+  // force larger headings to h3
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    $sizes: header('h3');
+    @if type-of($sizes) == map {
+      @each $bp, $size in $sizes {
+        @include breakpoint($bp) {
+          font-size: $size;
+        }
+      }
+    } @else {
+      font-size: $sizes;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

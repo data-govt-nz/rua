@@ -1,0 +1,92 @@
+// Spacing
+//
+// @todo
+//
+// Markup:
+// <div class="bg-primary color-white padding-sm margin-b-sm">
+//  padding-sm
+// </div>
+// <div class="bg-primary color-white padding-md margin-b-sm">
+//  padding-md
+// </div>
+// <div class="bg-primary color-white padding-lg margin-b-sm">
+//  padding-lg
+// </div>
+// <div class="bg-primary color-white padding-t-sm margin-b-sm">
+//  padding-t-sm
+// </div>
+// <div class="bg-primary color-white padding-t-md margin-b-sm">
+//  padding-t-md
+// </div>
+// <div class="bg-primary color-white padding-t-lg margin-b-sm">
+//  padding-t-lg
+// </div>
+// <div class="bg-primary color-white padding-r-sm margin-b-sm">
+//  padding-r-sm
+// </div>
+// <div class="bg-primary color-white padding-r-md margin-b-sm">
+//  padding-r-md
+// </div>
+// <div class="bg-primary color-white padding-r-lg margin-b-sm">
+//  padding-r-lg
+// </div>
+// <div class="bg-primary color-white padding-b-sm margin-b-sm">
+//  padding-b-sm
+// </div>
+// <div class="bg-primary color-white padding-b-md margin-b-sm">
+//  padding-b-md
+// </div>
+// <div class="bg-primary color-white padding-b-lg margin-b-sm">
+//  padding-b-lg
+// </div>
+// <div class="bg-primary color-white padding-l-sm margin-b-sm">
+//  padding-l-sm
+// </div>
+// <div class="bg-primary color-white padding-l-md margin-b-sm">
+//  padding-l-md
+// </div>
+// <div class="bg-primary color-white padding-l-lg margin-b-sm">
+//  padding-l-lg
+// </div>
+//
+// Styleguide: Core.Spacing
+
+$spacing: (
+  'sm': 20px,
+  'md': 35px,
+  'lg': 53px,
+) !default;
+
+$spacing-sides: (
+  all: all,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+) !default;
+
+@function spacing($key) {
+  @if map-has-key($spacing, $key) {
+    @return map-get($spacing, $key);
+  } @else {
+    @error 'spacing: key (#{$key}) not found.';
+  }
+}
+
+@each $abbr, $side in $spacing-sides {
+  @each $property in (margin, padding) {
+    @each $label, $size in $spacing {
+      @include selector(
+        $label: $property,
+        $value: $label,
+        $side: $abbr
+      ){
+        @if $side == all {
+          #{$property}: $size;
+        } @else {
+          #{$property}-#{$side}: $size;
+        }
+      }
+    }
+  }
+}

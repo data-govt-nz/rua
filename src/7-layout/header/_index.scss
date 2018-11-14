@@ -1,0 +1,39 @@
+$site-header-menu-item-padding: 20px 10px !default;
+$menu-item-padding-right: get-side($site-header-menu-item-padding, 'right');
+$menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
+
+.site-header{
+  &__menu{
+
+  }
+  &__menu-item{
+    padding: $site-header-menu-item-padding;
+    font-weight: $font-weight-medium;
+    color: color('pale-sky');
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 0;
+      background-color: color('secondary');
+      transition: 0.3s all ease;
+      border-radius: border-radius('full');
+    }
+    &:hover,
+    &:focus {
+      color: color('secondary');
+    }
+    &:hover,
+    &:focus,
+    &.is-active {
+      &:after {
+        width: calc(100% - #{$menu-item-padding-right + $menu-item-padding-left});
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Validation
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//    <div class="field">
+//      <label for="error">error text</label>
+//      <span class="input-message-error">This is an example of a validation error message</span>
+//      <input type="text" id="upload" class="input-error">
+//    </div>
+//    <div class="field">
+//      <label for="error-upload">error upload</label>
+//      <span class="input-message-error">This is an example of a validation error message</span>
+//      <input type="file" id="error-upload" class="input-error">
+//    </div>
+//    <div class="field">
+//      <label for="error-select">select</label>
+//      <span class="input-message-error">This is an example of a validation error message</span>
+//      <select name="error-select" class="input-error">
+//        <option value="1">Consectetur Risus Euismod Tortor</option>
+//        <option value="2">Dapibus Tortor Sollicitudin</option>
+//        <option value="3">Fringilla Dapibus Ultricies Tellus</option>
+//        <option value="4">Mollis Porta Purus Lorem</option>
+//        <option value="5">Dapibus Commodo Dolor Parturient Ultricies</option>
+//      </select>
+//    </div>
+//  </div>
+//
+// Styleguide: General.Form.Validation
+
+$input-error-color: color('danger') !default;
+
+/// Adds error styles to a form element, using the values in the settings file.
+@mixin input-error {
+  border-color: $input-error-color;
+  border-top-left-radius: 0;
+}
+
+// input error element
+.input-error {
+  @include input-error;
+}
+
+.input-message-error{
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  border-left: 3px solid $input-error-color;
+  padding: 0 0.5em;
+  margin-bottom: $form-spacing*2;
+}

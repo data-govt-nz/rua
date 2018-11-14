@@ -1,0 +1,70 @@
+// Lists
+//
+// @todo
+//
+// Markup:
+// <ul>
+//   <li>Consectetur Risus Euismod Tortor</li>
+//   <li>Dapibus Tortor Sollicitudin</li>
+//   <li>Fringilla Dapibus Ultricies Tellus<ul>
+//       <li>Dapibus Tortor Sollicitudin</li>
+//       <li>Fringilla Dapibus Ultricies Tellus</li>
+//       <li>Mollis Porta Purus Lorem</li>
+//       <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+//     </ul>
+//   </li>
+//   <li>Mollis Porta Purus Lorem</li>
+//   <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+// </ul>
+// <ol>
+//   <li>Consectetur Risus Euismod Tortor</li>
+//   <li>Dapibus Tortor Sollicitudin</li>
+//   <li>Fringilla Dapibus Ultricies Tellus<ol>
+//       <li>Dapibus Tortor Sollicitudin</li>
+//       <li>Fringilla Dapibus Ultricies Tellus</li>
+//       <li>Mollis Porta Purus Lorem</li>
+//       <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+//     </ol>
+//   </li>
+//   <li>Mollis Porta Purus Lorem</li>
+//   <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+// </ol>
+//
+// Weight: 3
+//
+// Styleguide: General.Lists
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+  line-height: 1.5em;
+  padding-left: 16px;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+li {
+  list-style-position: outside;
+  padding-left: 0.5em;
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}

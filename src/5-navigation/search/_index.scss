@@ -1,0 +1,63 @@
+// Search
+//
+// @todo
+//
+// Markup:
+// <div class="search-form">
+//   <label>
+//     Search for:
+//   </label>
+//   <div class="context-switch">
+//     <div class="field">
+//       <input name="context" type="radio" id="search-website-content" value="website-content">
+//       <label for="search-website-content">
+//         Website content
+//       </label>
+//     </div>
+//     <div class="field">
+//       <input name="context" type="radio" id="search-datasets" value="datasets">
+//       <label for="search-datasets">
+//         Datasets
+//       </label>
+//     </div>
+//   </div>
+//   <div class="field search-input">
+//       <input type="text">
+//   </div>
+//   <div class="actions">
+//       <button class="button">
+//         <span class="ri ri-search"></span>
+//         Search
+//       </button>
+//   </div>
+// </div>
+//
+// Styleguide: NavigationComponents.Search
+
+
+.search-form {
+  flex-direction: column;
+  &,
+  .field {
+    display: flex;
+    justify-content: space-between;
+  }
+  label,
+  input {
+    margin-right: 15px;
+  }
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
+}
+
+.search-input {
+  flex-grow: 1;
+}
+
+.context-switch {
+  display: flex;
+  label{
+    font-weight: $font-weight-regular;
+  }
+}

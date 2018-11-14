@@ -1,0 +1,175 @@
+$menu-margin: 1em !default;
+$menu-nested-margin: 1em !default;
+
+/// Creates the base styles for a Menu.
+@mixin menu-base {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    outline: 0;
+  }
+
+  a {
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+  }
+
+  // Reset styles of inner elements
+  input,
+  select,
+  a,
+  button {
+    margin-bottom: 0;
+  }
+
+  input {
+    display: inline-block;
+  }
+}
+
+/// Expands the items of a Menu, so each item is the same width.
+@mixin menu-expand {
+  li {
+    flex: 1 1 0px; // sass-lint:disable-line zero-unit
+  }
+}
+
+/// Align menu items.
+@mixin menu-align($alignment) {
+  @if $alignment == left {
+    justify-content: flex-start;
+  }
+  @else if $alignment == right {
+    li {
+      display: flex;
+      justify-content: flex-end;
+
+      .submenu li {
+        justify-content: flex-start;
+      }
+    }
+
+    &.vertical li {
+      display: block;
+      text-align: right;
+
+      .submenu li {
+        text-align: right;
+      }
+    }
+  }
+  @else if $alignment == center {
+    li {
+      display: flex;
+      justify-content: center;
+
+      .submenu li {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+/// Sets the direction of a Menu.
+/// @param {Keyword} $direction [horizontal] - Direction of the Menu. Can be `horizontal` or `vertical`.
+@mixin menu-direction($direction: horizontal) {
+  @if $direction == horizontal {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @else if $direction == vertical {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  @else {
+    @warn 'menu-direction(): $direction must be horizontal or vertical.';
+  }
+}
+
+/// Creates a simple Menu, which has no padding or hover state.
+/// @param {Number} $margin [$menu-margin] - The margin to apply to each `<li>`.
+@mixin menu-simple($margin: $menu-margin) {
+  align-items: center;
+  li + li {
+    margin-left: $margin;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+/// Adds styles for a nested Menu, by adding `margin-left` to the menu.
+/// @param {Keyword|Number} $margin [$menu-nested-margin] - Length of the margin.
+/// @param {Keyword} $nested-alignment [left] - Alignment of the nested class
+@mixin menu-nested(
+  $margin: $menu-nested-margin,
+  $nested-alignment: left
+) {
+  @if $nested-alignment == right {
+    margin-right: $margin;
+    margin-left: 0;
+  }
+  @else {
+    margin-right: 0;
+    margin-left: $margin;
+  }
+
+}
+
+.menu {
+  @include menu-base;
+  // Default orientation: horizontal
+  @include menu-direction(horizontal);
+
+  // Breakpoint specific versions
+  @each $breakpoint in $breakpoint-classes {
+    @include breakpoint($breakpoint) {
+      &.#{$breakpoint}-horizontal {
+        @include menu-direction(horizontal);
+      }
+
+      &.#{$breakpoint}-vertical {
+        @include menu-direction(vertical);
+      }
+
+      &.#{$breakpoint}-expanded {
+        @include menu-expand;
+      }
+
+      &.#{$breakpoint}-simple {
+        @include menu-expand;
+      }
+    }
+  }
+
+  // Nesting
+  &.nested {
+    @include menu-nested;
+  }
+
+  // Align left
+  &.align-left {
+    @include menu-align(left);
+  }
+
+  // Align right
+  &.align-right {
+    @include menu-align(right);
+
+    .nested {
+      @include menu-nested($nested-alignment: right);
+    }
+  }
+
+  // Align center
+  &.align-center {
+    @include menu-align(center);
+  }
+}

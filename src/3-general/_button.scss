@@ -1,0 +1,352 @@
+// Button
+//
+// @todo
+//
+// Markup:
+// <button class="button">
+//   Button
+// </button>
+// <input type='submit' value="Submit">
+// <button class="button secondary">
+//   Secondary Button
+// </button>
+// <button class="button">
+//   <span class="ri ri-envelope"></span>
+//   <span>Button with icon</span>
+// </button>
+// <button class="button">
+//   <span>Button right with icon</span>
+//   <span class="ri ri-arrow-right"></span>
+// </button>
+// <button class="button">
+//   <span class="ri ri-search"></span>
+//   <span>Search</span>
+// </button>
+// <input type='submit' value="Secondary Submit" class="secondary">
+//
+// Weight: 4
+//
+// Styleguide: General.Button
+
+@mixin button-base {
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: $button-transition;
+  font-family: $button-font-family;
+  text-transform: $button-text-transform;
+  font-size: $button-font-size;
+  font-weight: $button-weight;
+  border-radius: $button-radius;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  line-height: 1;
+  padding: vertical-padding(
+    $height: em(40),
+    $font-size: $button-font-size,
+    $line-height: 1,
+    $horizontal-padding: $button-padding,
+    $border-width: 2px
+  );
+  height: em(40);
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    box-shadow: $button-shadow-hover;
+  }
+
+  // button icon styles
+  .ri:first-child {
+    margin-right: em(5px);
+  }
+
+  .ri:last-child {
+    margin-left: em(5px);
+  }
+}
+
+@mixin button-primary {
+  color: $button-color;
+  background-color: $button-background;
+  &:hover,
+  &:focus{
+    color: $button-color;
+    background-color: $button-background-hover;
+  }
+}
+
+@mixin button-secondary {
+  color: $button-background;
+  border-color: $button-background;
+  background: $button-color;
+  &:hover,
+  &:focus{
+    color: $button-background-hover;
+    border-color: $button-background-hover;
+  }
+}
+
+/// Expands a button to make it full-width.
+/// @param {Boolean} $full [true] - Set to `true` to enable the full width behavior. Set to `false` to reverse this behavior.
+@mixin button-width($full: true) {
+  @if $full {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @else {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+/// Adds disabled styles to a button by fading the element, reseting the cursor, and disabling pointer events.
+/// @param {Color} $background [$button-background] - Background color of the disabled button.
+/// @param {Color} $color [$button-color] - Text color of the disabled button. Set to `auto` to have the mixin automatically generate a color based on the background color.
+@mixin button-disabled(
+  $background: $button-background,
+  $color: $button-color
+) {
+  @if $color == auto {
+    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
+  }
+
+  opacity: $button-opacity-disabled;
+  cursor: not-allowed;
+
+  &
+  &:hover,
+  &:focus {
+    background-color: $background;
+    color: $color;
+    box-shadow: none;
+  }
+}
+
+.button {
+  @include button-base;
+  @include button-primary;
+
+  &.secondary {
+    @include button-secondary;
+  }
+
+  // Disabled style
+  &.state-disabled,
+  &[disabled] {
+    @include button-disabled;
+  }
+}
+
+a.button { // sass-lint:disable-line no-qualifying-elements
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Reset styles on button-like inputs
+[type='submit'],
+[type='button'] {
+  @include button-base;
+  @include button-primary;
+
+  appearance: none;
+
+  &.secondary {
+    @include button-secondary;
+  }
+}
+
+// Button icon only
+//
+// @todo
+//
+// Markup:
+// <button class="button-icon">
+//   <span class="ri ri-arrow-left"></span>
+// </button>
+// <button class="button-icon">
+//   <span class="ri ri-arrow-right"></span>
+// </button>
+// <button class="button-icon">
+//   <span class="ri ri-chevron-down"></span>
+// </button>
+//
+// Styleguide: General.Button.Icon
+
+.button-icon {
+  @include button-secondary;
+  outline: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid;
+  transition: $button-transition;
+  font-family: $button-font-family;
+  text-transform: $button-text-transform;
+  font-size: $button-font-size;
+  font-weight: $button-weight;
+  border-radius: $button-radius;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  line-height: em(40-2px*2);
+
+  height: em(40);
+  width: em(40);
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    box-shadow: $button-shadow-hover;
+  }
+
+  &.state-disabled,
+  &[disabled] {
+    @include button-disabled;
+  }
+
+  .ri {
+    line-height: 1;
+    height: em(38);
+    display: inline-block;
+  }
+}
+
+// Buttons Group
+//
+// @todo
+//
+// Markup:
+// <div class="buttons">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+// <div class="buttons sm-direction-vertical">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+// <div class="buttons sm-align-right">
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+//   <button class="button">
+//     Button
+//   </button>
+// </div>
+//
+// Styleguide: General.Button.ButtonsGroup
+
+$buttons-gap: 10px !default;
+$buttons-justify: (
+  'left': start,
+  'right': end,
+  'center': center,
+  'justify': space-between,
+  'spaced': space-around,
+);
+
+$buttons-alignment: (
+  'top': start,
+  'bottom': end,
+  'middle': center,
+  'stretch': stretch,
+);
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 -$buttons-gap;
+  clear: both;
+  width: calc(100% + #{$buttons-gap * 2});
+  &:first-child{
+    margin-top: -$buttons-gap;
+  }
+  &:last-child{
+    margin-bottom: -$buttons-gap;
+  }
+  li{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  a,
+  .button{
+    margin: 0;
+    display: block;
+  }
+  & > select,
+  & > input{
+    width: auto;
+    margin: $buttons-gap;
+  }
+  & > li,
+  & > a,
+  & > .button{
+    margin: $buttons-gap;
+  }
+
+  @each $breakpoint in $breakpoint-classes {
+    @include breakpoint($breakpoint) {
+      @each $name, $value in $buttons-justify {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          justify-content: $value
+        }
+      }
+
+      @each $name, $value in $buttons-alignment {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: 'align',
+          $value: $name
+        ){
+          align-items: $value;
+        }
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'vertical'
+      ){
+        flex-direction: column;
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'direction',
+        $value: 'horizontal'
+      ){
+        flex-direction: row;
+      }
+    }
+  }
+}

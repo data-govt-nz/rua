@@ -1,0 +1,74 @@
+// Table
+//
+// @todo
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr>
+//       <th>Header 1</th>
+//       <th>Header 2</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>Key</td>
+//       <td>Value</td>
+//     </tr>
+//     <tr>
+//       <td>Key</td>
+//       <td>Value</td>
+//     </tr>
+//     <tr>
+//       <td>Key</td>
+//       <td>Value</td>
+//     </tr>
+//     <tr>
+//       <td>Key</td>
+//       <td>Value</td>
+//     </tr>
+//     <tr>
+//       <td>Key</td>
+//       <td>Value</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide: InformationComponents.Table
+
+$table-margin: 1.4em 0 !default;
+$table-header-font-size: 16px !default;
+$table-cell-padding: 0.715em 0.2em !default;
+$table-cell-font-size: 14px !default;
+
+table {
+  width: 100%;
+  margin: $table-margin;
+}
+
+thead {
+    border-bottom: border('solid');
+}
+
+thead,
+th {
+  font-weight: $font-weight-bold;
+}
+
+tbody tr {
+  border-bottom: 1px solid color('gray-lighter');
+}
+
+td,
+th {
+  text-align: left;
+  padding: $table-cell-padding;
+}
+
+th {
+  font-size: $table-header-font-size;
+}
+
+td {
+  font-size: $table-cell-font-size;
+}

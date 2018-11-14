@@ -1,0 +1,214 @@
+// Text
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//    <div class="field">
+//      <label for="text">text</label>
+//      <input type="text" id="text">
+//    </div>
+//    <div class="field">
+//      <label for="password">password</label>
+//      <input type="password" id="password">
+//    </div>
+//    <div class="field">
+//      <label for="tel">tel</label>
+//      <input type="tel" id="tel">
+//    </div>
+//    <div class="field">
+//      <label for="date">date</label>
+//      <input type="date" id="date">
+//    </div>
+//    <div class="field">
+//      <label for="datetime">datetime</label>
+//      <input type="datetime" id="datetime">
+//    </div>
+//    <div class="field">
+//      <label for="datetime-local">datetime-local</label>
+//      <input type="datetime-local" id="datetime-local">
+//    </div>
+//    <div class="field">
+//      <label for="month">month</label>
+//      <input type="month" id="month">
+//    </div>
+//    <div class="field">
+//      <label for="week">week</label>
+//      <input type="week" id="week">
+//    </div>
+//    <div class="field">
+//      <label for="email">email</label>
+//      <input type="email" id="email">
+//    </div>
+//    <div class="field">
+//      <label for="number">number</label>
+//      <input type="number" id="number">
+//    </div>
+//    <div class="field">
+//      <label for="search">search</label>
+//      <input type="search" id="search">
+//    </div>
+//    <div class="field">
+//      <label for="time">time</label>
+//      <input type="time" id="time">
+//    </div>
+//    <div class="field">
+//      <label for="url">url</label>
+//      <input type="url" id="url">
+//    </div>
+//    <div class="field">
+//      <label for="color">color</label>
+//      <input type="color" id="color">
+//    </div>
+//    <div class="field">
+//      <label for="textarea">textarea</label>
+//      <textarea id="textarea" rows="10"></textarea>
+//    </div>
+//    <div class="field">
+//      <label for="text-placeholder">text placeholder</label>
+//      <input type="text" id="text-placeholder" placeholder="Ridiculus Purus">
+//    </div>
+//    <div class="field">
+//      <label for="textarea-placeholder">textarea placeholder</label>
+//      <textarea id="textarea-placeholder" rows="10" placeholder="Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam."></textarea>
+//    </div>
+//    <div class="field">
+//      <label for="text-disabled">text disabled</label>
+//      <input type="text" id="text-disabled" disabled>
+//    </div>
+//    <div class="field">
+//      <label for="textarea-disabled">textarea disabled</label>
+//      <textarea id="textarea-disabled" rows="10" disabled></textarea>
+//    </div>
+//  </div>
+//
+// Weight: -10
+//
+// Styleguide: General.Form.Text
+
+// Text width
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//    <div class="field">
+//      <label for="text-width-small">Small</label>
+//      <input type="text" id="text-width-small" class="mxw-sm">
+//    </div>
+//    <div class="field">
+//      <label for="text-width-medium">Medium</label>
+//      <input type="text" id="text-width-medium" class="mxw-md">
+//    </div>
+//    <div class="field">
+//      <label for="text-width-large">Large</label>
+//      <input type="text" id="text-width-large" class="mxw-lg">
+//    </div>
+//    <div class="field">
+//      <label for="textarea-width-medium">Text area medium</label>
+//      <textarea id="textarea-width-medium" rows="10" class="mxw-md"></textarea>
+//    </div>
+//
+// Styleguide: General.Form.Text.Width
+
+@mixin form-element {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 $form-spacing;
+  padding: $input-padding;
+
+  border: $input-border;
+  border-radius: $input-radius;
+  background-color: $input-background;
+  box-shadow: $input-shadow;
+
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+
+  // Focus state
+  &:focus {
+    outline: none;
+    border: $input-border-focus;
+    background-color: $input-background-focus;
+    box-shadow: $input-shadow-focus;
+  }
+}
+
+// Text inputs
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color']{
+  @include form-element;
+  padding: vertical-padding(
+    $height: em(40),
+    $font-size: $input-font-size,
+    $line-height: $input-line-height,
+    $horizontal-padding: $input-padding,
+    $border-width: 2px
+  );
+  height: em(40);
+  appearance: none;
+}
+
+// Text areas
+textarea {
+  @include form-element;
+  max-width: 100%;
+  min-height: em(40*2);
+  // Remove border-radius on bottom right where resize handle is.
+  border-bottom-right-radius: 0;
+  &[rows] {
+    height: auto;
+  }
+}
+
+html input,
+textarea {
+  // Disabled/readonly state
+  &:disabled,
+  &[readonly] {
+    color: $input-color-disabled;
+    background-color: $input-background-disabled;
+    cursor: $input-cursor-disabled;
+  }
+}
+
+// Reset Normalize setting content-box to search elements
+input[type='search'] { // sass-lint:disable-line no-qualifying-elements
+  box-sizing: border-box;
+}
+
+[type='color'] {
+  min-height: $input-font-size * 2.5;
+}
+
+// Number input styles
+[type='number'] {
+  -moz-appearance: textfield; // sass-lint:disable-line no-vendor-prefixes
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+    margin: 0;
+  }
+}
+
+// Placeholder text
+::placeholder {
+  color: $input-placeholder-color;
+}

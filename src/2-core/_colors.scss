@@ -1,0 +1,96 @@
+// Colours
+//
+// @todo
+//
+// Markup:
+// <div class="bg-primary padding-sm color-white">
+//  Primary
+// </div>
+// <div class="bg-secondary padding-sm color-white">
+//  Secondary
+// </div>
+// <div class="bg-success padding-sm color-black">
+//  Success
+// </div>
+// <div class="bg-info padding-sm color-black">
+//  Information
+// </div>
+// <div class="bg-warning padding-sm color-black">
+//  Warning
+// </div>
+// <div class="bg-danger padding-sm color-black">
+//  Danger
+// </div>
+// <div class="bg-astral padding-sm color-white">
+//  Astral
+// </div>
+// <div class="bg-big-stone padding-sm color-white">
+//  Big stone
+// </div>
+// <div class="bg-pale-sky padding-sm color-white">
+//  Pale sky
+// </div>
+// <div class="bg-french-gray padding-sm color-black">
+//  French gray
+// </div>
+// <div class="bg-heather padding-sm color-black">
+//  Heather
+// </div>
+// <div class="bg-athens-gray padding-sm color-black">
+//  Athens gray
+// </div>
+// <div class="bg-iceberg padding-sm color-black">
+//  Iceberg
+// </div>
+// <div class="bg-loafer padding-sm color-black">
+//  Loafer
+// </div>
+// <div class="bg-harp padding-sm color-black">
+//  Harp
+// </div>
+// <div class="bg-cinderella padding-sm color-black">
+//  Cinderella
+// </div>
+// <div class="bg-prelude padding-sm color-black">
+//  Prelude
+// </div>
+// <div class="bg-pacific-blue padding-sm color-white">
+//  Pacific blue
+// </div>
+// <div class="bg-eminence padding-sm color-white">
+//  Eminence
+// </div>
+// <div class="bg-apple padding-sm color-white">
+//  Apple
+// </div>
+// <div class="bg-red-ribbon padding-sm color-white">
+//  Red ribbon
+// </div>
+//
+// Weight: -5
+//
+// Styleguide: Core.Colour
+
+// Tips
+//
+// - Do pair foreground and background colours.
+// - Don't Mix light and dark variables.
+// - Don't pair foreground with foreground or background with background.
+//
+// Styleguide: Core.Colour.Tips
+
+@each $label, $color in $colors {
+  @include selector(
+    $label: 'bg',
+    $value: $label
+  ){
+    background-color: $color
+  }
+  @include selector(
+    $label: 'color',
+    $value: $label
+  ){
+    color: $color
+  }
+}
+

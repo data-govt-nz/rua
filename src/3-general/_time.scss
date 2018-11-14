@@ -1,0 +1,26 @@
+// Date time
+//
+// @todo
+//
+// Markup:
+// <time datetime="2008-02-14 20:00">17 Oct 2018</time>
+//
+// Weight: 8
+//
+// Styleguide: General.Datetime
+
+// Time ago
+//
+// @todo
+//
+// Markup:
+// <time datetime="2008-02-14 20:00">25 mins ago</time>
+//
+// Styleguide: General.Datetime.timeAgo
+
+time,
+.time {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: $color-pale-sky
+}

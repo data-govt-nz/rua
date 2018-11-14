@@ -1,0 +1,22 @@
+// Upload
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//    <div class="field">
+//      <label for="upload">upload</label>
+//      <input type="file" id="upload">
+//    </div>
+//    <div class="field">
+//      <label for="upload-disabled">upload disabled</label>
+//      <input type="file" id="upload-disabled" disabled>
+//    </div>
+//  </div>
+//
+// Styleguide: General.Form.Upload
+
+[type='file']{
+  @include form-element;
+  appearance: none;
+}

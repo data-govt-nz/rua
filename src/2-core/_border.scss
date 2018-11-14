@@ -1,0 +1,126 @@
+// Border
+//
+// @todo
+//
+// Markup:
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-none">
+//  radius-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-lg">
+//  radius-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-full">
+//  radius-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-none">
+//  radius-t-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-lg">
+//  radius-t-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-t-full">
+//  radius-t-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-none">
+//  radius-r-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-lg">
+//  radius-r-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-r-full">
+//  radius-r-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-none">
+//  radius-b-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-lg">
+//  radius-b-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-b-full">
+//  radius-b-full
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-none">
+//  radius-l-none
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-lg">
+//  radius-l-lg
+// </div>
+// <div class="bg-primary color-white padding-sm margin-b-sm radius-l-full">
+//  radius-l-full
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-dot">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-solid">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-b-dot">
+//  border-dot
+// </div>
+// <div class="color-black padding-sm margin-b-sm border-b-solid">
+//  border-dot
+// </div>
+//
+// Styleguide: Core.Border
+
+@each $breakpoint in $breakpoint-classes {
+  @include breakpoint($breakpoint) {
+    @each $abbr, $side in $border-radius-sides {
+      @each $name, $size in $border-radius {
+        @include selector(
+          $breakpoint: $breakpoint,
+          $label: 'radius',
+          $side: $abbr,
+          $value: $name
+        ){
+          @if $side == all {
+            border-radius: $size;
+          } @else if $side == top {
+            border-top-left-radius: $size;
+            border-top-right-radius: $size;
+          } @else if $side == right {
+            border-top-right-radius: $size;
+            border-bottom-right-radius: $size;
+          } @else if $side == bottom {
+            border-bottom-left-radius: $size;
+            border-bottom-right-radius: $size;
+          } @else if $side == left {
+            border-top-left-radius: $size;
+            border-bottom-left-radius: $size;
+          } @else {
+            border-#{$side}-radius: $size;
+          }
+        }
+      }
+    }
+  }
+}
+
+$border-styles: (
+  'dot': 1px dotted color('gray-light'),
+  'solid': 3px solid color('secondary')
+) !default;
+
+@function border($key) {
+  @if map-has-key($border-styles, $key) {
+    @return map-get($border-styles, $key);
+  } @else {
+    @error 'border: key (#{$key}) not found.';
+  }
+}
+
+@each $abbr, $side in $border-sides {
+  @each $name, $style in $border-styles {
+    @include selector(
+      $label: 'border',
+      $side: $abbr,
+      $value: $name
+    ){
+      @if $side == all {
+        border: $style;
+      } @else {
+        border-#{$side}: $style;
+      }
+    }
+  }
+}

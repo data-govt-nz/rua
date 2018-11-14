@@ -1,0 +1,27 @@
+$border-radius-sides: (
+  all: all,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+  tr: 'top-right',
+  br: 'bottom-right',
+  bl: 'bottom-left',
+  tl: 'top-left'
+) !default;
+
+$border-sides: (
+  all: all,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+) !default;
+
+@function border-radius($key) {
+  @if map-has-key($border-radius, $key) {
+    @return map-get($border-radius, $key);
+  } @else {
+    @error 'border-radius: key (#{$key}) not found.';
+  }
+}
