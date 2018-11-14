@@ -1,0 +1,16 @@
+# Exclude stuff specific to this project.
+node_modules
+/test/output
+npm-debug.log
+
+# Exclude hidden OS files.
+.DS_Store
+._*
+Thumbs.db
+
+# All lines above should be identical with .gitignore
+
+# NPM: Prevent these files from being published.
+.editorconfig
+.circleci
+docs/
