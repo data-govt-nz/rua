@@ -11,10 +11,16 @@
 //   Secondary Button
 // </button>
 // <button class="button">
-//   <span class="ri ri-envelope"></span>Button with icon
+//   <span class="ri ri-envelope"></span>
+//   <span>Button with icon</span>
 // </button>
 // <button class="button">
-//   <span class="ri ri-search"></span>Search
+//   <span>Button right with icon</span>
+//   <span class="ri ri-arrow-right"></span>
+// </button>
+// <button class="button">
+//   <span class="ri ri-search"></span>
+//   <span>Search</span>
 // </button>
 // <input type='submit' value="Secondary Submit" class="secondary">
 //
@@ -51,6 +57,16 @@
     box-shadow: $button-shadow-hover;
   }
 
+  .ri {
+    position: relative;
+    padding-right: 1em; // force space for icon due to absolute position in before pseudo selector
+    transform: scale(2,2);
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
   // button icon styles
   .ri:first-child {
     margin-right: em(5px);
