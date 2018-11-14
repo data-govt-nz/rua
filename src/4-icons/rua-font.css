@@ -26,6 +26,7 @@
   line-height: 0.75em;
   vertical-align: -15%;
 }
+.<%= className %>-1\.5x { font-size: 1.5em; }
 .<%= className %>-2x { font-size: 2em; }
 .<%= className %>-3x { font-size: 3em; }
 .<%= className %>-4x { font-size: 4em; }
