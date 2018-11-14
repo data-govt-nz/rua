@@ -10,7 +10,12 @@
     } @else {
       $side: '';
     }
-    @return '.#{$breakpoint}#{$label}#{$side}-#{$value}';
+    @if $value {
+      $value: -#{$value};
+    } @else {
+      $value: '';
+    }
+    @return '.#{$breakpoint}#{$label}#{$side}#{$value}';
   }
   @return null;
 }
