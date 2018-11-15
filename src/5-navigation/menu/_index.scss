@@ -130,6 +130,17 @@ $menu-nested-margin: 1em !default;
       @include selector(
         $prefix: '&',
         $breakpoint: $breakpoint,
+        $label: '2-column'
+      ) {
+        @include menu-direction(horizontal);
+        & > li {
+          width: 50%;
+        }
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
         $label: 'vertical'
       ) {
         @include menu-direction(vertical);
