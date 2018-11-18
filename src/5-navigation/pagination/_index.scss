@@ -3,11 +3,11 @@
 // @todo
 //
 // Markup:
-// <nav aria-label="Pagination" class="pagination">
+// <nav aria-label="Pagination" class="iterator">
 //   <span aria-label="Previous page" class="button-icon state-disabled">
 //     <span class="ri ri-arrow-left"></span>
 //   </span>
-//   <ul class="pagination__list">
+//   <ul class="pagination">
 //     <li class="current" aria-label="You're on page 1">1</li>
 //     <li><a href="#" aria-label="Page 2">2</a></li>
 //     <li><a href="#" aria-label="Page 3">3</a></li>
@@ -25,7 +25,6 @@
 $pagination-font-size: 16px !default;
 $pagination-border-width: 2px !default;
 $pagination-item-size: 32px !default;
-$pagination-margin-bottom: 10px !default;
 $pagination-item-color: color('primary') !default;
 $pagination-item-spacing: 1px !default;
 $pagination-radius: border-radius('full') !default;
@@ -33,17 +32,8 @@ $pagination-item-background-hover: color('gray-lighter') !default;
 $pagination-item-border-current: color('secondary') !default;
 $pagination-item-color-disabled: color('gray') !default;
 
-@mixin pagination-container (
-  $margin-bottom: $pagination-margin-bottom,
-) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $margin-bottom;
-}
-
 /// Adds styles for a pagination list. Apply this to a `<ul>`.
-@mixin pagination-list (
+@mixin pagination (
   $font-size: $pagination-font-size,
   $spacing: $pagination-item-spacing,
   $radius: $pagination-radius,
@@ -129,11 +119,7 @@ $pagination-item-color-disabled: color('gray') !default;
 }
 
 .pagination {
-  @include pagination-container;
-}
-
-.pagination__list {
-  @include pagination-list;
+  @include pagination;
 
   a,
   .current,
