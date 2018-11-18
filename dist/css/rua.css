@@ -2837,8 +2837,25 @@ td {
       .card h3 {
         font-size: 22px; } }
 
+.site-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.6875rem 0; }
+
+.site-header__menu {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
 .site-header__menu-item {
-  padding: 20px 10px;
+  padding: 1.25rem 0.9375rem;
   font-weight: 500;
   color: #666C7F;
   position: relative; }
@@ -2860,12 +2877,21 @@ td {
     border-radius: 100px; }
   .site-header__menu-item:hover, .site-header__menu-item:focus {
     color: #01B3C4; }
-  .site-header__menu-item:hover:after, .site-header__menu-item:focus:after, .site-header__menu-item.is-active:after {
-    width: calc(100% - 20px); }
+  .site-header__menu-item:hover:after, .site-header__menu-item:focus:after, .site-header__menu-item.current:after {
+    width: calc(100% - 1.875rem); }
+
+.site-header__search {
+  border-top: 1px dotted #C3CED8;
+  padding: 1.6875rem 0; }
 
 .site-banner {
   background: #ECEFF2 url("../assets/tic-tac-toe.png");
   padding: 20px; }
+  .site-banner__title {
+    margin-bottom: 0.625rem; }
+  .site-banner__lead {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 .site-back-to-top {
   display: -webkit-box;
