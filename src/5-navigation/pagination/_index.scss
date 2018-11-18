@@ -43,6 +43,7 @@ $pagination-item-color-disabled: color('gray') !default;
   @include clearfix;
   padding: 0 em(10);
   margin: 0;
+  align-self: center;
 
 
   // List item
