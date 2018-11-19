@@ -6,6 +6,9 @@
 // <button class="button">
 //   Button
 // </button>
+// <a class="button">
+//   Button
+// </a>
 // <input type='submit' value="Submit">
 // <button class="button secondary">
 //   Secondary Button
@@ -22,18 +25,25 @@
 //   <span class="ri ri-search"></span>
 //   <span>Search</span>
 // </button>
+// <a class="button">
+//   <span class="ri ri-arrow-left"></span>
+//   <span>Back</span>
+// </a>
 // <input type='submit' value="Secondary Submit" class="secondary">
 //
 // Weight: 4
 //
 // Styleguide: General.Button
 
+$button-border-height: 40px;
+$button-border-width: 2px;
+
 @mixin button-base {
   outline: 0;
   display: inline-block;
   position: relative;
   text-align: center;
-  border: 2px solid transparent;
+  border: $button-border-width solid transparent;
   transition: $button-transition;
   font-family: $button-font-family;
   text-transform: $button-text-transform;
@@ -41,15 +51,10 @@
   font-weight: $button-weight;
   border-radius: $button-radius;
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-  line-height: 1;
-  padding: vertical-padding(
-    $height: em(40),
-    $font-size: $button-font-size,
-    $line-height: 1,
-    $horizontal-padding: $button-padding,
-    $border-width: 2px
-  );
-  height: em(40);
+  appearance: none;
+  line-height: em($button-border-height - $button-border-width * 2);
+  padding: 0 $button-padding;
+  height: em($button-border-height);
   cursor: pointer;
   &:hover,
   &:focus{
@@ -149,8 +154,8 @@ a.button { // sass-lint:disable-line no-qualifying-elements
 }
 
 // Reset styles on button-like inputs
-[type='submit'],
-[type='button'] {
+input[type='submit'],
+input[type='button'] {
   @include button-base;
   @include button-primary;
 
@@ -192,10 +197,10 @@ a.button { // sass-lint:disable-line no-qualifying-elements
   font-weight: $button-weight;
   border-radius: $button-radius;
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-  line-height: em(40-2px*2);
+  line-height: em($button-border-height - $button-border-width * 2);
 
-  height: em(40);
-  width: em(40);
+  height: em($button-border-height);
+  width: em($button-border-height);
   cursor: pointer;
   &:hover,
   &:focus{
