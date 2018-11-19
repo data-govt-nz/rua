@@ -21,7 +21,7 @@ blockquote,
   border-top-right-radius: border-radius('full');
   border-bottom-right-radius: border-radius('full');
   padding: 1.5em 2em;
-  background: color('gray-lighter') url('../assets/tic-tac-toe.png');
+  background: color('gray-lighter') url("#{$images-path}tic-tac-toe.png");
 
   // force larger headings to h3
   h1,

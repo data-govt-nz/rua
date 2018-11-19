@@ -8,6 +8,12 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
+//== Asset paths
+//
+//## Relative to dist/css folder
+
+$images-path: '../assets/' !default;
+$fonts-path: '../fonts/' !default;
 
 //== Scaffolding
 //
