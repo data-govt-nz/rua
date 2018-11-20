@@ -27,12 +27,16 @@ $max-widths: (
   'lg': rem(720)
 ) !default;
 
-@each $label, $width in $max-widths {
-  @include selector(
-    $label: 'mxw',
-    $value: $label
-  ){
-    max-width: $width
+@each $breakpoint in $breakpoint-classes {
+  @include breakpoint($breakpoint) {
+    @each $label, $width in $max-widths {
+      @include selector(
+        $breakpoint: $breakpoint,
+        $label: 'mxw',
+        $value: $label
+      ){
+        max-width: $width
+      }
+    }
   }
 }
-

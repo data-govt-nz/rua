@@ -8,7 +8,7 @@
 //     <span aria-label="Previous page" class="button-icon">
 //       <span class="ri ri-arrow-left"></span>
 //     </span>
-//     <p class="iterator__summary mxw-sm">
+//     <p class="iterator__summary hidden-xs mxw-sm">
 //       Lorem ipsum dolor sit amet.
 //     </p>
 //   </a>
@@ -16,7 +16,7 @@
 //     <span href="" aria-label="Next page" class="button-icon">
 //       <span class="ri ri-arrow-right"></span>
 //     </span>
-//     <p class="iterator__summary mxw-sm">
+//     <p class="iterator__summary hidden-xs mxw-sm">
 //       Proin dolor nunc, sagittis tincidunt nibh vel, ultricies feugiat tortor.
 //     </p>
 //   </a>
@@ -39,7 +39,7 @@
 //     <span href="" aria-label="Next page" class="button-icon">
 //       <span class="ri ri-arrow-right"></span>
 //     </span>
-//     <p class="iterator__summary mxw-sm">
+//     <p class="iterator__summary hidden-xs mxw-sm">
 //       Proin dolor nunc, sagittis tincidunt nibh vel, ultricies feugiat tortor.
 //     </p>
 //   </a>
@@ -74,15 +74,15 @@ $iterator-margin-bottom: 10px !default;
     @include iterator-summary;
   }
 
-  &__prev {
+  &__prev,
+  &__next {
     display: block;
     text-align: left;
+    text-decoration: none;
     cursor: pointer;
   }
 
   &__next {
-    display: block;
     text-align: right;
-    cursor: pointer;
   }
 }
