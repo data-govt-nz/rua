@@ -5,7 +5,25 @@
 // Markup:
 // <button class="button" data-click="text: Click, Replacement text">Click</button>
 //
+// Weight: 1
+//
 // Styleguide: Plugins.Toggler
+
+// Event types
+//
+// Click toggles the state `data-click="..."`
+//
+// Click-true sets the state to true `data-click-true="..."`
+//
+// Click-false sets the state to false `data-click-false="..."`
+//
+// Focus sets the state to true `data-focus="..."`
+//
+// Blur sets the state to false `data-blur="..."`
+//
+// Weight: -11
+//
+// Styleguide: Plugins.Toggler.MultipleToggles
 
 // Multiple toggles
 //
@@ -14,6 +32,8 @@
 // Markup:
 // <button class="button" data-click="text: Click, Replacement text; trigger: #multiple-toggles">Click</button>
 // <div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm">Hello World</div>
+//
+// Weight: -10
 //
 // Styleguide: Plugins.Toggler.MultipleToggles
 
