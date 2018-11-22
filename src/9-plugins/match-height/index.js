@@ -38,6 +38,38 @@
 //
 // Styleguide: Plugins.MatchHeight
 
+// Inception
+//
+// Below is an example of using match height within another match height.
+//
+// Markup:
+// <div class="row margin-b-sm">
+//   <div class="col-md-6">
+//     <div class="bg-french-gray padding-sm" data-mh="inception-1">
+//       <div class="bg-secondary padding-sm margin-b-sm" data-mh="inception-2">
+//         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+//         fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
+//         consectetur ac, vestibulum at eros.
+//       </div>
+//       Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+//       fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
+//       consectetur ac, vestibulum at eros.
+//     </div>
+//   </div>
+//   <div class="col-md-6">
+//     <div class="bg-french-gray padding-sm" data-mh="inception-1">
+//       <div class="bg-secondary padding-sm margin-b-sm" data-mh="inception-2">
+//         Maecenas sed diam eget risus varius blandit sit amet non magna.
+//       </div>
+//       Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet,
+//       consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet,
+//       consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide: Plugins.MatchHeight.Inception
+
 import globals from './globals'
 import matchHeight from './definition'
 import update from './update'
