@@ -13,7 +13,8 @@ const watch = require('gulp-watch')
 
 const kssConfig = require('./kss-config.json')
 
-const webpack = require('gulp-webpack')
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
 const webpackConfig = require('./webpack.config.js')
 
 const browserSync = require('browser-sync').create()
@@ -21,6 +22,8 @@ const browserSync = require('browser-sync').create()
 const async = require('async')
 const iconfont = require('gulp-iconfont')
 const consolidate = require('gulp-consolidate')
+
+const notifier = require('node-notifier');
 
 const config = {
   path: {
@@ -58,7 +61,17 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
   return gulp.src('./src/rua.js')
-    .pipe(webpack(webpackConfig))
+    .pipe(webpackStream(webpackConfig, webpack, function(err, stats) {
+      notifier.notify(err)
+      if (stats.compilation.errors.length) {
+
+        notifier.notify({
+          title: 'Webpack error',
+          message: stats.compilation.errors[0].error
+        })
+      }
+    }))
+    // .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest(config.path.js))
 })
 

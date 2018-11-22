@@ -1,4 +1,23 @@
-import $ from 'jquery'
+// Toggler
+//
+// Provides options to toggle text, css classes, animations, visibilty etc between 2 states.
+//
+// Markup:
+// <button class="button" data-click="text: Click, Replacement text">Click</button>
+//
+// Styleguide: Plugins.Toggler
+
+// Multiple toggles
+//
+// Use `;` to seperate multiple toggles
+//
+// Markup:
+// <button class="button" data-click="text: Click, Replacement text; trigger: #multiple-toggles">Click</button>
+// <div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm">Hello World</div>
+//
+// Styleguide: Plugins.Toggler.MultipleToggles
+
+import $ from 'jQuery'
 
 import string2func from './string2func'
 

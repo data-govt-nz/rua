@@ -2,6 +2,7 @@
   "title": "Rua pattern library",
   "source": "src",
   "destination": "docs",
+  "mask": "*.css|*.less|*.sass|*.scss|*.styl|*.stylus|*.js",
   "builder": "kss-template",
   "css" : [
       "./rua-assets/css/rua.css",
