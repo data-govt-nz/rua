@@ -16,7 +16,7 @@ export default function (element, state, toggleOptions) {
 
     // call function
     options[func](element, state, variables)
-    console.log(func, state, variables)
+    // console.log(func, state, variables)
   })
 
   return !state
