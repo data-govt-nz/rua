@@ -37,7 +37,7 @@
 //
 // Styleguide: Plugins.Toggler.MultipleToggles
 
-import $ from 'jQuery'
+import $ from 'jquery'
 
 import string2func from './string2func'
 
