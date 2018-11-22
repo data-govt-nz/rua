@@ -1,9 +1,7 @@
-// import {
-//   toggler
-// } from './9-plugins'
-
-// toggler()
-
-import toggler from './9-plugins/toggler/'
+import {
+  toggler,
+  matchHeight
+} from './9-plugins'
 
 toggler()
+matchHeight()

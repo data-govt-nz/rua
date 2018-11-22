@@ -7,7 +7,9 @@
 // Styleguide: Plugins
 
 import toggler from './toggler'
+import matchHeight from './match-height'
 
 export {
-  toggler
+  toggler,
+  matchHeight
 }

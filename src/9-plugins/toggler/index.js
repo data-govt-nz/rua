@@ -5,8 +5,6 @@
 // Markup:
 // <button class="button" data-click="text: Click, Replacement text">Click</button>
 //
-// Weight: 1
-//
 // Styleguide: Plugins.Toggler
 
 // Event types
