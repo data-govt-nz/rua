@@ -1,0 +1,88 @@
+// Iterator
+//
+// @todo
+//
+// Markup:
+// <nav aria-label="Iterator" class="iterator">
+//   <a class="iterator__prev">
+//     <span aria-label="Previous page" class="button-icon">
+//       <span class="ri ri-arrow-left"></span>
+//     </span>
+//     <p class="iterator__summary hidden-xs mxw-sm">
+//       Lorem ipsum dolor sit amet.
+//     </p>
+//   </a>
+//   <a class="iterator__next">
+//     <span href="" aria-label="Next page" class="button-icon">
+//       <span class="ri ri-arrow-right"></span>
+//     </span>
+//     <p class="iterator__summary hidden-xs mxw-sm">
+//       Proin dolor nunc, sagittis tincidunt nibh vel, ultricies feugiat tortor.
+//     </p>
+//   </a>
+// </nav>
+//
+// Styleguide: NavigationComponents.Iterator
+
+// Disabled iterator
+//
+// @todo
+//
+// Markup:
+// <nav aria-label="Iterator" class="iterator">
+//   <span class="iterator__prev">
+//     <span aria-label="Previous page" class="button-icon state-disabled">
+//       <span class="ri ri-arrow-left"></span>
+//     </span>
+//   </span>
+//   <a class="iterator__next">
+//     <span href="" aria-label="Next page" class="button-icon">
+//       <span class="ri ri-arrow-right"></span>
+//     </span>
+//     <p class="iterator__summary hidden-xs mxw-sm">
+//       Proin dolor nunc, sagittis tincidunt nibh vel, ultricies feugiat tortor.
+//     </p>
+//   </a>
+// </nav>
+//
+// Styleguide: NavigationComponents.Iterator.Disabled
+
+$iterator-font-size: rem(14) !default;
+$iterator-margin-bottom: 10px !default;
+
+@mixin iterator (
+  $margin-bottom: $iterator-margin-bottom,
+) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $margin-bottom;
+}
+
+@mixin iterator-summary (
+  $font-size: $iterator-font-size,
+) {
+  display: block;
+  font-size: $font-size;
+  color: color('primary');
+  margin: em(16) 0;
+}
+
+.iterator {
+  @include iterator;
+
+  &__summary {
+    @include iterator-summary;
+  }
+
+  &__prev,
+  &__next {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__next {
+    text-align: right;
+  }
+}

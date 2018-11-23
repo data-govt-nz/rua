@@ -1,0 +1,322 @@
+// Footer
+//
+// @todo
+//
+// Markup:
+// <footer class="site-footer">
+//   <div class="site-footer__style-1"></div>
+//   <div class="site-footer__navigation">
+//     <div class="site-footer__inner">
+//       <div class="site-footer__col-1">
+//         <h2>
+//           What are you looking for?
+//         </h2>
+//         <hr class="margin-t-sm margin-b-sm">
+//         <ul class="menu vertical md-2-column site-footer__menu">
+//           <li>
+//             <a href="/" class="link">
+//               Home
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://catalogue.data.govt.nz/dataset" class="link">
+//               Get datasets
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/manage-data/" class="link">
+//               Manage data
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/use-data/" class="current">
+//               Use data
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/open-data/" class="link">
+//               Open data
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/events/" class="link">
+//               Events
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/blog/" class="link">
+//               Blog
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/about/" class="link">
+//               About
+//             </a>
+//           </li>
+//         </ul>
+//       </div>
+//       <div class="site-footer__col-2">
+//         <h2>
+//           Using this website
+//         </h2>
+//         <hr class="margin-t-sm margin-b-sm">
+//         <ul class="menu vertical site-footer__menu">
+//           <li>
+//             <a href="/terms-of-use/" class="link">
+//               Terms of use
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/privacy-policy/" class="link">
+//               Privacy policy
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/copyright/" class="link">
+//               Copyright
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://catalogue.data.govt.nz/user/login" class="link">
+//               Publisher login
+//             </a>
+//           </li>
+//         </ul>
+//       </div>
+//       <div class="site-footer__col-3">
+//         <h2>
+//           Get in touch
+//         </h2>
+//         <hr class="margin-t-sm margin-b-sm">
+//         <ul class="menu vertical site-footer__menu">
+//           <li>
+//             <a href="/contact-us/" class="link">
+//               Contact us
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/feedback/" class="link">
+//               Give us feedback
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://github.com/data-govt-nz" class="link">
+//               Github
+//             </a>
+//           </li>
+//           <li>
+//             <a href="/request-data/" class="link">
+//               Request a dataset
+//             </a>
+//           </li>
+//         </ul>
+//         <ul class="social-menu">
+//           <li>
+//             <a href="/use-data/#" class="ri ri-twitter"></a>
+//           </li>
+//           <li>
+//             <a href="/use-data/#" class="ri ri-facebook"></a>
+//           </li>
+//           <li>
+//             <a href="/use-data/#" class="ri ri-youtube"></a>
+//           </li>
+//           <li>
+//             <a href="/use-data/#" class="ri ri-linkedin"></a>
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="site-footer__bottom">
+//     <div class="site-footer__inner">
+//       <div class="site-footer__col-copyright">
+//         <div class="row">
+//           <div class="col-md-3">
+//             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+//               <img src="http://via.placeholder.com/83x40" alt="CC BY 4.0" width="83">
+//             </a>
+//           </div>
+//           <div class="col-md-9">
+//             <small>Unless indicated otherwise, all content on data.govt.nz is licensed for re-use under a
+//               <a class="external" href="https://creativecommons.org/licenses/by/4.0/" rel="external license">Creative
+//                 Commons 4.0 International Licence&nbsp;<span class="ri  ri-external-link" aria-label="(external site link)"></span></a></small><a
+//               class="external" href="https://creativecommons.org/licenses/by/4.0/" rel="external license"><br>
+//               <small>Crown copyright 2018</small>
+//             </a></div><a class="external" href="https://creativecommons.org/licenses/by/4.0/" rel="external license">
+//           </a>
+//         </div><a class="external" href="https://creativecommons.org/licenses/by/4.0/" rel="external license">
+//         </a>
+//       </div><a class="external" href="https://creativecommons.org/licenses/by/4.0/" rel="external license">
+//       </a>
+//       <div class="site-footer__col-logo"><a class="external" href="https://creativecommons.org/licenses/by/4.0/"
+//           rel="external license">
+//         </a><a href="https://www.govt.nz">
+//           <img src="http://via.placeholder.com/180x35" alt="New Zealand Government" width="180">
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+// </footer>
+//
+// Styleguide: Layout.Footer
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+
+  &__navigation {
+      background: color('gray-lighter') url("#{$images-path}tic-tac-toe.png");
+      padding: 0;
+  }
+
+  &__title,
+  h1,
+  h2,
+  h3 {
+      margin-top: rem(15);
+      margin-bottom: rem(15);
+      font-size: rem(18);
+  }
+
+  &__inner {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      @media (min-width: $screen-lg-min) {
+          max-width: $container-lg;
+      }
+  }
+
+  &__col-1,
+  &__col-2,
+  &__col-3,
+  &__col-logo,
+  &__col-copyright {
+    width: 100%;
+    padding-top: rem(24);
+    padding-right: ceil(($grid-gutter-width / 2));
+    padding-bottom: rem(34);
+    padding-left:  floor(($grid-gutter-width / 2));
+  }
+
+  &__col-1 {
+      .menu a {
+          color: color('big-stone');
+          &:focus,
+          &:hover {
+              color: color('primary');
+          }
+      }
+      @include breakpoint(lg) {
+          width: 33%;
+      }
+  }
+
+  &__col-2 {
+      .menu a {
+          color: color('big-stone');
+          &:focus,
+          &:hover {
+              color: color('primary');
+          }
+      }
+      @include breakpoint(lg) {
+          width: 24.5%;
+      }
+  }
+
+  &__col-3 {
+      color: color('white');
+      background-color: color('big-stone');
+      .menu a {
+          color: color('white');
+          text-decoration: underline;
+          font-size: rem(16);
+          padding: 0.4em 0;
+          &:focus,
+          &:hover {
+              color: color('gray-lighter');
+          }
+      }
+      .social-menu a {
+          color: color('white');
+          &:focus,
+          &:hover {
+              color: color('gray-lighter');
+          }
+      }
+      @include breakpoint(lg) {
+          text-align: right;
+          width: 23%;
+          margin-left: 7%;
+          background: transparent;
+      }
+  }
+
+  &__col-logo {
+      @include breakpoint(lg) {
+          order: 1;
+          width: 50%;
+      }
+  }
+
+  &__col-copyright {
+      background-color: color('big-stone');
+      &,
+      * {
+          color: color('white');
+      }
+      a:hover,
+      a:focus {
+          color: color('gray-lighter');
+      }
+      @include breakpoint(lg) {
+          text-align: right;
+          order: 2;
+          width: 50%;
+          background: transparent;
+      }
+  }
+
+  &__menu {
+      a {
+          text-decoration: underline;
+          font-size: rem(16);
+          padding: 0.4em 0;
+      }
+  }
+
+  &__copyright {
+      background-color: color('white');
+      padding: rem(38 0);
+  }
+
+  &__style-1 {
+      @include breakpoint(lg) {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background-color: color('big-stone');
+          width: calc(50% - 370px);
+
+          &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              right: -100%;
+              bottom: 0;
+              left: 0;
+              background-color: color('big-stone');
+              transform: skewX(-45deg);
+              transform-origin: top right;
+          }
+      }
+  }
+}

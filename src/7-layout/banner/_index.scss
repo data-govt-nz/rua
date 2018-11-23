@@ -1,4 +1,82 @@
+// Banner
+//
+// @todo
+//
+// Markup:
+// <div class="site-banner">
+//   <div class="container">
+//     <div class="row">
+//       <div class="col-xs-8 col-md-6 col-lg-9">
+//         <nav aria-label="You are here:" role="navigation">
+//           <ul class="breadcrumbs">
+//             <li>
+//               <a href="/" class="ri ri-home" aria-label="Home"></a>
+//             </li>
+//             <li aria-label="Current: Events">
+//               Events
+//             </li>
+//           </ul>
+//         </nav>
+//         <h1 class="site-banner__title">
+//           Events
+//         </h1>
+//         <p class="lead site-banner__lead">
+//           Helping you understand what data is, and what you can do with it.
+//         </p>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="site-banner__style-1"></div>
+// </div>
+//
+// Styleguide: Layout.Banner
+
+
 .site-banner {
-  background: color('gray-lighter') url('../assets/tic-tac-toe.png');
-  padding: spacing('sm')
+  background: color('gray-lighter') url("#{$images-path}tic-tac-toe.png");
+  padding: spacing('sm');
+  position: relative;
+  overflow: hidden;
+  max-height: rem(200);
+
+  &__title {
+      margin-top: 0;
+      margin-bottom: rem(10);
+  }
+
+  &__lead {
+      margin-top: 0;
+      margin-bottom: 1em;
+  }
+
+  &__style-1 {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      background-attachment: fixed;
+      width: 45%;
+      &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          background-image: url("#{$images-path}blue-banner-edge.png");
+          width: 100%;
+          max-width: rem(505);
+      }
+      &:after {
+          content: '';
+          background-image: url("#{$images-path}blue-banner-repeat.png");
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: rem(505);
+      }
+  }
 }

@@ -15,6 +15,11 @@
     "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -27,10 +32,14 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
-    "gulp-webpack": "^1.5.0",
+    "jquery": "^3.3.1",
     "kss": "^3.0.0-beta.23",
+    "node-notifier": "^5.3.0",
     "node-sass-tilde-importer": "^1.0.2",
     "prismjs": "^1.15.0",
-    "webpack": "^4.25.1"
+    "uglify-js": "^3.4.9",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.0",
+    "webpack-stream": "^5.1.1"
   }
 }

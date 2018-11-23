@@ -68,3 +68,35 @@ dt {
 dd {
   margin-left: 0; // Undo browser default
 }
+
+// Remove bullet and numbers
+//
+// @todo
+//
+// Markup:
+// <ul class="type-none">
+//   <li>Consectetur Risus Euismod Tortor</li>
+//   <li>Dapibus Tortor Sollicitudin</li>
+//   <li>Fringilla Dapibus Ultricies Tellus<ul>
+//       <li>Dapibus Tortor Sollicitudin</li>
+//       <li>Fringilla Dapibus Ultricies Tellus</li>
+//       <li>Mollis Porta Purus Lorem</li>
+//       <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+//     </ul>
+//   </li>
+//   <li>Mollis Porta Purus Lorem</li>
+//   <li>Dapibus Commodo Dolor Parturient Ultricies</li>
+// </ul>
+//
+// Styleguide: General.Lists.RemoveBulletsNumbers
+
+ul,
+ol {
+  &.type-none {
+    list-style: none;
+    padding-left: 0;
+    & > li {
+      padding-left: 0;
+    }
+  }
+}

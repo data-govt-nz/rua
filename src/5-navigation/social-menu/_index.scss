@@ -1,0 +1,46 @@
+// Social menu
+//
+// @todo
+//
+// Markup:
+// <ul class="social-menu">
+//   <li>
+//     <a href="#" class="ri ri-twitter"></a>
+//   </li>
+//   <li>
+//     <a href="#" class="ri ri-facebook"></a>
+//   </li>
+//   <li>
+//     <a href="#" class="ri ri-youtube"></a>
+//   </li>
+//   <li>
+//     <a href="#" class="ri ri-linkedin"></a>
+//   </li>
+// </ul>
+//
+// Styleguide: NavigationComponents.SocialMenu
+
+$social-menu-padding: rem(16) !default;
+$social-menu-size: rem(26) !default;
+
+.social-menu {
+  padding: 0;
+  margin: 0 -#{$social-menu-padding};
+  list-style: none;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  li {
+    outline: 0;
+    padding: 0;
+  }
+
+  a {
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: $social-menu-padding;
+    font-size: $social-menu-size;
+  }
+}

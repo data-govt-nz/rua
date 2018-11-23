@@ -1,0 +1,34 @@
+// Fieldset
+//
+// @todo
+//
+// Markup:
+// <div class="fields">
+//   <fieldset>
+//     <div class="field">
+//       <label for="text-fieldset">Example</label>
+//       <input type="text" id="text-fieldset" class="mxw-sm">
+//     </div>
+//     <div class="field">
+//       <label for="textarea-fieldset1">Example</label>
+//       <textarea id="textarea-fieldset1" rows="10" class="mxw-md"></textarea>
+//     </div>
+//   </fieldset>
+//   <fieldset>
+//     <div class="field">
+//       <label for="textarea-fieldset2">Example</label>
+//       <textarea id="textarea-fieldset2" rows="10" class="mxw-md"></textarea>
+//     </div>
+//   </fieldset>
+// </div>
+//
+// Styleguide: General.Form.Fieldset
+
+fieldset {
+  border: 0;
+  border-bottom: border('dot');
+  padding: spacing('sm') 0;
+  &:last-of-type {
+      border-bottom: none;
+  }
+}

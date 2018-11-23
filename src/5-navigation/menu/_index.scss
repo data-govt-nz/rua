@@ -12,6 +12,7 @@ $menu-nested-margin: 1em !default;
 
   li {
     outline: 0;
+    padding: 0;
   }
 
   a {
@@ -92,19 +93,6 @@ $menu-nested-margin: 1em !default;
   }
 }
 
-/// Creates a simple Menu, which has no padding or hover state.
-/// @param {Number} $margin [$menu-margin] - The margin to apply to each `<li>`.
-@mixin menu-simple($margin: $menu-margin) {
-  align-items: center;
-  li + li {
-    margin-left: $margin;
-  }
-
-  a {
-    padding: 0;
-  }
-}
-
 /// Adds styles for a nested Menu, by adding `margin-left` to the menu.
 /// @param {Keyword|Number} $margin [$menu-nested-margin] - Length of the margin.
 /// @param {Keyword} $nested-alignment [left] - Alignment of the nested class
@@ -131,19 +119,38 @@ $menu-nested-margin: 1em !default;
   // Breakpoint specific versions
   @each $breakpoint in $breakpoint-classes {
     @include breakpoint($breakpoint) {
-      &.#{$breakpoint}-horizontal {
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'horizontal'
+      ) {
         @include menu-direction(horizontal);
       }
 
-      &.#{$breakpoint}-vertical {
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: '2-column'
+      ) {
+        @include menu-direction(horizontal);
+        & > li {
+          width: 50%;
+        }
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'vertical'
+      ) {
         @include menu-direction(vertical);
       }
 
-      &.#{$breakpoint}-expanded {
-        @include menu-expand;
-      }
-
-      &.#{$breakpoint}-simple {
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'expanded'
+      ) {
         @include menu-expand;
       }
     }
