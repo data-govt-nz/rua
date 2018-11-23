@@ -10,7 +10,7 @@
 // <button class="button" data-click="dirty">Click</button>
 // <button class="button" data-click="dirty: secondary">Click</button>
 //
-// Styleguide: Plugins.Toggler.Class
+// Styleguide: Plugins.Toggler.Dirty
 
 export default function (owner, state, variables) {
   if (variables && variables[0]) {
@@ -18,5 +18,4 @@ export default function (owner, state, variables) {
   } else {
     $(owner).addClass('dirty')
   }
-
 }
