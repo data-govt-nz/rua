@@ -4,6 +4,7 @@ import text from './text'
 import html from './html'
 import trigger from './trigger'
 import ariaexpanded from './ariaexpanded'
+import dirty from './dirty'
 
 export default {
   'class': cssclass,
@@ -11,5 +12,6 @@ export default {
   text,
   html,
   trigger,
-  ariaexpanded
+  ariaexpanded,
+  dirty
 }

@@ -9,7 +9,6 @@
 //
 // Styleguide: Plugins.Toggler.Class
 
-
 export default function (owner, state, variables) {
   if (state) {
     $(owner).removeClass(variables[0]).addClass(variables[1]);
