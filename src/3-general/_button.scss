@@ -202,9 +202,15 @@ input[type='button'] {
   height: em($button-border-height);
   width: em($button-border-height);
   cursor: pointer;
+
   &:hover,
   &:focus{
     box-shadow: $button-shadow-hover;
+  }
+
+  &.state-active {
+    @include button-primary;
+    border-color: color('primary');
   }
 
   &.state-disabled,
