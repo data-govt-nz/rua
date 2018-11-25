@@ -4,7 +4,7 @@
 //
 // This is useful for people with cognitive impairments may find it hard to remember what they have read and/or form elements.
 //
-// @todo Complete
+// Parameters: `dirty: <optional dirty class>, <optional clean class>`
 //
 // Markup:
 // <button class="button" data-click="dirty">Click</button>
@@ -12,10 +12,33 @@
 //
 // Styleguide: Plugins.Toggler.Dirty
 
-export default function (owner, state, variables) {
-  if (variables && variables[0]) {
-    $(owner).addClass(variables[0])
-  } else {
-    $(owner).addClass('dirty')
+const dirtyClass = 'dirty',
+  cleanClass = 'clean'
+
+function getClasses(variables) {
+  return {
+    [dirtyClass]: ((variables && variables[0]) ? variables[0] : dirtyClass),
+    [cleanClass]: ((variables && variables[1]) ? variables[1] : cleanClass)
   }
+}
+
+export function init({
+  element,
+  variables
+}) {
+  const classes = getClasses(variables)
+  $(element).removeClass(classes[dirtyClass]).addClass(classes[cleanClass])
+}
+
+export function run({
+  element,
+  variables
+}) {
+  const classes = getClasses(variables)
+  $(element).removeClass(classes[cleanClass]).addClass(classes[dirtyClass])
+}
+
+export default {
+  init,
+  run
 }

@@ -2,17 +2,33 @@
 //
 // Toggles the class of the element between 2 strings
 //
-// @todo Complete
+// Parameters: `class: <css class>, <css class>`
 //
 // Markup:
 // <button class="button" data-click="class: secondary">Click</button>
 //
 // Styleguide: Plugins.Toggler.Class
 
-export default function (owner, state, variables) {
+export function init({
+  element,
+  variables
+}) {
+  $(element).removeClass(variables[1]).addClass(variables[0])
+}
+
+export function run({
+  element,
+  state,
+  variables
+}) {
   if (state) {
-    $(owner).removeClass(variables[0]).addClass(variables[1]);
+    $(element).removeClass(variables[0]).addClass(variables[1])
   } else {
-    $(owner).removeClass(variables[1]).addClass(variables[0]);
+    $(element).removeClass(variables[1]).addClass(variables[0])
   }
+}
+
+export default {
+  init,
+  run
 }

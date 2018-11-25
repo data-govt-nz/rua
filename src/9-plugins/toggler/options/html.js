@@ -2,17 +2,10 @@
 //
 // Toggles the inner html of an element between itself and the given element identified by HTML ID
 //
-// @todo Complete
+// Parameters: `html: <html id>, <html id>`
 //
 // Markup:
-// <div data-click="trigger: #site-search; html: #header-search-inactive, #header-search-active">
-//   <div class="button">
-//     <span class="ri ri-chevron-down"></span>
-//     <span>
-//       Search
-//     </span>
-//   </div>
-// </div>
+// <div data-click="html: #header-search-inactive, #header-search-active"></div>
 // <script type="text/html" id="header-search-inactive">
 //   <div class="button">
 //     <span class="ri ri-chevron-down"></span>
@@ -29,10 +22,27 @@
 //
 // Styleguide: Plugins.Toggler.HTML
 
-export default function (owner, state, variables) {
+export function init({
+  element,
+  variables
+}) {
+  $(element).html($(variables[0]).html())
+}
+
+export function run({
+  element,
+  state,
+  variables
+}) {
+
   if (state) {
-    $(owner).html($(variables[1]).html())
+    $(element).html($(variables[1]).html())
   } else {
-    $(owner).html($(variables[0]).html())
+    $(element).html($(variables[0]).html())
   }
+}
+
+export default {
+  init,
+  run
 }

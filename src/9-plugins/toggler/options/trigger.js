@@ -22,25 +22,34 @@
 //
 // Styleguide: Plugins.Toggler.Trigger.Multiple
 
-import string2func from '../string2func'
+import parseData from '../parseData'
+import options from '../options'
 
-const toggleSelector = 'toggle';
+export function init() {
 
-export default function (owner, state, variables) {
+}
+
+export function run({
+  state,
+  variables
+}) {
   variables.forEach(function (selector) {
     const o = selector.split('=>')
     const elements = $(o[0])
     state = (o[1]) ? o[1] : state
+
     elements.each(function (index, element) {
-      let toggleOptions = $(element).data(toggleSelector)
-      if (typeof toggleOptions !== typeof undefined && toggleOptions !== false) {
-        string2func(element, state, toggleOptions)
-      } else {
-        console.log(
-          'No toggles defined',
-          element
-        )
-      }
+      const data = parseData(element, 'toggle', {
+        forceState: state
+      })
+      data.functions.forEach(function(parameter) {
+        options[parameter.option].run(parameter)
+      })
     })
   })
+}
+
+export default {
+  init,
+  run
 }
