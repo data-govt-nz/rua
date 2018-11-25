@@ -10,6 +10,8 @@
 //
 // Styleguide: Plugins.Toggler.Slide
 
+import ariaexpanded from './ariaexpanded'
+
 const hiddenClass = 'hidden',
   visibleClass = 'visible'
 
@@ -23,5 +25,5 @@ export default function (owner, state, variables) {
       $(owner).addClass(hiddenClass).removeClass(visibleClass)
     })
   }
-  $(owner).attr('aria-expanded', state)
+  ariaexpanded(owner, state, variables)
 }
