@@ -166,6 +166,32 @@ input[type='button'] {
   }
 }
 
+
+// Button full width
+//
+// @todo
+//
+// Markup:
+// <div class="buttons">
+//   <button class="button full">
+//     <span>Category</span>
+//     <span class="ri ri-chevron-up"></span>
+//   </button>
+//   <button class="button full">
+//     <span>Category</span>
+//     <span class="ri ri-cross"></span>
+//   </button>
+// </div>
+//
+// Styleguide: General.Button.FullWidth
+
+.button.full,
+.buttons .button.full {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 // Button icon only
 //
 // @todo
