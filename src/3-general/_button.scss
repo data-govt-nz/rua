@@ -166,30 +166,57 @@ input[type='button'] {
   }
 }
 
+// Button justify
+//
+// @todo
+//
+// Markup:
+// <div class="buttons">
+//   <button class="button secondary justify">
+//     <span>Category</span>
+//     <span class="ri ri-chevron-down"></span>
+//   </button>
+//   <button class="button justify">
+//     <span>Category</span>
+//     <span class="ri ri-chevron-up"></span>
+//   </button>
+//   <button class="button justify">
+//     <span>Category</span>
+//     <span class="ri ri-cross"></span>
+//   </button>
+// </div>
+//
+// Styleguide: General.Button.Justify
+
+.button,
+.buttons .button {
+  &.justify {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
 // Button full width
 //
 // @todo
 //
 // Markup:
-// <div class="buttons">
-//   <button class="button full">
-//     <span>Category</span>
-//     <span class="ri ri-chevron-up"></span>
-//   </button>
-//   <button class="button full">
-//     <span>Category</span>
-//     <span class="ri ri-cross"></span>
-//   </button>
-// </div>
+// <button class="button full">
+//   <span class="ri ri-envelope"></span>
+//   <span>
+//     Subscribe to our blog
+//   </span>
+// </button>
 //
 // Styleguide: General.Button.FullWidth
 
-.button.full,
-.buttons .button.full {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.button,
+.buttons .button {
+  &.full{
+    display: block;
+    width: 100%;
+  }
 }
 
 // Button icon only
