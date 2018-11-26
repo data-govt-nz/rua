@@ -11,7 +11,7 @@
 
 // String comma
 //
-// To prevent a comma from being considered a seperate string wrap the in double-quotes.
+// To prevent a comma from being considered a seperate string, wrap the string in double-quotes.
 //
 // Markup:
 // <button class="button" data-click='text: "Hi world, im .." , Good bye'></button>
