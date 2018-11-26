@@ -1,0 +1,95 @@
+// Comments
+//
+// @todo
+//
+// Markup:
+// <ul class="comments-list">
+//   <li class="comment odd">
+//     <p class="comment__info">
+//       <span class="comment__author">
+//         Nibh Pellentesque
+//       </span>
+//       <time class="datetime" datetime="26/11/2018 4:43pm">26/11/2018 4:43pm (4 hours ago)</time>
+//     </p>
+//     <div class="comment__text">
+//       <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Aenean
+//         lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Duis mollis, est non
+//         commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur
+//         purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+//     </div>
+//   </li>
+//   <li class="comment even">
+//     <p class="comment__info">
+//       <span class="comment__author">
+//         Sit Tristique
+//       </span>
+//       <time class="datetime" datetime="26/11/2018 4:43pm">26/11/2018 4:43pm (4 hours ago)</time>
+//     </p>
+//     <div class="comment__text">
+//       <p>Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+//         Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam
+//         porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+//         dolor auctor.<br>
+//         Donec sed odio dui. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum
+//         faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+//         mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+//     </div>
+//   </li>
+//   <li class="comment odd last">
+//     <p class="comment__info">
+//       <span class="comment__author">Venenatis Quam</span>
+//       <time class="datetime" datetime="26/11/2018 4:48pm">26/11/2018 4:48pm (4 hours ago)</time>
+//     </p>
+//     <div class="comment__text">
+//       <p>Donec sed odio dui. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum
+//         faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+//         mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+//     </div>
+//   </li>
+// </ul>
+//
+// Styleguide: InformationComponents.Comments
+
+.comments-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment {
+  background-color: color('iceberg');
+  border-radius: border-radius('full');
+  margin-bottom: spacing('sm');
+  padding: spacing('sm') spacing('md');
+  font-size: rem(16);
+
+  &__info {
+      margin-bottom: rem(12);
+      display: flex;
+      align-items: baseline;
+  }
+
+  &__author {
+      font-size: rem(16);
+      font-weight: $font-weight-medium;
+  }
+
+  .datetime {
+      margin: 0 spacing('sm');
+  }
+
+  &.even {
+      background-color: color('loafer');
+      border-top-right-radius: 0;
+      text-align: right;
+
+      .comment__info {
+          flex-direction: row-reverse;
+      }
+  }
+
+  &.odd {
+      border-top-left-radius: 0;
+  }
+}
