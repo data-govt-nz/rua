@@ -16,9 +16,9 @@
 //
 // Markup:
 // <button class="button" data-click="trigger: .multiple-targets, #multiple-target-ID">Click</button>
-// <div class="multiple-targets" data-toggle="text: These are targeted by..., class">These are targeted by...</div>
-// <div class="multiple-targets" data-toggle="text: These are targeted by..., class">These are targeted by...</div>
-// <div id="multiple-target-ID" data-toggle="text: This is targeted..., id">This is targeted...</div>
+// <div class="multiple-targets" data-toggle="text: These are targeted by..., class"></div>
+// <div class="multiple-targets" data-toggle="text: These are targeted by..., class"></div>
+// <div id="multiple-target-ID" data-toggle="text: This is targeted..., id"></div>
 //
 // Styleguide: Plugins.Toggler.Trigger.Multiple
 
@@ -36,7 +36,7 @@ export function run({
   variables.forEach(function (selector) {
     const o = selector.split('=>')
     const elements = $(o[0])
-    state = (o[1]) ? o[1] : state
+    state = (o[1]) ? (o[1] == 'true') : state
 
     elements.each(function (index, element) {
       const data = parseData(element, 'toggle', {
