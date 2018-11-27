@@ -23,6 +23,8 @@
 //
 // Styleguide: NavigationComponents.Tabs
 
+$tab-font-size: rem(16) !default;
+$tab-font-weight: $font-weight-medium !default;
 $tab-radius: em(2) !default;
 
 .tabs {
@@ -34,7 +36,8 @@ $tab-radius: em(2) !default;
     line-height: em(40);
     background-color: color('gray-lighter');
     padding: 0 1em;
-    font-weight: $font-weight-medium;
+    font-size: $tab-font-size;
+    font-weight: $tab-font-weight;
     border-top-left-radius: $tab-radius;
     border-top-right-radius: $tab-radius;
     &:hover,
