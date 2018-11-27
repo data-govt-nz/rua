@@ -15,7 +15,6 @@ import tooltip from 'tooltip.js'
 
 export default function () {
   $('[data-clipboard]').each(function(index, element){
-    const $element = $(element),
     tipInstance = new tooltip(element, {
       title: 'Copied!',
       placement: 'top',
