@@ -1,0 +1,58 @@
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  background: color('white');
+  color: color('black');
+  font-size: rem(14);
+  width: rem(230);
+  border: 2px solid color('secondary');
+  border-radius: border-radius('lg');
+  padding: em(15);
+  text-align: left;
+  &-arrow {
+    background: color('white');
+    width: rem(10);
+    height: rem(10);
+    border: 2px solid color('secondary');
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transform: rotate(45deg);
+  }
+  &[x-placement^="top"] {
+    margin-bottom: rem(10);
+    .tooltip-arrow {
+      border-left: none;
+      border-top: none;
+      bottom: rem(-6);
+      left: calc(50% - rem(10));
+    }
+  }
+  &[x-placement^="right"] {
+    margin-left: rem(10);
+    .tooltip-arrow {
+      border-top: none;
+      border-right: none;
+      left: rem(-6);
+      top: calc(50% - rem(10));
+    }
+  }
+  &[x-placement^="bottom"] {
+    margin-top: rem(10);
+    .tooltip-arrow {
+      border-right: none;
+      border-bottom: none;
+      top: rem(-6);
+      left: calc(50% - rem(10));
+    }
+  }
+  &[x-placement^="left"] {
+    margin-right: rem(10);
+    .tooltip-arrow {
+      border-bottom: none;
+      border-left: none;
+      right: rem(-6);
+      top: calc(50% - rem(10));
+    }
+  }
+}

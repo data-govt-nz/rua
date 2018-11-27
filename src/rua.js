@@ -1,9 +1,11 @@
 import {
   toggler,
   matchHeight,
-  clipboard
+  clipboard,
+  tooltip
 } from './9-plugins'
 
 toggler()
 matchHeight()
 clipboard()
+tooltip()
