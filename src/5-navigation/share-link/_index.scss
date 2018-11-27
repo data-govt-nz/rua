@@ -12,13 +12,17 @@
 //
 // Styleguide: NavigationComponents.ShareLink
 
+$share-link-background: color('gray-lighter') !default;
+$share-link-button-color: color('white') !default;
+$share-link-button-background: color('primary') !default;
+$share-link-padding: em(6) !default;
+
 .share-link {
-  height: em(48);
-  background-color: color('gray-lighter');
+  background-color: $share-link-background;
   border-radius: border-radius('full');
   display: flex;
   align-items: center;
-  padding: em(6);
+  padding: $share-link-padding;
   input {
     &,
     &:focus,
@@ -33,9 +37,9 @@
     box-shadow: $button-shadow-hover;
   }
   .button-icon {
-    color: color('white');
-    background-color: color('primary');
-    border-color: color('primary');
+    color: $share-link-button-color;
+    background-color: $share-link-button-background;
+    border-color: $share-link-button-background;
   }
   .ri {
     font-size: 1.3em;
