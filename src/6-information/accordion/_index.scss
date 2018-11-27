@@ -1,0 +1,381 @@
+// Accordion
+//
+// Accordions are used to hide and show information.
+// They help people scan web content easily so they only see what they need to.
+//
+// Markup:
+// <ul class="accordion">
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           Showcase
+//         </a>
+//         <div class="accordion__actions">
+//           <div class="button-icon size-sm" data-click="dirty; class: state-standard, state-active;  trigger: #group-57, #group-57-icon">
+//             <span class="ri ri-chevron-down" id="group-57-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//           </div>
+//         </div>
+//       </h3>
+//       <p class="excerpt">
+//         Read inspiring New Zealand stories about innovative projects that use open data. You can also hear
+//         about the challenges, successes and benefits of initiatives to publish open data.
+//       </p>
+//     </div>
+//     <div id="group-57" data-toggle="slide" style="display: none;" class="accordion__content hidden" aria-expanded="false">
+//       <ul class="type-none">
+//         <li>
+//           <h4 class="margin-t-none">
+//             <a href="#">
+//               Charities Register
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             In 2011 Charities Services (then the Charities Commission) made advanced search
+//             functionality available for the Charities Register and licensed the data for re-use under a
+//             Creative Commons BY licence.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Local councils
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             The Department of Internal Affairs manages the local councils website at
+//             localcouncils.govt.nz, which presents data from New Zealand’s 78 local authorities in a
+//             consistent format that enables it to be compared and analysed.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Affordability in NZ
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Affordability in NZ is an open source web application, created by transportation
+//             consultancy MRCagney, which uses open government data to show people which suburbs will be
+//             most affordable for them.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Craft Beer Industry Insights
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             The ANZ Bank uses open data to create industry insight reports that inform investment in
+//             the craft beer industry.
+//           </p>
+//         </li>
+//       </ul>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           Communities and groups
+//         </a>
+//         <div class="accordion__actions">
+//           <div class="button-icon size-sm" data-click="dirty; class: state-standard, state-active;  trigger: #group-48, #group-48-icon">
+//             <span class="ri ri-chevron-down" id="group-48-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//           </div>
+//         </div>
+//       </h3>
+//       <p class="excerpt">
+//         Directory of data communities, discussion forums, and meetups to share ideas on data management and
+//         use.
+//       </p>
+//     </div>
+//     <div id="group-48" data-toggle="slide" style="display: none;" class="accordion__content hidden" aria-expanded="false">
+//       <ul class="type-none">
+//         <li>
+//           <h4 class="margin-t-none">
+//             <a href="#">
+//               Open data community forums
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Open data discussion forums, websites and meetups where you can get (and share) information
+//             and ideas about the innovative use of open data.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Government Analytics Network
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             The Government Analytics Network (GAN) is a community of practice for government people
+//             working with data. Formed in 2017, GAN has 300 members from 40 government agencies. It is
+//             run by its members with support and guidance from Stats NZ and the Social Investment
+//             Agency.
+//           </p>
+//         </li>
+//       </ul>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           Using data.govt.nz APIs
+//         </a>
+//         <div class="accordion__actions">
+//           <div class="button-icon size-sm" data-click="dirty; class: state-standard, state-active;  trigger: #group-144, #group-144-icon">
+//             <span class="ri ri-chevron-down" id="group-144-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//           </div>
+//         </div>
+//       </h3>
+//       <p class="excerpt">
+//         Technical documentation and code examples for developer use with the data.govt.nz Application
+//         Programming Interfaces (APIs).
+//       </p>
+//     </div>
+//     <div id="group-144" data-toggle="slide" style="display: none;" class="accordion__content hidden" aria-expanded="false">
+//       <ul class="type-none">
+//         <li>
+//           <h4 class="margin-t-none">
+//             <a href="#">
+//               About data.govt.nz APIs
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             The metadata and many datasets on data.govt.nz are available for use via an Application
+//             Programming Interface (API). When using our API you need to know what you can and cannot do
+//             with the data and where to find technical documentation.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Do's and dont's of using the data.govt.nz API
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Data.govt.nz's data APIs are made openly available for users and it's worth taking a moment
+//             to find out what you can and cannot do when using our APIs in your own applications.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Accessing dataset metadata via API
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Data.govt.nz's datasets, organisations and groups can be accessed and queried as JSON date
+//             through the MetaData API.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               Accessing machine readable data via API
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             The data.govt.nz DataStore API allows you to access and query the rows and columns of raw
+//             data listed by agencies in machine readable CSV format via a JSON API endpoint.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               How to export all datasets from data.govt.nz into a CSV
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Using the ckanapi-exporter tool you can extract all dataset metadata into a single CSV
+//             file.
+//           </p>
+//         </li>
+//         <li>
+//           <h4>
+//             <a href="#">
+//               How to export an agencies datasets as a data package
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             Export an agencies datasets into sub-folders including any hosted or referenced data files
+//             and a json file with metadata.
+//           </p>
+//         </li>
+//       </ul>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           Benefits of using open data
+//         </a>
+//       </h3>
+//       <p class="excerpt">
+//         Open Data in a business context can, at first, appear at odds with the idea of economic value creation,
+//         particularly when publishing Open Data. Benefits can be found through using others open data or
+//         publishing it.
+//       </p>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           How is Open Data used by small businesses and start-ups?
+//         </a>
+//       </h3>
+//       <p class="excerpt">
+//         Examples of how start-ups and small businesses also gain particular advantages from using Open Data.
+//       </p>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           How is Open Data used by big business?
+//         </a>
+//       </h3>
+//       <p class="excerpt">
+//         Examples of how larger businesses can gain particular advantages from using Open Data.
+//       </p>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           How is Open Data used by social enterprises?
+//         </a>
+//       </h3>
+//       <p class="excerpt">
+//         Social enterprises and charities are well placed to benefit from Open Data. Unlike their for-profit
+//         contemporaries, social enterprises and charities prioritise the creation of social value over economic
+//         value.
+//       </p>
+//     </div>
+//   </li>
+//   <li class="accordion__item">
+//     <div class="accordion__summary">
+//       <h3 class="accordion__title">
+//         <a href="#">
+//           Analyse data
+//         </a>
+//         <div class="accordion__actions">
+//           <div class="button-icon size-sm" data-click="dirty; class: state-standard, state-active;  trigger: #group-304, #group-304-icon">
+//             <span class="ri ri-chevron-down" id="group-304-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//           </div>
+//         </div>
+//       </h3>
+//       <p class="excerpt">
+//         Resources and tools to evaluate and analyse data to generate insights and inform decision-making.
+//       </p>
+//     </div>
+//     <div id="group-304" data-toggle="slide" style="display: none;" class="accordion__content hidden" aria-expanded="false">
+//       <ul class="type-none">
+//         <li>
+//           <h4 class="margin-t-none">
+//             <a href="#">
+//               Government algorithm transparency
+//             </a>
+//           </h4>
+//           <p class="excerpt">
+//             A cross-government review of how government uses algorithms* to improve the lives of New
+//             Zealanders was undertaken in 2018. The review aimed to ensure New Zealanders are informed,
+//             and have confidence in how the government uses algorithms.
+//           </p>
+//         </li>
+//       </ul>
+//     </div>
+//   </li>
+// </ul>
+//
+// Styleguide: InformationComponents.Accordion
+
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: border('solid');
+  border-bottom: border('solid');
+
+  &__item {
+    border-bottom: border('dot');
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: spacing('sm');
+  }
+
+  summary::-webkit-details-marker {
+    display: none
+  }
+}
+
+// Usage
+//
+// Do use:
+// - if you want to show a list of sections and sub-sections
+// - if you want to publish information that's not for most people. This is sometimes called an edge case,
+// for example only some people need to know information about using a New Zealand marriage certificate overseas.
+//
+// Don't use:
+//
+// - if it's information that's important to most users
+// - if you only want to shorten a page.
+//
+// Styleguide: InformationComponents.Accordion.Usage
+
+// Usability guidance
+//
+// - Avoid traditional accordions that only open 1 section at a time — people with cognitive impairments may find it hard to remember what they have read.
+// - Give users full control over what content is visible.
+// - Write accordion headings in plain English so users can quickly see if they need to open the accordion or not.
+//   You could write 'if' headings, such as 'If you'll use your marriage certificate overseas'.
+// - It must be possible to print the accordion information.
+//
+// Styleguide: InformationComponents.Accordion.Usability
+
+// Accessibility
+//
+// The component has the following features to support accessibility:
+//
+// - Accordion controls show focus when using tab key and are accessible using a keyboard.
+// - The accordion has a dynamic tab order that takes account of the opening and closing of sections.
+//
+// In the context of a full page, consider the following:
+//
+// - Ensure headings are marked up correctly with the right ranking.
+//   For example if you have an `<h1>` page heading followed by an accordion the accordion heading should be marked up as an `<h2>`.
+// - Accordion controls must be placed in the correct tab order in their page context.
+// - If placed on a non-white background, ensure the contrast between the accordion text and its background still meets
+//   the [AAA contrast and luminosity ratio standard of 4.5:1](http:www.rte.ie).
+//
+// Styleguide: InformationComponents.Accordion.Accessibility
+
+// Rationale
+//
+// The design uses a right aligned caret icon supported by a text label, where space allows.
+// The caret was selected over alternatives (a text label, plus/minus icons) as carets are commonly used in other controls that reveal content in situ (such as select lists)
+// where as all other alternatives have more ambiguous meanings (e.g. a plus might mean "Add").
+//
+// The heading has been styled as a link so users know to select it to get more information and the hover state reinforces the interactive and link-like behaviour of the component.
+//
+// Styleguide: InformationComponents.Accordion.Rationale
+
+
+

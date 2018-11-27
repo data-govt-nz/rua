@@ -35,7 +35,8 @@
 //
 // Styleguide: General.Button
 
-$button-border-height: 40px;
+$button-height: 40px;
+$button-sm-height: 32px;
 $button-border-width: 2px;
 
 @mixin button-base {
@@ -52,9 +53,9 @@ $button-border-width: 2px;
   border-radius: $button-radius;
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
   appearance: none;
-  line-height: em($button-border-height - $button-border-width * 2);
+  line-height: em($button-height - $button-border-width * 2);
   padding: 0 $button-padding;
-  height: em($button-border-height);
+  height: em($button-height);
   cursor: pointer;
   &:hover,
   &:focus{
@@ -250,14 +251,20 @@ input[type='button'] {
   font-weight: $button-weight;
   border-radius: $button-radius;
   -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-  line-height: em($button-border-height - $button-border-width * 2);
+  line-height: em($button-height - $button-border-width * 2);
 
-  height: em($button-border-height);
-  width: em($button-border-height);
+  height: em($button-height);
+  width: em($button-height);
   cursor: pointer;
+
   &:hover,
   &:focus{
     box-shadow: $button-shadow-hover;
+  }
+
+  &.state-active {
+    @include button-primary;
+    border-color: color('primary');
   }
 
   &.state-disabled,
@@ -269,6 +276,13 @@ input[type='button'] {
     line-height: 1;
     height: em(38);
     display: inline-block;
+  }
+
+  &.size-sm {
+    line-height: em($button-sm-height - $button-border-width * 2);
+
+    height: em($button-sm-height);
+    width: em($button-sm-height);
   }
 }
 
