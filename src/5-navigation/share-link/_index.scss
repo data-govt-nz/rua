@@ -1,0 +1,44 @@
+// Share link
+//
+// @todo
+//
+// Markup:
+// <div class="share-link" data-clipboard data-clipboard-target="#clipboard-copy">
+//   <input type="text" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on" />
+//   <div class="button-icon ">
+//     <span class="ri ri-copy"></span>
+//   </div>
+// </div>
+//
+// Styleguide: NavigationComponents.ShareLink
+
+.share-link {
+  height: em(48);
+  background-color: color('gray-lighter');
+  border-radius: border-radius('full');
+  display: flex;
+  align-items: center;
+  padding: em(6);
+  input {
+    &,
+    &:focus,
+    &:hover{
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+  &:focus-within {
+    box-shadow: $button-shadow-hover;
+  }
+  .button-icon {
+    color: color('white');
+    background-color: color('primary');
+    border-color: color('primary');
+  }
+  .ri {
+    font-size: 1.3em;
+    line-height: inherit;
+  }
+}
