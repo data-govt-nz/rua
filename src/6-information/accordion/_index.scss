@@ -309,6 +309,9 @@
     border-bottom: border('dot');
     padding: 0;
     margin: 0;
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   &__title {
