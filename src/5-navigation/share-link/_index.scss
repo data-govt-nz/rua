@@ -4,8 +4,8 @@
 //
 // Markup:
 // <div class="share-link" data-clipboard data-clipboard-target="#clipboard-copy">
-//   <input type="text" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
-//   <div class="button-icon ">
+//   <input type="text" readonly="readonly" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
+//   <div class="button-icon">
 //     <span class="ri ri-copy"></span>
 //   </div>
 // </div>
@@ -31,6 +31,7 @@ $share-link-padding: em(6) !default;
       border: none;
       box-shadow: none;
       margin: 0;
+      cursor: text;
     }
   }
   &:focus-within {
