@@ -4,7 +4,7 @@
   background: color('white');
   color: color('black');
   font-size: rem(14);
-  width: rem(230);
+  max-width: rem(230);
   border: 2px solid color('secondary');
   border-radius: border-radius('lg');
   padding: em(15);
