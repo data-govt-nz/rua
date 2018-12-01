@@ -3,9 +3,9 @@
 // @todo
 //
 // Markup:
-// <div class="share-link" data-clipboard data-clipboard-target="#clipboard-copy">
+// <div class="share-link">
 //   <input type="text" readonly="readonly" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
-//   <div class="button-icon">
+//   <div class="button-icon" data-clipboard data-clipboard-target="#clipboard-copy">
 //     <span class="ri ri-copy"></span>
 //   </div>
 // </div>
