@@ -54,6 +54,11 @@ $breadcrumbs-item-separator-item: '/' !default;
         content: $breadcrumbs-item-separator-item;
       }
     }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   // Page links
