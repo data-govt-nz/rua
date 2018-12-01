@@ -33,7 +33,8 @@ export default function () {
     new tooltip(element, {
       title,
       placement,
-      trigger
+      trigger,
+      closeOnClickOutside: true
     })
   })
 }
