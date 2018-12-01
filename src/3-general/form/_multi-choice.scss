@@ -1,0 +1,114 @@
+// Multi choice
+//
+// @todo
+//
+// Markup:
+// <div class="mxw-sm">
+//   <div class="field-option">
+//     <input id="no" class="radio" name="field-name" type="radio" value="no" checked>
+//     <label for="no">No/not sure</label>
+//   </div>
+//   <div class="field-option">
+//     <input id="yes" class="radio" name="field-name" type="radio" value="yes">
+//     <label for="yes">Yes</label>
+//   </div>
+// </div>
+//
+// Styleguide: General.Form.MultiChoice
+
+// Disabled
+//
+// @todo
+//
+// Markup:
+// <div class="mxw-sm">
+//   <div class="field-option">
+//     <input id="no-disabled" class="radio" name="field-name-disabled" type="radio" value="no" checked disabled>
+//     <label for="no-disabled">No/not sure</label>
+//   </div>
+//   <div class="field-option">
+//     <input id="yes-disabled" class="radio" name="field-name-disabled" type="radio" value="yes" disabled>
+//     <label for="yes-disabled">Yes</label>
+//   </div>
+// </div>
+//
+// Styleguide: General.Form.MultiChoice.Disabled
+
+$mutlichoice-option-font-family: inherit !default;
+$mutlichoice-option-text-transform: inherit !default;
+$mutlichoice-option-weight: 500 !default;
+$mutlichoice-option-padding: 1em !default;
+$mutlichoice-option-background: color('gray-lighter') !default;
+$mutlichoice-option-background-checked: color('primary') !default;
+$mutlichoice-option-color: color('black') !default;
+$mutlichoice-option-color-checked: color('white') !default;
+$mutlichoice-option-radius: border-radius('full') !default;
+$mutlichoice-option-font-size: rem(16);
+$mutlichoice-option-opacity-disabled: 0.25 !default;
+$mutlichoice-option-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
+$mutlichoice-option-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+$mutlichoice-option-height: 40px !default;
+$mutlichoice-option-border-width: 2px !default;
+
+.field-option {
+  display: block;
+  margin: 0 0 $form-spacing*2 0;
+  position: relative;
+  cursor: pointer;
+
+  & > input {
+    position: absolute;
+    top: 50%;
+    left: em($mutlichoice-option-height/2);
+    z-index: 1;
+    margin: 0;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  & > label {
+    outline: 0;
+    display: block;
+    position: relative;
+    text-align: left;
+    border: $mutlichoice-option-border-width solid transparent;
+    color: $mutlichoice-option-color;
+    background-color: $mutlichoice-option-background;
+    transition: $mutlichoice-option-transition;
+    font-family: $mutlichoice-option-font-family;
+    text-transform: $mutlichoice-option-text-transform;
+    font-size: $mutlichoice-option-font-size;
+    font-weight: $mutlichoice-option-weight;
+    border-radius: $mutlichoice-option-radius;
+    -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+    appearance: none;
+    line-height: em($mutlichoice-option-height - $mutlichoice-option-border-width * 2);
+    padding: 0 $mutlichoice-option-padding 0 em($mutlichoice-option-height);
+    margin: 0;
+    height: em($mutlichoice-option-height);
+
+    &:hover,
+    &:focus{
+      box-shadow: $mutlichoice-option-shadow-hover;
+    }
+  }
+
+  & > input:checked + label {
+    background-color: $mutlichoice-option-background-checked;
+    color: $mutlichoice-option-color-checked;
+  }
+
+  &.state-disabled > label,
+  & > input[disabled] + label {
+    opacity: $button-opacity-disabled;
+    cursor: not-allowed;
+
+    &
+    &:hover,
+    &:focus {
+      background-color: $mutlichoice-option-background;
+      color: $mutlichoice-option-color;
+      box-shadow: none;
+    }
+  }
+}
+
