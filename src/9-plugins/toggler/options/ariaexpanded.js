@@ -1,3 +1,18 @@
-export default function (owner, state, variables) {
-  $(owner).attr('aria-expanded', state)
+export function init({
+  element,
+  state
+}) {
+  $(element).attr('aria-expanded', state)
+}
+
+export function run({
+  element,
+  state
+}) {
+  $(element).attr('aria-expanded', state)
+}
+
+export default {
+  init,
+  run
 }

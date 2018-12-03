@@ -3,7 +3,7 @@
 // Provides options to toggle text, css classes, animations, visibilty etc between 2 states.
 //
 // Markup:
-// <button class="button" data-click="text: Click, Replacement text">Click</button>
+// <button class="button" data-click="text: Click, Replacement text"></button>
 //
 // Styleguide: Plugins.Toggler
 
@@ -28,8 +28,8 @@
 // Use `;` to seperate multiple toggles
 //
 // Markup:
-// <button class="button" data-click="text: Click, Replacement text; trigger: #multiple-toggles">Click</button>
-// <div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm">Hello World</div>
+// <button class="button" data-click='text: Click, "Replacement text"; trigger: #multiple-toggles'></button>
+// <div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm"></div>
 //
 // Weight: -10
 //
@@ -37,57 +37,71 @@
 
 import $ from 'jquery'
 
-import string2func from './string2func'
+import parseData from './parseData'
+import options from './options'
 
-const events = [
-    {
-        name: 'click',
-        type: 'click'
-    },
-    {
-        name: 'click-true',
-        type: 'click',
-        forceState: true
-    },
-    {
-        name: 'click-false',
-        type: 'click',
-        forceState: false
-    },
-    {
-        name: 'focus',
-        type: 'focus',
-        forceState: true
-    },
-    {
-        name: 'blur',
-        type: 'blur',
-        forceState: false
-    }
+const events = [{
+    name: 'click',
+    type: 'click'
+  },
+  {
+    name: 'click-true',
+    type: 'click',
+    forceState: true
+  },
+  {
+    name: 'click-false',
+    type: 'click',
+    forceState: false
+  },
+  {
+    name: 'focus',
+    type: 'focus',
+    forceState: true
+  },
+  {
+    name: 'blur',
+    type: 'blur',
+    forceState: false
+  }
 ]
 
-export default function() {
-    events.forEach(function({name, type, forceState}) {
-        $(document).on(type, '[data-' + name + ']', function(event) {
-            event.preventDefault()
+const attributes = [
+  {
+    name: 'toggle'
+  }
+].concat(events)
 
-            const eventOptions = $(this).data(name)
-            let state = true
-            if (typeof forceState !== typeof undefined) {
-                state = forceState
-            } else if (typeof $(this).data('toggler-state') !== typeof undefined) {
-                state = $(this).data('toggler-state')
-            }
+export default function () {
 
-            if (typeof eventOptions !== typeof undefined && eventOptions !== false) {
-                state = string2func(this, state, eventOptions)
-                $(this).data('toggler-state', state)
-            } else {
-                console.log(
-                    'No toggles defined',
-                    this
-                )
-            }
-        })
+  attributes.forEach(function ({
+    name,
+    forceState
+  }) {
+    $('[data-' + name + ']').each(function() {
+      const data = parseData(this, name, {
+        forceState
+      })
+
+      data.functions.forEach(function(parameter) {
+        options[parameter.option].init(parameter)
+      })
     })
+  })
+
+  events.forEach(function ({
+    name,
+    type,
+    forceState
+  }) {
+    $(document).on(type, '[data-' + name + ']', function (event) {
+      event.preventDefault()
+      const data = parseData(this, name, {
+        forceState
+      })
+      data.functions.forEach(function(parameter) {
+        options[parameter.option].run(parameter)
+      })
+    })
+  })
 }

@@ -42,3 +42,23 @@ gulp
 ```
 
 ## Usage
+
+```scss
+@import '~rua-pattern-library/src/rua';
+```
+
+```js
+import {
+    toggler,
+    matchHeight,
+    clipboard,
+    tooltip
+} from 'rua-pattern-library/src/9-plugins'
+
+$(document).ready(function(){
+    matchHeight()
+    toggler()
+    clipboard()
+    tooltip()
+})
+```

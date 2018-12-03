@@ -48,7 +48,8 @@ p {
 }
 
 
-.excerpt {
+.excerpt,
+.excerpt p {
   margin-bottom: $line-height-computed;
   font-weight: 400;
   line-height: 1.45;

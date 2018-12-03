@@ -24,9 +24,11 @@
 //
 // Styleguide: General.Form.RadioCheckbox
 
+$check-radio-size: rem(14) !default;
+
 input[type="radio"],
 input[type="checkbox"] {
-  width: rem(13);
-  height: rem(13);
+  width: $check-radio-size;
+  height: $check-radio-size;
   margin-top: 0.6em;
 }

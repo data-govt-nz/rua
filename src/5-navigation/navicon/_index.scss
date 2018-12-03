@@ -1,0 +1,136 @@
+// Hamburger/Navicon
+//
+// @todo
+//
+// Markup:
+// <div class="navicon" data-click="class: in-active, is-active">
+//   <span class="navicon-box">
+//     <span class="navicon-inner"></span>
+//   </span>
+// </div>
+//
+// Styleguide: NavigationComponents.Navicon
+
+$navicon-padding-x: rem(15) !default;
+$navicon-padding-y: rem(15) !default;
+$navicon-layer-width: rem(20) !default;
+$navicon-layer-height: rem(3) !default;
+$navicon-layer-spacing: rem(4) !default;
+$navicon-layer-color: currentColor !default;
+$navicon-layer-radius: rem(2) !default;
+$navicon-hover-opacity: 0.7 !default;
+$navicon-active-layer-color: $navicon-layer-color !default;
+$navicon-active-hover-opacity: $navicon-hover-opacity !default;
+
+.navicon {
+  outline: 0;
+  padding: $navicon-padding-y $navicon-padding-x;
+  display: inline-block;
+  cursor: pointer;
+
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  overflow: visible;
+
+  &:hover {
+    opacity: $navicon-hover-opacity;
+  }
+
+  &.is-active {
+    &:hover {
+      opacity: $navicon-active-hover-opacity;
+    }
+
+    .navicon-inner,
+    .navicon-inner::before,
+    .navicon-inner::after {
+      background-color: $navicon-active-layer-color;
+    }
+  }
+}
+
+.navicon-box {
+  width: $navicon-layer-width;
+  height: $navicon-layer-width;
+  display: inline-block;
+  position: relative;
+}
+
+.navicon-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  &::before {
+    top: ($navicon-layer-spacing + $navicon-layer-height) * -1;
+    transition: top 0.075s 0.12s ease,
+      opacity 0.075s ease;
+  }
+
+  &::after {
+    bottom: ($navicon-layer-spacing + $navicon-layer-height) * -1;
+    transition: bottom 0.075s 0.12s ease,
+      transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+}
+
+.navicon {
+  &.is-active {
+    .navicon-inner {
+      transform: rotate(45deg);
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.075s ease,
+          opacity 0.075s 0.12s ease;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.075s ease,
+          transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+}
+
+
+.navicon-inner {
+  display: block;
+  top: 50%;
+  margin-top: $navicon-layer-height / -2;
+
+  &,
+  &::before,
+  &::after {
+    width: $navicon-layer-width;
+    height: $navicon-layer-height;
+    background-color: $navicon-layer-color;
+
+    @if $navicon-layer-radius !=0 {
+      border-radius: $navicon-layer-radius;
+    }
+
+    position: absolute;
+    transition: transform 0.15s ease,
+    right 0.3s ease,
+    width 0.3s ease;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+}

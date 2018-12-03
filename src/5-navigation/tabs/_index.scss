@@ -1,0 +1,75 @@
+// Tabs
+//
+// @todo
+//
+// Markup:
+// <ul class="tabs md-horizontal">
+//   <li>
+//     <a href="#">
+//       Manage data
+//     </a>
+//   </li>
+//   <li>
+//     <a href="#">
+//       Use data
+//     </a>
+//   </li>
+//   <li>
+//     <a href="#" class="current">
+//       Open data
+//     </a>
+//   </li>
+// </ul>
+//
+// Styleguide: NavigationComponents.Tabs
+
+$tab-font-size: rem(16) !default;
+$tab-font-weight: $font-weight-medium !default;
+$tab-radius: em(2) !default;
+
+.tabs {
+  @include menu-base;
+  border-bottom: border('solid');
+  a,
+  &__item {
+    height: em(40);
+    line-height: em(40);
+    background-color: color('gray-lighter');
+    padding: 0 1em;
+    font-size: $tab-font-size;
+    font-weight: $tab-font-weight;
+    border-top-left-radius: $tab-radius;
+    border-top-right-radius: $tab-radius;
+    &:hover,
+    &:focus {
+      background-color: color('gray-light');
+    }
+    &.current {
+      background-color: color('primary');
+      color: color('white')
+    }
+  }
+
+  @include menu-direction(vertical);
+
+  // Breakpoint specific versions
+  @each $breakpoint in $breakpoint-classes {
+    @include breakpoint($breakpoint) {
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'horizontal'
+      ) {
+        @include menu-direction(horizontal);
+      }
+
+      @include selector(
+        $prefix: '&',
+        $breakpoint: $breakpoint,
+        $label: 'vertical'
+      ) {
+        @include menu-direction(vertical);
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 $menu-margin: 1em !default;
 $menu-nested-margin: 1em !default;
+$menu-item-active-class: 'current' !default;
 
 /// Creates the base styles for a Menu.
 @mixin menu-base {

@@ -5,14 +5,39 @@
 // @todo Complete
 //
 // Markup:
-// <button class="button" data-click="text: Hello World, Good bye">Hello World</button>
+// <button class="button" data-click="text: Hello World, Good bye"></button>
 //
 // Styleguide: Plugins.Toggler.Text
 
-export default function (owner, state, variables) {
+// String comma
+//
+// To prevent a comma from being considered a seperate string, wrap the string in double-quotes.
+//
+// Markup:
+// <button class="button" data-click='text: "Hi world, im .." , Good bye'></button>
+//
+// Styleguide: Plugins.Toggler.Text.Comma
+
+export function init({
+  element,
+  variables
+}) {
+  $(element).text(variables[0])
+}
+
+export function run({
+  element,
+  state,
+  variables
+}) {
   if (state) {
-    $(owner).text(variables[1])
+    $(element).text(variables[1])
   } else {
-    $(owner).text(variables[0])
+    $(element).text(variables[0])
   }
+}
+
+export default {
+  init,
+  run
 }

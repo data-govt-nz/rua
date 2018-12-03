@@ -260,8 +260,8 @@ $breakpoints: (
   default: 0,
   xs: 480px,
   sm:768px,
-  md: 992px,
-  lg: 1200px
+  md: 975px,
+  lg: 1053px
 ) !default;
 
 /// The largest named breakpoint in which to include print as a media type
@@ -301,7 +301,7 @@ $container-desktop: (940px + $grid-gutter-width) !default;
 $container-md: $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop: (1140px + $grid-gutter-width) !default;
+$container-large-desktop: (1018px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop !default;
 
