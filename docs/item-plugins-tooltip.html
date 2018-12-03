@@ -94,19 +94,20 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-navigationcomponents-search">
+            <header class="kss-section kss-section--depth-2" id="kssref-plugins-tooltip">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>5-navigation/search/_index.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>9-plugins/tooltip/index.js</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-navigationcomponents-search">
+              <a class="kss-section__permalink" href="#kssref-plugins-tooltip">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.5</span>
-                  <span class="kss-section__name">Search</span>
+                  <span class="kss-section__ref">7.4</span>
+                  <span class="kss-section__name">Tooltip</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>@todo</p>
+                <div class="kss-section__description"><p>Provides and option to copy text to clip board</p>
+<p>For more infomation check: https://popper.js.org/tooltip-documentation.html</p>
 </div>
 
             </article>
@@ -115,66 +116,26 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><div class="search-form">
-  <label>
-    Search for:
-  </label>
-  <div class="context-switch">
-    <div class="field">
-      <input name="context" type="radio" id="search-website-content" value="website-content">
-      <label for="search-website-content">
-        Website content
-      </label>
-    </div>
-    <div class="field">
-      <input name="context" type="radio" id="search-datasets" value="datasets">
-      <label for="search-datasets">
-        Datasets
-      </label>
-    </div>
-  </div>
-  <div class="field search-input">
-      <input type="text">
-  </div>
-  <div class="actions">
-      <button class="button">
-        <span class="ri ri-search"></span>
-        Search
-      </button>
-  </div>
-</div></div>
+                <div class="kss-modifiers__example"><button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="right">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="bottom">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="left">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="right">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="bottom">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="left">Click</button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;search-form&quot;&gt;
-  &lt;label&gt;
-    Search for:
-  &lt;/label&gt;
-  &lt;div class&#x3D;&quot;context-switch&quot;&gt;
-    &lt;div class&#x3D;&quot;field&quot;&gt;
-      &lt;input name&#x3D;&quot;context&quot; type&#x3D;&quot;radio&quot; id&#x3D;&quot;search-website-content&quot; value&#x3D;&quot;website-content&quot;&gt;
-      &lt;label for&#x3D;&quot;search-website-content&quot;&gt;
-        Website content
-      &lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;field&quot;&gt;
-      &lt;input name&#x3D;&quot;context&quot; type&#x3D;&quot;radio&quot; id&#x3D;&quot;search-datasets&quot; value&#x3D;&quot;datasets&quot;&gt;
-      &lt;label for&#x3D;&quot;search-datasets&quot;&gt;
-        Datasets
-      &lt;/label&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;field search-input&quot;&gt;
-      &lt;input type&#x3D;&quot;text&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;actions&quot;&gt;
-      &lt;button class&#x3D;&quot;button&quot;&gt;
-        &lt;span class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
-        Search
-      &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;right&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;bottom&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;left&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;right&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;bottom&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;left&quot;&gt;Click&lt;/button&gt;</code></pre>
                 </article>
 
             </header>

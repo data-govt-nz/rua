@@ -82,63 +82,81 @@
             </a>
                 <ul class="kss-nav__subnav">
                     <li class="kss-nav__item ">
-                      <a href="section-plugins.html#kssref-plugins-matchheight">
+                      <a href="section-plugins.html#kssref-plugins-clipboard">
                         <span class="kss-nav__ref">7.1</span>
+                        <span class="kss-nav__name">Clipboard</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-plugins.html#kssref-plugins-matchheight">
+                        <span class="kss-nav__ref">7.2</span>
                         <span class="kss-nav__name">Match height</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-matchheight-inception">
-                        <span class="kss-nav__ref">7.1.1</span>
+                        <span class="kss-nav__ref">7.2.1</span>
                         <span class="kss-nav__name">Inception</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
                       <a href="section-plugins.html#kssref-plugins-toggler">
-                        <span class="kss-nav__ref">7.2</span>
+                        <span class="kss-nav__ref">7.3</span>
                         <span class="kss-nav__name">Toggler</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-multipletoggles">
-                        <span class="kss-nav__ref">7.2.1</span>
+                        <span class="kss-nav__ref">7.3.1</span>
                         <span class="kss-nav__name">Event types</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-multipletoggles">
-                        <span class="kss-nav__ref">7.2.1</span>
+                        <span class="kss-nav__ref">7.3.1</span>
                         <span class="kss-nav__name">Multiple toggles</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-class">
-                        <span class="kss-nav__ref">7.2.2</span>
+                        <span class="kss-nav__ref">7.3.2</span>
                         <span class="kss-nav__name">Class</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-dirty">
-                        <span class="kss-nav__ref">7.2.3</span>
+                        <span class="kss-nav__ref">7.3.3</span>
                         <span class="kss-nav__name">Dirty</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-plugins.html#kssref-plugins-toggler-html">
+                        <span class="kss-nav__ref">7.3.4</span>
+                        <span class="kss-nav__name">HTML</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-slide">
-                        <span class="kss-nav__ref">7.2.4</span>
+                        <span class="kss-nav__ref">7.3.5</span>
                         <span class="kss-nav__name">Slide</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-text">
-                        <span class="kss-nav__ref">7.2.5</span>
+                        <span class="kss-nav__ref">7.3.6</span>
                         <span class="kss-nav__name">Text</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-plugins.html#kssref-plugins-toggler-trigger">
-                        <span class="kss-nav__ref">7.2.6</span>
+                        <span class="kss-nav__ref">7.3.7</span>
                         <span class="kss-nav__name">Triggers</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-plugins.html#kssref-plugins-tooltip">
+                        <span class="kss-nav__ref">7.4</span>
+                        <span class="kss-nav__name">Tooltip</span>
                       </a>
                     </li>
                 </ul>
@@ -175,6 +193,39 @@
 
 
             </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-plugins-clipboard">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>9-plugins/clipboard/index.js</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-plugins-clipboard">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">7.1</span>
+                  <span class="kss-section__name">Clipboard</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Provides and option to copy text to clip board</p>
+<p>For more infomation check: https://clipboardjs.com/</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><input type="text" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
+<button class="button" data-clipboard data-clipboard-target="#clipboard-copy">Copy</button></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;clipboard-copy&quot; value&#x3D;&quot;https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/&quot; /&gt;
+&lt;button class&#x3D;&quot;button&quot; data-clipboard data-clipboard-target&#x3D;&quot;#clipboard-copy&quot;&gt;Copy&lt;/button&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-2" id="kssref-plugins-matchheight">
 
             <article class="kss-section__content">
@@ -182,7 +233,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-matchheight">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">7.1</span>
+                  <span class="kss-section__ref">7.2</span>
                   <span class="kss-section__name">Match height</span>
                 </h2>
               </a>
@@ -274,7 +325,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-matchheight-inception">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.1.1</span>
+                  <span class="kss-section__ref">7.2.1</span>
                   <span class="kss-section__name">Inception</span>
                 </h3>
               </a>
@@ -350,7 +401,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">7.2</span>
+                  <span class="kss-section__ref">7.3</span>
                   <span class="kss-section__name">Toggler</span>
                 </h2>
               </a>
@@ -364,12 +415,12 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button class="button" data-click="text: Click, Replacement text">Click</button></div>
+                <div class="kss-modifiers__example"><button class="button" data-click="text: Click, Replacement text"></button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;text: Click, Replacement text&quot;&gt;Click&lt;/button&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;text: Click, Replacement text&quot;&gt;&lt;/button&gt;</code></pre>
                 </article>
 
             </section>
@@ -380,7 +431,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-multipletoggles">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.1</span>
+                  <span class="kss-section__ref">7.3.1</span>
                   <span class="kss-section__name">Event types</span>
                 </h3>
               </a>
@@ -403,7 +454,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-multipletoggles">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.1</span>
+                  <span class="kss-section__ref">7.3.1</span>
                   <span class="kss-section__name">Multiple toggles</span>
                 </h3>
               </a>
@@ -417,14 +468,14 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button class="button" data-click="text: Click, Replacement text; trigger: #multiple-toggles">Click</button>
-<div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm">Hello World</div></div>
+                <div class="kss-modifiers__example"><button class="button" data-click='text: Click, "Replacement text"; trigger: #multiple-toggles'></button>
+<div id="multiple-toggles" data-toggle="text: Hello World, Good bye; class: bg-primary, bg-secondary" class="bg-primary padding-sm margin-sm"></div></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;text: Click, Replacement text; trigger: #multiple-toggles&quot;&gt;Click&lt;/button&gt;
-&lt;div id&#x3D;&quot;multiple-toggles&quot; data-toggle&#x3D;&quot;text: Hello World, Good bye; class: bg-primary, bg-secondary&quot; class&#x3D;&quot;bg-primary padding-sm margin-sm&quot;&gt;Hello World&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&#x27;text: Click, &quot;Replacement text&quot;; trigger: #multiple-toggles&#x27;&gt;&lt;/button&gt;
+&lt;div id&#x3D;&quot;multiple-toggles&quot; data-toggle&#x3D;&quot;text: Hello World, Good bye; class: bg-primary, bg-secondary&quot; class&#x3D;&quot;bg-primary padding-sm margin-sm&quot;&gt;&lt;/div&gt;</code></pre>
                 </article>
 
             </section>
@@ -435,13 +486,13 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-class">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.2</span>
+                  <span class="kss-section__ref">7.3.2</span>
                   <span class="kss-section__name">Class</span>
                 </h3>
               </a>
 
                 <div class="kss-section__description"><p>Toggles the class of the element between 2 strings</p>
-<p>@todo Complete</p>
+<p>Parameters: <code>class: &lt;css class&gt;, &lt;css class&gt;</code></p>
 </div>
 
             </article>
@@ -466,14 +517,14 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-dirty">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.3</span>
+                  <span class="kss-section__ref">7.3.3</span>
                   <span class="kss-section__name">Dirty</span>
                 </h3>
               </a>
 
                 <div class="kss-section__description"><p>Simply adds a <code>dirty</code> class to the element indicating this element has been interacted with.  This option ignores the current state, therefore once interacted its perminant till page reload.</p>
 <p>This is useful for people with cognitive impairments may find it hard to remember what they have read and/or form elements.</p>
-<p>@todo Complete</p>
+<p>Parameters: <code>dirty: &lt;optional dirty class&gt;, &lt;optional clean class&gt;</code></p>
 </div>
 
             </article>
@@ -493,6 +544,63 @@
                 </article>
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-plugins-toggler-html">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>9-plugins/toggler/options/html.js</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-plugins-toggler-html">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">7.3.4</span>
+                  <span class="kss-section__name">HTML</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Toggles the inner html of an element between itself and the given element identified by HTML ID</p>
+<p>Parameters: <code>html: &lt;html id&gt;, &lt;html id&gt;</code></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div data-click="html: #header-search-inactive, #header-search-active"></div>
+<script type="text/html" id="header-search-inactive">
+  <div class="button">
+    <span class="ri ri-chevron-down"></span>
+    <span>
+      Search
+    </span>
+  </div>
+</script>
+<script type="text/html" id="header-search-active">
+  <div class="button-icon">
+    <span class="ri ri-chevron-up"></span>
+  </div>
+</script></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div data-click&#x3D;&quot;html: #header-search-inactive, #header-search-active&quot;&gt;&lt;/div&gt;
+&lt;script type&#x3D;&quot;text/html&quot; id&#x3D;&quot;header-search-inactive&quot;&gt;
+  &lt;div class&#x3D;&quot;button&quot;&gt;
+    &lt;span class&#x3D;&quot;ri ri-chevron-down&quot;&gt;&lt;/span&gt;
+    &lt;span&gt;
+      Search
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+&lt;script type&#x3D;&quot;text/html&quot; id&#x3D;&quot;header-search-active&quot;&gt;
+  &lt;div class&#x3D;&quot;button-icon&quot;&gt;
+    &lt;span class&#x3D;&quot;ri ri-chevron-up&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/script&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-3" id="kssref-plugins-toggler-slide">
 
             <article class="kss-section__content">
@@ -500,13 +608,12 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-slide">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.4</span>
+                  <span class="kss-section__ref">7.3.5</span>
                   <span class="kss-section__name">Slide</span>
                 </h3>
               </a>
 
                 <div class="kss-section__description"><p>Animates a element in and out of appearance.</p>
-<p>@todo Complete</p>
 </div>
 
             </article>
@@ -533,7 +640,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-text">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.5</span>
+                  <span class="kss-section__ref">7.3.6</span>
                   <span class="kss-section__name">Text</span>
                 </h3>
               </a>
@@ -548,12 +655,42 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button class="button" data-click="text: Hello World, Good bye">Hello World</button></div>
+                <div class="kss-modifiers__example"><button class="button" data-click="text: Hello World, Good bye"></button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;text: Hello World, Good bye&quot;&gt;Hello World&lt;/button&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;text: Hello World, Good bye&quot;&gt;&lt;/button&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-plugins-toggler-text-comma">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>9-plugins/toggler/options/text.js</span>, line <span>12</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-plugins-toggler-text-comma">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">7.3.6.1</span>
+                  <span class="kss-section__name">String comma</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>To prevent a comma from being considered a seperate string, wrap the string in double-quotes.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="button" data-click='text: "Hi world, im .." , Good bye'></button></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&#x27;text: &quot;Hi world, im ..&quot; , Good bye&#x27;&gt;&lt;/button&gt;</code></pre>
                 </article>
 
             </section>
@@ -564,7 +701,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-trigger">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.6</span>
+                  <span class="kss-section__ref">7.3.7</span>
                   <span class="kss-section__name">Triggers</span>
                 </h3>
               </a>
@@ -597,7 +734,7 @@
 
               <a class="kss-section__permalink" href="#kssref-plugins-toggler-trigger-multiple">
                 <h4 class="kss-section__item kss-section__item--depth-4">
-                  <span class="kss-section__ref">7.2.6.1</span>
+                  <span class="kss-section__ref">7.3.7.1</span>
                   <span class="kss-section__name">Multiple targets</span>
                 </h4>
               </a>
@@ -612,17 +749,62 @@
 
 
                 <div class="kss-modifiers__example"><button class="button" data-click="trigger: .multiple-targets, #multiple-target-ID">Click</button>
-<div class="multiple-targets" data-toggle="text: These are targeted by..., class">These are targeted by...</div>
-<div class="multiple-targets" data-toggle="text: These are targeted by..., class">These are targeted by...</div>
-<div id="multiple-target-ID" data-toggle="text: This is targeted..., id">This is targeted...</div></div>
+<div class="multiple-targets" data-toggle="text: These are targeted by..., class"></div>
+<div class="multiple-targets" data-toggle="text: These are targeted by..., class"></div>
+<div id="multiple-target-ID" data-toggle="text: This is targeted..., id"></div></div>
 
               </article>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-click&#x3D;&quot;trigger: .multiple-targets, #multiple-target-ID&quot;&gt;Click&lt;/button&gt;
-&lt;div class&#x3D;&quot;multiple-targets&quot; data-toggle&#x3D;&quot;text: These are targeted by..., class&quot;&gt;These are targeted by...&lt;/div&gt;
-&lt;div class&#x3D;&quot;multiple-targets&quot; data-toggle&#x3D;&quot;text: These are targeted by..., class&quot;&gt;These are targeted by...&lt;/div&gt;
-&lt;div id&#x3D;&quot;multiple-target-ID&quot; data-toggle&#x3D;&quot;text: This is targeted..., id&quot;&gt;This is targeted...&lt;/div&gt;</code></pre>
+&lt;div class&#x3D;&quot;multiple-targets&quot; data-toggle&#x3D;&quot;text: These are targeted by..., class&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;multiple-targets&quot; data-toggle&#x3D;&quot;text: These are targeted by..., class&quot;&gt;&lt;/div&gt;
+&lt;div id&#x3D;&quot;multiple-target-ID&quot; data-toggle&#x3D;&quot;text: This is targeted..., id&quot;&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-plugins-tooltip">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>9-plugins/tooltip/index.js</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-plugins-tooltip">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">7.4</span>
+                  <span class="kss-section__name">Tooltip</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Provides and option to copy text to clip board</p>
+<p>For more infomation check: https://popper.js.org/tooltip-documentation.html</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="right">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="bottom">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="left">Hover/Focus</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="right">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="bottom">Click</button>
+<button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-trigger="click" data-tooltip-placement="left">Click</button></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;right&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;bottom&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-placement&#x3D;&quot;left&quot;&gt;Hover/Focus&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;right&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;bottom&quot;&gt;Click&lt;/button&gt;
+&lt;button class&#x3D;&quot;button&quot; data-tooltip&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue.&quot; data-tooltip-trigger&#x3D;&quot;click&quot; data-tooltip-placement&#x3D;&quot;left&quot;&gt;Click&lt;/button&gt;</code></pre>
                 </article>
 
             </section>
