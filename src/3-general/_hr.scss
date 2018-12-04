@@ -5,7 +5,7 @@
 // Markup:
 // <hr>
 //
-// Styleguide: General.Dividers
+// Styleguide: General.HorizontalRule
 
 hr {
   box-sizing: content-box;
@@ -25,7 +25,7 @@ hr {
 // Markup:
 // <hr class="dot">
 //
-// Styleguide: General.Dividers.DottedHorizontalRule
+// Styleguide: General.HorizontalRule.DottedHorizontalRule
 
 // Section divider
 //
@@ -34,7 +34,7 @@ hr {
 // Markup:
 // <hr class="mxw-xs">
 //
-// Styleguide: General.Dividers.SectionDivider
+// Styleguide: General.HorizontalRule.SectionDivider
 
 // Tagged Horizontal Rule
 //
@@ -46,7 +46,7 @@ hr {
 //   <span class="tagged-hor-rule__tag">Guidance</span>
 // </div>
 //
-// Styleguide: General.Dividers.TaggedHorizontalRule
+// Styleguide: General.HorizontalRule.TaggedHorizontalRule
 
 .tagged-hor-rule {
   overflow: hidden;
