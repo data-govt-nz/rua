@@ -1,3 +1,12 @@
+// Horizontal Rule
+//
+// @todo
+//
+// Markup:
+// <hr>
+//
+// Styleguide: General.Dividers
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -9,3 +18,47 @@ hr {
   }
 }
 
+// Dotted Horizontal Rule
+//
+// @todo
+//
+// Markup:
+// <hr class="dot">
+//
+// Styleguide: General.Dividers.DottedHorizontalRule
+
+// Section divider
+//
+// @todo
+//
+// Markup:
+// <hr class="mxw-xs">
+//
+// Styleguide: General.Dividers.SectionDivider
+
+// Tagged Horizontal Rule
+//
+// @todo
+//
+// Markup:
+// <div class="tagged-hor-rule">
+//   <hr>
+//   <span class="tagged-hor-rule__tag">Guidance</span>
+// </div>
+//
+// Styleguide: General.Dividers.TaggedHorizontalRule
+
+.tagged-hor-rule {
+  overflow: hidden;
+}
+
+.tagged-hor-rule__tag {
+  float: left;
+  padding: 4px 10px;
+  border-radius: 0 10px 10px 10px;
+  background-color: $color-iceberg;
+  font-size: rem(12);
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  color: $color-big-stone;
+}
