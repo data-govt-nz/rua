@@ -27,8 +27,8 @@ $tag-background-hover: scale-color($tag-background, $lightness: -15%) !default;
 $tag-color: color('white') !default;
 $tag-radius: border-radius('full') !default;
 $tag-font-size: 12px;
-$tag-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
-$tag-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+$tag-transition: $box-shadow-transition, background-color 0.25s ease-out, color 0.25s ease-out !default;
+$tag-shadow-hover: $box-shadow-hover !default;
 
 @mixin tag-base {
   outline: 0;
