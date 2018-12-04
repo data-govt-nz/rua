@@ -1,0 +1,148 @@
+// Progress bar
+//
+// @todo
+//
+// Markup:
+// <ul class="progress-bar">
+//   <li class="progress-bar__step progress-bar__step--enabled">
+//     <button class="progress-bar__button">
+//       <span class="ri ri-check"></span>
+//     </button>
+//   </li>
+//   <li class="progress-bar__step progress-bar__step--enabled">
+//     <button class="progress-bar__button">
+//        <span class="ri ri-check"></span>
+//     </button>
+//   </li>
+//   <li class="progress-bar__step progress-bar__step--enabled">
+//     <button class="progress-bar__button progress-bar__button--active"></button>
+//   </li>
+//   <li class="progress-bar__step">
+//     <button class="progress-bar__button" disabled></button>
+//   </li>
+// </ul>
+//
+// Styleguide: NavigationComponents.ProgressBar
+
+$progress-bar--button-size: 32px;
+
+/**
+ * Mixin for connecting line.
+ * - Uses psuedo element
+ * - Disabled version gets displayed full-width behind entire element
+ * - Active version is applied to individual step items (lis) based on enabled state
+ */
+@mixin steps-connecting-line($line-color: $color-heather) {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: $progress-bar--button-size/2;
+  z-index: 0;
+  background-color: $line-color;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint(sm down) {
+    display: none;
+  }
+
+  &:after {
+    @include steps-connecting-line;
+  }
+}
+
+.progress-bar__step {
+  position: relative;
+  padding: 0;
+  flex-grow: 2;
+  flex-basis: 0;
+  text-align: center;
+
+  /**
+   * Align first/last buttons to edges, set width to half of other elements.
+   */
+  &:first-child {
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  &:last-child {
+    text-align: right;
+    flex-grow: 1;
+  }
+}
+
+.progress-bar__step--enabled {
+
+  .progress-bar__button {
+    border-color: $color-astral;
+    color: $color-astral;
+  }
+
+  /**
+   * Display active connecting line between enabled elements.
+   */
+  &:after {
+    @include steps-connecting-line($color-astral);
+    z-index: 5;
+    left: -50%;
+  }
+}
+
+/**
+ * Disable connecting line for first element.
+ */
+.progress-bar__step--enabled:first-child:after {
+  content: none;
+}
+
+/**
+ * Connecting line of last element needs to be against right edge
+ * and double width of parent (as parent is half width of other step
+ * elements).
+ */
+.progress-bar__step--enabled:last-child:after {
+  left: auto;
+  right: 0;
+  width: 200%;
+}
+
+.progress-bar__button {
+  display: inline-block;
+  vertical-align: top;
+  width: $progress-bar--button-size;
+  height: $progress-bar--button-size;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+  border-color: $color-heather;
+  background-color: #fff;
+  text-align: center;
+}
+
+// Filled state for currently active step button
+.progress-bar__button--active:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-pacific-blue;
+  border: 3px solid #fff;
+  border-radius: 100%;
+}
