@@ -3,24 +3,27 @@
 // @todo
 //
 // Markup:
-// <ul class="progress-bar">
-//   <li class="progress-bar__step progress-bar__step--enabled">
-//     <button class="progress-bar__button">
-//       <span class="ri ri-check"></span>
-//     </button>
-//   </li>
-//   <li class="progress-bar__step progress-bar__step--enabled">
-//     <button class="progress-bar__button">
-//        <span class="ri ri-check"></span>
-//     </button>
-//   </li>
-//   <li class="progress-bar__step progress-bar__step--enabled">
-//     <button class="progress-bar__button progress-bar__button--active"></button>
-//   </li>
-//   <li class="progress-bar__step">
-//     <button class="progress-bar__button" disabled></button>
-//   </li>
-// </ul>
+// <div class="progress-bar">
+//   <div class="progress-bar__mobile-summary">Page 3 of 4</div>
+//   <ul class="progress-bar__list">
+//     <li class="progress-bar__step progress-bar__step--enabled">
+//       <button class="progress-bar__button">
+//         <span class="ri ri-check"></span>
+//       </button>
+//     </li>
+//     <li class="progress-bar__step progress-bar__step--enabled">
+//       <button class="progress-bar__button">
+//         <span class="ri ri-check"></span>
+//       </button>
+//     </li>
+//     <li class="progress-bar__step progress-bar__step--enabled">
+//       <button class="progress-bar__button progress-bar__button--active"></button>
+//     </li>
+//     <li class="progress-bar__step">
+//       <button class="progress-bar__button" disabled></button>
+//     </li>
+//   </ul>
+// </div>
 //
 // Styleguide: NavigationComponents.ProgressBar
 
@@ -44,7 +47,18 @@ $progress-bar--button-size: 32px;
   background-color: $line-color;
 }
 
-.progress-bar {
+.progress-bar__mobile-summary {
+  display: none;
+
+  @include breakpoint(sm down) {
+    display: block;
+    font-size: rem(16);
+    color: $color-pale-sky;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.progress-bar__list {
   display: flex;
   align-items: flex-start;
   position: relative;
