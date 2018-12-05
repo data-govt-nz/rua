@@ -1,0 +1,38 @@
+// Category Select
+//
+// @todo
+//
+// Markup:
+// <a href="#" class="category-select">
+//   <span class="category-select__label">Unselected filter</span>
+//   <span class="category-select__icon ri ri-plus"></span>
+// </a>
+//
+// Styleguide: NavigationComponents.CategorySelect
+
+.category-select {
+  display: flex;
+  justify-content: space-between;
+  height: em(49);
+  margin-left: ceil(($grid-gutter-width / 2));
+  margin-right: floor(($grid-gutter-width / 2));
+  border-bottom: border('dot');
+  text-decoration: none;
+  font-size: rem(18);
+  line-height: em(49);
+
+  &:hover {
+    text-decoration: underline;
+
+    .category-select__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.category-select__icon {
+  opacity: 0;
+  transition: opacity 250ms ease;
+  font-size: rem(20);
+  color: currentColor;
+}
