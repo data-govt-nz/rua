@@ -1,24 +1,24 @@
 // Sidebar Navigation
 //
 // Markup:
-// <nav class="hierarchy" role="navigation" aria-labelledby="subnav-section">
-//   <a id="subnav-section" href="/open-data/" title="Go to the Open data page" class="hierarchy__title">
+// <nav class="sidebar-nav" role="navigation" aria-labelledby="subnav-section">
+//   <a id="subnav-section" href="/open-data/" title="Go to the Open data page" class="sidebar-nav__title">
 //     <h4>Open data</h4>
 //   </a>
-//   <ul class="menu vertical hierarchy__menu">
-//     <li><a href="#" class="menu-item hierarchy__menu-item current">What is open data?</a></li>
-//     <li><a href="#"class="menu-item hierarchy__menu-item link">Learn more about open data</a></li>
-//     <li><a href="#" class="menu-item hierarchy__menu-item link">Open government data programme</a></li>
-//     <li><a href="#" class="menu-item hierarchy__menu-item link">Open Data Maturity Dashboard</a></li>
-//     <li><a href="#" class="menu-item hierarchy__menu-item link">Open licensing</a></li>
-//     <li><a href="#" class="menu-item hierarchy__menu-item link">Open data policy</a></li>
-//     <li><a href="#" class="menu-item hierarchy__menu-item link">Formats for open data, machine readable and human readable</a></li>
+//   <ul class="menu vertical sidebar-nav__menu">
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item current">What is open data?</a></li>
+//     <li><a href="#"class="menu-item sidebar-nav__menu-item link">Learn more about open data</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open government data programme</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open Data Maturity Dashboard</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open licensing</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Formats for open data, machine readable and human readable</a></li>
 //   </ul>
 // </nav>
 //
 // Styleguide: NavigationComponents.SidebarNavigation
 
-.hierarchy {
+.sidebar-nav {
   border-top: border('solid');
   border-bottom: border('solid');
   &__title {
