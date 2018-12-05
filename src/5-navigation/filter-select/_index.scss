@@ -1,0 +1,63 @@
+// Filter Select
+//
+// @todo
+//
+// Markup:
+// <a href="#" class="filter-select">
+//   <span class="filter-select__label">Unselected filter</span>&nbsp;
+//   <span class="filter-select__count">(191)</span>
+//   <span class="filter-select__icon ri ri-plus"></span>
+// </a>
+// <a href="#" class="filter-select filter-select--selected">
+//   <span class="filter-select__label">Selected filter</span>&nbsp;
+//   <span class="filter-select__count">(191)</span>
+//   <span class="filter-select__icon ri ri-cross"></span>
+// </a>
+//
+// Styleguide: NavigationComponents.FilterSelect
+
+.filter-select {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 8px 8px 8px 0;
+  font-size: rem(14);
+  line-height: 1.5;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+
+    .filter-select__icon {
+      opacity: 1;
+    }
+
+  }
+}
+
+.filter-select--selected {
+  padding: 3px 8px 3px 12px;
+  margin: 5px 0;
+  border-radius: 20px;
+  background-color: $color-astral;
+  color: #fff;
+  font-weight: $font-weight-medium;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.filter-select__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filter-select__icon {
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  color: currentColor;
+}

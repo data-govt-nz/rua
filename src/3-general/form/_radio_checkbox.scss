@@ -4,21 +4,21 @@
 //
 // Markup:
 // <div class="fields">
-//    <div class="field">
-//      <label for="radio">radio</label>
+//    <div class="field field--inline-label">
 //      <input type="radio" id="radio">
+//      <label for="radio">radio</label>
 //    </div>
-//    <div class="field">
-//      <label for="checkbox">checkbox</label>
+//    <div class="field field--inline-label">
 //      <input type="checkbox" id="checkbox">
+//      <label for="checkbox">checkbox</label>
 //    </div>
-//    <div class="field">
-//      <label for="radio-disabled">radio disabled</label>
+//    <div class="field field--inline-label">
 //      <input type="radio" id="radio-disabled" disabled>
+//      <label for="radio-disabled">radio disabled</label>
 //    </div>
-//    <div class="field">
-//      <label for="checkbox-disabled">checkbox disabled</label>
+//    <div class="field field--inline-label">
 //      <input type="checkbox" id="checkbox-disabled" disabled>
+//      <label for="checkbox-disabled">checkbox disabled</label>
 //    </div>
 //  </div>
 //
@@ -30,5 +30,5 @@ input[type="radio"],
 input[type="checkbox"] {
   width: $check-radio-size;
   height: $check-radio-size;
-  margin-top: 0.6em;
+  margin-right: 0.6em;
 }

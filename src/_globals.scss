@@ -133,6 +133,9 @@ $caret-width-base: 4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large: 5px !default;
 
+// General box element style
+$box-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+$box-shadow-transition: box-shadow 0.3s ease !default;
 
 //== Tables
 //
@@ -158,9 +161,9 @@ $button-radius: border-radius('full') !default;
 $button-font-size: rem(16);
 $button-opacity-disabled: 0.25 !default;
 $button-background-hover-lightness: -20% !default;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
+$button-transition: $box-shadow-transition, background-color 0.25s ease-out, color 0.25s ease-out !default;
 $button-types: $colors !default;
-$button-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+$button-shadow-hover: $box-shadow-hover !default;
 
 //== Forms
 //
@@ -182,9 +185,9 @@ $input-border: 2px solid $gray-light !default;
 $input-border-focus: $input-border !default;
 $input-padding: 0.9em !default;
 $input-shadow: none !default;
-$input-shadow-focus: 0 3px 0 rgba(#000, .1) !default;
+$input-shadow-focus: $box-shadow-hover !default;
 $input-cursor-disabled: not-allowed !default;
-$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out !default;
+$input-transition: $box-shadow-transition, box-shadow 0.5s, border-color 0.25s ease-in-out !default;
 $input-radius: 1.5em !default;
 $form-button-radius: 1.5em !default;
 
