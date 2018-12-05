@@ -1,0 +1,52 @@
+// Sidebar Navigation
+//
+// Markup:
+// <nav class="sidebar-nav" role="navigation" aria-labelledby="subnav-section">
+//   <a id="subnav-section" href="/open-data/" title="Go to the Open data page" class="sidebar-nav__title">
+//     <h4>Open data</h4>
+//   </a>
+//   <ul class="menu vertical sidebar-nav__menu">
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item current">What is open data?</a></li>
+//     <li><a href="#"class="menu-item sidebar-nav__menu-item link">Learn more about open data</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open government data programme</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open Data Maturity Dashboard</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open licensing</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Formats for open data, machine readable and human readable</a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide: NavigationComponents.SidebarNavigation
+
+.sidebar-nav {
+  border-top: border('solid');
+  border-bottom: border('solid');
+  &__title {
+      display: block;
+      border-bottom: border('solid');
+      color: color('gray-dark');
+      text-decoration: none;
+      padding: rem(18 0);
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          font-size: rem(19);
+          margin: 0;
+      }
+  }
+
+  &__menu {
+      font-size: rem(16);
+      padding: em(8 0);
+  }
+
+  &__menu-item {
+      padding: em(8 0);
+      &.current {
+          font-weight: $font-weight-bold;
+      }
+  }
+}
