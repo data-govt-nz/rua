@@ -11,7 +11,12 @@
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open government data programme</a></li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open Data Maturity Dashboard</a></li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open licensing</a></li>
-//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a></li>
+//     <li>
+//       <a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a>
+//       <ul class="menu vertical">
+//         <li><a href="#" class="menu-item sidebar-nav__menu-item">Sub item</a></li>
+//       </ul>
+//     </li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Formats for open data, machine readable and human readable</a></li>
 //   </ul>
 // </nav>
@@ -44,6 +49,10 @@
 
       a {
         line-height: 1.4;
+      }
+
+      .menu {
+        padding-left: 30px;
       }
   }
 
