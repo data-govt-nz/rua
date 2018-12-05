@@ -1,0 +1,60 @@
+// Sidebar Group
+//
+// @todo
+//
+// Markup:
+// <div class="sidebar-group">
+//   <h5 class="sidebar-group__heading">Organisations</h5>
+//   <ul class="sidebar-group__list">
+//     <li class="sidebar-group__item">
+//       <a href="#" class="filter-select">
+//         <span class="filter-select__label">Unselected filter</span>&nbsp;
+//         <span class="filter-select__count">(191)</span>
+//         <span class="filter-select__icon ri ri-plus"></span>
+//       </a>
+//     </li>
+//     <li class="sidebar-group__item">
+//       <a href="#" class="filter-select filter-select--selected">
+//         <span class="filter-select__label">Selected filter</span>&nbsp;
+//         <span class="filter-select__count">(191)</span>
+//         <span class="filter-select__icon ri ri-cross"></span>
+//       </a>
+//     </li>
+//     <li class="sidebar-group__item">
+//       <a href="#" class="filter-select">
+//         <span class="filter-select__label">Unselected filter</span>&nbsp;
+//         <span class="filter-select__count">(191)</span>
+//         <span class="filter-select__icon ri ri-plus"></span>
+//       </a>
+//     </li>
+//   </ul>
+// </div>
+//
+// Styleguide: NavigationComponents.SidebarGroup
+
+.sidebar-group {
+  padding: 12px;
+  border-radius: 2px 20px 20px 2px;
+  background-color: $color-athens-gray;
+}
+
+.sidebar-group__heading {
+  font-size: rem(18);
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.sidebar-group__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-group__item {
+  padding: 0;
+  border-bottom: border('dot');
+
+  &:last-child {
+    border: none;
+  }
+}
