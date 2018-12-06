@@ -10,7 +10,8 @@
 //
 // Styleguide: NavigationComponents.CategorySelect
 
-.category-select {
+.category-select,
+.menu .category-select {
   display: flex;
   justify-content: space-between;
   height: em(49);
