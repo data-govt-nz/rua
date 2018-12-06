@@ -4,7 +4,7 @@
 //
 // Markup:
 // <header class="site-header">
-//   <div class="container">
+//   <div class="container site-header__nav-container">
 //     <div class="site-header__inner">
 //       <a href="#" aria-label="Return to home page">
 //         <img src="http://via.placeholder.com/324x58" alt="data.govt.nz" width="164">
@@ -69,48 +69,48 @@
 //       </div>
 //     </div>
 //   </div>
-// </header>
-// <div class="site-search">
-//   <div class="site-search__visibility hidden" id="site-search" data-toggle="slide" style="display: none;"
-//     aria-expanded="false">
-//     <div class="container">
-//       <div class="site-search__inner">
-//         <form class="search-form" action="search/SearchForm" method="get">
-//           <label for="field-sitewide-search">
-//             Search for:
-//           </label>
-//           <div class="context-switch">
-//             <div class="field field--inline-label">
-//               <input id="search-for-website-content" type="radio" class="search-form-context" name="header-search-context"
-//                 value="content" checked="checked">
-//               <label for="search-for-website-content">
-//                 Website content
-//               </label>
+//   <div class="site-search">
+//     <div class="site-search__visibility hidden" id="site-search" data-toggle="slide" style="display: none;"
+//       aria-expanded="false">
+//       <div class="container">
+//         <div class="site-search__inner">
+//           <form class="search-form" action="search/SearchForm" method="get">
+//             <label for="field-sitewide-search">
+//               Search for:
+//             </label>
+//             <div class="context-switch">
+//               <div class="field field--inline-label">
+//                 <input id="search-for-website-content" type="radio" class="search-form-context" name="header-search-context"
+//                   value="content" checked="checked">
+//                 <label for="search-for-website-content">
+//                   Website content
+//                 </label>
+//               </div>
+//               <div class="field field--inline-label">
+//                 <input id="search-for-datasets" type="radio" class="search-form-context" name="header-search-context"
+//                   value="datasets">
+//                 <label for="search-for-datasets">
+//                   Datasets
+//                 </label>
+//               </div>
 //             </div>
-//             <div class="field field--inline-label">
-//               <input id="search-for-datasets" type="radio" class="search-form-context" name="header-search-context"
-//                 value="datasets">
-//               <label for="search-for-datasets">
-//                 Datasets
-//               </label>
+//             <div class="field search-input">
+//               <input class="ckan-search-url" value="https://catalogue.data.govt.nz/dataset" type="hidden">
+//               <input id="field-sitewide-search" name="Search" placeholder="E.g. environment" type="text"
+//                 aria-label="Search term">
 //             </div>
-//           </div>
-//           <div class="field search-input">
-//             <input class="ckan-search-url" value="https://catalogue.data.govt.nz/dataset" type="hidden">
-//             <input id="field-sitewide-search" name="Search" placeholder="E.g. environment" type="text"
-//               aria-label="Search term">
-//           </div>
-//           <div class="actions">
-//             <button class="button">
-//               <span class="ri ri-search"></span>
-//               <span>Search</span>
-//             </button>
-//           </div>
-//         </form>
+//             <div class="actions">
+//               <button class="button">
+//                 <span class="ri ri-search"></span>
+//                 <span>Search</span>
+//               </button>
+//             </div>
+//           </form>
+//         </div>
 //       </div>
 //     </div>
 //   </div>
-// </div>
+// </header>
 // <div class="site-navigation">
 //   <div class="site-search__visibility" id="site-navigation" data-toggle="slide" style="display: none;" aria-expanded="true">
 //     <div class="container">
@@ -167,6 +167,24 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
     position: relative;
     z-index: 3;
     background-color: color('white');
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: color('white');
+    }
+
+    &__nav-container {
+      position: relative;
+      z-index: 2;;
+    }
 
     &__inner {
         display: flex;
@@ -174,7 +192,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
         justify-content: space-between;
         padding: rem(10 0);
         @include breakpoint(lg) {
-            padding: rem(27 0);
+            padding: rem(17 0);
         }
     }
 
@@ -191,6 +209,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
     &__menu-item {
         padding: $site-header-menu-item-padding;
         font-weight: $font-weight-medium;
+        font-size: rem(16);
         color: color('pale-sky');
         position: relative;
 
@@ -285,13 +304,13 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
 .site-search {
     position: relative;
-    z-index: 2;
+    z-index: 0;
     width: 100%;
 
     &__visibility {
         position: absolute;
         width: 100%;
-        box-shadow: 0 2px 4px rgba(#000, .5);
+        box-shadow: 0 0 40px rgba(#000, .1);
         background-color: color('white');
     }
 
