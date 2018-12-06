@@ -7,11 +7,16 @@
 //   </a>
 //   <ul class="menu vertical sidebar-nav__menu">
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item current">What is open data?</a></li>
-//     <li><a href="#"class="menu-item sidebar-nav__menu-item link">Learn more about open data</a></li>
+//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Learn more about open data</a></li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open government data programme</a></li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open Data Maturity Dashboard</a></li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open licensing</a></li>
-//     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a></li>
+//     <li>
+//       <a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a>
+//       <ul class="menu vertical">
+//         <li><a href="#" class="menu-item sidebar-nav__menu-item">Sub item</a></li>
+//       </ul>
+//     </li>
 //     <li><a href="#" class="menu-item sidebar-nav__menu-item link">Formats for open data, machine readable and human readable</a></li>
 //   </ul>
 // </nav>
@@ -41,6 +46,14 @@
   &__menu {
       font-size: rem(16);
       padding: em(8 0);
+
+      a {
+        line-height: 1.4;
+      }
+
+      .menu {
+        padding-left: 30px;
+      }
   }
 
   &__menu-item {
