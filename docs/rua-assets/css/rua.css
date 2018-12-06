@@ -3581,6 +3581,10 @@ a.tag {
   .sidebar-nav__menu {
     font-size: 1rem;
     padding: 0.5em 0; }
+    .sidebar-nav__menu a {
+      line-height: 1.4; }
+    .sidebar-nav__menu .menu {
+      padding-left: 30px; }
   .sidebar-nav__menu-item {
     padding: 0.5em 0; }
     .sidebar-nav__menu-item.current {
