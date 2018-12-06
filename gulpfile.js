@@ -91,7 +91,7 @@ gulp.task('icons', function(done){
       fontHeight: 1001,
       fixedWidth: true,
       centerhorizontally: true,
-      formats: ['ttf', 'eot', 'woff'],
+      formats: ['ttf', 'eot', 'woff', 'woff2'],
       timestamp: runTimestamp
     }))
 
