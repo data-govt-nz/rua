@@ -22,7 +22,8 @@
   font-size: rem(18);
   line-height: em(49);
 
-  &:hover {
+  &:hover,
+  &.category-select--selected {
     text-decoration: underline;
 
     .category-select__icon {
