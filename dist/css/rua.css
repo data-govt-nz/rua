@@ -3534,7 +3534,8 @@ a.tag {
     content: "";
     display: block; }
 
-.category-select {
+.category-select,
+.menu .category-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3548,9 +3549,11 @@ a.tag {
   text-decoration: none;
   font-size: 1.125rem;
   line-height: 3.0625em; }
-  .category-select:hover {
+  .category-select:hover,
+  .menu .category-select:hover {
     text-decoration: underline; }
-    .category-select:hover .category-select__icon {
+    .category-select:hover .category-select__icon,
+    .menu .category-select:hover .category-select__icon {
       opacity: 1; }
 
 .category-select__icon {
