@@ -4027,7 +4027,7 @@ td {
 
 .site-navigation {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   width: 100%; }
   @media screen and (min-width: 1200px) {
     .site-navigation {
@@ -4065,12 +4065,14 @@ td {
   .site-search__visibility {
     position: absolute;
     width: 100%;
-    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #fff; }
   .site-search__inner {
     border-top: 1px dotted #C3CED8;
     padding: 1.6875rem 0 0.9375rem 0; }
+
+.site-search .site-search__visibility {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); }
 
 .site-banner {
   background: #ECEFF2 url("../assets/tic-tac-toe.png");
