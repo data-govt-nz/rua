@@ -3549,11 +3549,13 @@ a.tag {
   text-decoration: none;
   font-size: 1.125rem;
   line-height: 3.0625em; }
-  .category-select:hover,
-  .menu .category-select:hover {
+  .category-select:hover, .category-select.category-select--selected,
+  .menu .category-select:hover,
+  .menu .category-select.category-select--selected {
     text-decoration: underline; }
-    .category-select:hover .category-select__icon,
-    .menu .category-select:hover .category-select__icon {
+    .category-select:hover .category-select__icon, .category-select.category-select--selected .category-select__icon,
+    .menu .category-select:hover .category-select__icon,
+    .menu .category-select.category-select--selected .category-select__icon {
       opacity: 1; }
 
 .category-select__icon {
