@@ -116,7 +116,7 @@
 
 
                 <div class="kss-modifiers__example"><header class="site-header">
-  <div class="container">
+  <div class="container site-header__nav-container">
     <div class="site-header__inner">
       <a href="#" aria-label="Return to home page">
         <img src="http://via.placeholder.com/324x58" alt="data.govt.nz" width="164">
@@ -181,48 +181,48 @@
       </div>
     </div>
   </div>
-</header>
-<div class="site-search">
-  <div class="site-search__visibility hidden" id="site-search" data-toggle="slide" style="display: none;"
-    aria-expanded="false">
-    <div class="container">
-      <div class="site-search__inner">
-        <form class="search-form" action="search/SearchForm" method="get">
-          <label for="field-sitewide-search">
-            Search for:
-          </label>
-          <div class="context-switch">
-            <div class="field field--inline-label">
-              <input id="search-for-website-content" type="radio" class="search-form-context" name="header-search-context"
-                value="content" checked="checked">
-              <label for="search-for-website-content">
-                Website content
-              </label>
+  <div class="site-search">
+    <div class="site-search__visibility hidden" id="site-search" data-toggle="slide" style="display: none;"
+      aria-expanded="false">
+      <div class="container">
+        <div class="site-search__inner">
+          <form class="search-form" action="search/SearchForm" method="get">
+            <label for="field-sitewide-search">
+              Search for:
+            </label>
+            <div class="context-switch">
+              <div class="field field--inline-label">
+                <input id="search-for-website-content" type="radio" class="search-form-context" name="header-search-context"
+                  value="content" checked="checked">
+                <label for="search-for-website-content">
+                  Website content
+                </label>
+              </div>
+              <div class="field field--inline-label">
+                <input id="search-for-datasets" type="radio" class="search-form-context" name="header-search-context"
+                  value="datasets">
+                <label for="search-for-datasets">
+                  Datasets
+                </label>
+              </div>
             </div>
-            <div class="field field--inline-label">
-              <input id="search-for-datasets" type="radio" class="search-form-context" name="header-search-context"
-                value="datasets">
-              <label for="search-for-datasets">
-                Datasets
-              </label>
+            <div class="field search-input">
+              <input class="ckan-search-url" value="https://catalogue.data.govt.nz/dataset" type="hidden">
+              <input id="field-sitewide-search" name="Search" placeholder="E.g. environment" type="text"
+                aria-label="Search term">
             </div>
-          </div>
-          <div class="field search-input">
-            <input class="ckan-search-url" value="https://catalogue.data.govt.nz/dataset" type="hidden">
-            <input id="field-sitewide-search" name="Search" placeholder="E.g. environment" type="text"
-              aria-label="Search term">
-          </div>
-          <div class="actions">
-            <button class="button">
-              <span class="ri ri-search"></span>
-              <span>Search</span>
-            </button>
-          </div>
-        </form>
+            <div class="actions">
+              <button class="button">
+                <span class="ri ri-search"></span>
+                <span>Search</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</header>
 <div class="site-navigation">
   <div class="site-search__visibility" id="site-navigation" data-toggle="slide" style="display: none;" aria-expanded="true">
     <div class="container">
@@ -273,7 +273,7 @@
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;header class&#x3D;&quot;site-header&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;container site-header__nav-container&quot;&gt;
     &lt;div class&#x3D;&quot;site-header__inner&quot;&gt;
       &lt;a href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Return to home page&quot;&gt;
         &lt;img src&#x3D;&quot;http://via.placeholder.com/324x58&quot; alt&#x3D;&quot;data.govt.nz&quot; width&#x3D;&quot;164&quot;&gt;
@@ -338,48 +338,48 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/header&gt;
-&lt;div class&#x3D;&quot;site-search&quot;&gt;
-  &lt;div class&#x3D;&quot;site-search__visibility hidden&quot; id&#x3D;&quot;site-search&quot; data-toggle&#x3D;&quot;slide&quot; style&#x3D;&quot;display: none;&quot;
-    aria-expanded&#x3D;&quot;false&quot;&gt;
-    &lt;div class&#x3D;&quot;container&quot;&gt;
-      &lt;div class&#x3D;&quot;site-search__inner&quot;&gt;
-        &lt;form class&#x3D;&quot;search-form&quot; action&#x3D;&quot;search/SearchForm&quot; method&#x3D;&quot;get&quot;&gt;
-          &lt;label for&#x3D;&quot;field-sitewide-search&quot;&gt;
-            Search for:
-          &lt;/label&gt;
-          &lt;div class&#x3D;&quot;context-switch&quot;&gt;
-            &lt;div class&#x3D;&quot;field field--inline-label&quot;&gt;
-              &lt;input id&#x3D;&quot;search-for-website-content&quot; type&#x3D;&quot;radio&quot; class&#x3D;&quot;search-form-context&quot; name&#x3D;&quot;header-search-context&quot;
-                value&#x3D;&quot;content&quot; checked&#x3D;&quot;checked&quot;&gt;
-              &lt;label for&#x3D;&quot;search-for-website-content&quot;&gt;
-                Website content
-              &lt;/label&gt;
+  &lt;div class&#x3D;&quot;site-search&quot;&gt;
+    &lt;div class&#x3D;&quot;site-search__visibility hidden&quot; id&#x3D;&quot;site-search&quot; data-toggle&#x3D;&quot;slide&quot; style&#x3D;&quot;display: none;&quot;
+      aria-expanded&#x3D;&quot;false&quot;&gt;
+      &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;site-search__inner&quot;&gt;
+          &lt;form class&#x3D;&quot;search-form&quot; action&#x3D;&quot;search/SearchForm&quot; method&#x3D;&quot;get&quot;&gt;
+            &lt;label for&#x3D;&quot;field-sitewide-search&quot;&gt;
+              Search for:
+            &lt;/label&gt;
+            &lt;div class&#x3D;&quot;context-switch&quot;&gt;
+              &lt;div class&#x3D;&quot;field field--inline-label&quot;&gt;
+                &lt;input id&#x3D;&quot;search-for-website-content&quot; type&#x3D;&quot;radio&quot; class&#x3D;&quot;search-form-context&quot; name&#x3D;&quot;header-search-context&quot;
+                  value&#x3D;&quot;content&quot; checked&#x3D;&quot;checked&quot;&gt;
+                &lt;label for&#x3D;&quot;search-for-website-content&quot;&gt;
+                  Website content
+                &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;field field--inline-label&quot;&gt;
+                &lt;input id&#x3D;&quot;search-for-datasets&quot; type&#x3D;&quot;radio&quot; class&#x3D;&quot;search-form-context&quot; name&#x3D;&quot;header-search-context&quot;
+                  value&#x3D;&quot;datasets&quot;&gt;
+                &lt;label for&#x3D;&quot;search-for-datasets&quot;&gt;
+                  Datasets
+                &lt;/label&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;field field--inline-label&quot;&gt;
-              &lt;input id&#x3D;&quot;search-for-datasets&quot; type&#x3D;&quot;radio&quot; class&#x3D;&quot;search-form-context&quot; name&#x3D;&quot;header-search-context&quot;
-                value&#x3D;&quot;datasets&quot;&gt;
-              &lt;label for&#x3D;&quot;search-for-datasets&quot;&gt;
-                Datasets
-              &lt;/label&gt;
+            &lt;div class&#x3D;&quot;field search-input&quot;&gt;
+              &lt;input class&#x3D;&quot;ckan-search-url&quot; value&#x3D;&quot;https://catalogue.data.govt.nz/dataset&quot; type&#x3D;&quot;hidden&quot;&gt;
+              &lt;input id&#x3D;&quot;field-sitewide-search&quot; name&#x3D;&quot;Search&quot; placeholder&#x3D;&quot;E.g. environment&quot; type&#x3D;&quot;text&quot;
+                aria-label&#x3D;&quot;Search term&quot;&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class&#x3D;&quot;field search-input&quot;&gt;
-            &lt;input class&#x3D;&quot;ckan-search-url&quot; value&#x3D;&quot;https://catalogue.data.govt.nz/dataset&quot; type&#x3D;&quot;hidden&quot;&gt;
-            &lt;input id&#x3D;&quot;field-sitewide-search&quot; name&#x3D;&quot;Search&quot; placeholder&#x3D;&quot;E.g. environment&quot; type&#x3D;&quot;text&quot;
-              aria-label&#x3D;&quot;Search term&quot;&gt;
-          &lt;/div&gt;
-          &lt;div class&#x3D;&quot;actions&quot;&gt;
-            &lt;button class&#x3D;&quot;button&quot;&gt;
-              &lt;span class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
-              &lt;span&gt;Search&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
+            &lt;div class&#x3D;&quot;actions&quot;&gt;
+              &lt;button class&#x3D;&quot;button&quot;&gt;
+                &lt;span class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
+                &lt;span&gt;Search&lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/header&gt;
 &lt;div class&#x3D;&quot;site-navigation&quot;&gt;
   &lt;div class&#x3D;&quot;site-search__visibility&quot; id&#x3D;&quot;site-navigation&quot; data-toggle&#x3D;&quot;slide&quot; style&#x3D;&quot;display: none;&quot; aria-expanded&#x3D;&quot;true&quot;&gt;
     &lt;div class&#x3D;&quot;container&quot;&gt;
