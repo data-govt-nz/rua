@@ -254,7 +254,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
 .site-navigation {
     position: relative;
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     @include breakpoint(lg) {
         display: none;
@@ -310,7 +310,6 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
     &__visibility {
         position: absolute;
         width: 100%;
-        box-shadow: 0 0 40px rgba(#000, .1);
         background-color: color('white');
     }
 
@@ -318,4 +317,8 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
         border-top: border('dot');
         padding: rem(27 0 27-$form-spacing*3 0);
     }
+}
+
+.site-search .site-search__visibility {
+    box-shadow: 0 0 40px rgba(#000, .1);
 }
