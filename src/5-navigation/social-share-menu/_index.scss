@@ -1,0 +1,52 @@
+// Social Share Menu
+//
+// @todo
+//
+// Markup:
+// <ul class="social-share-menu">
+//   <li class="social-share-menu__item">
+//     <a href="https://twitter.com/home?status=URLTOSHARE" class="social-share-menu__link">
+//       <span class="ri ri-twitter"></span>
+//     </a>
+//   </li>
+//   <li class="social-share-menu__item">
+//     <a href="https://www.facebook.com/sharer/sharer.php?u=URLTOSHARE" class="social-share-menu__link">
+//       <span class="ri ri-facebook"></span>
+//     </a>
+//   </li>
+//   <li class="social-share-menu__item">
+//     <a href="https://www.linkedin.com/shareArticle?mini=true&url=URLTOSHARE" class="social-share-menu__link">
+//       <span class="ri ri-linkedin"></span>
+//     </a>
+//   </li>
+// </ul>
+//
+// Styleguide: NavigationComponents.SocialShareMenu
+
+.social-share-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-share-menu__item {
+  margin-right: 10px;
+}
+
+.social-share-menu__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 1;
+  border: 2px solid color('astral');
+  border-radius: 100%;
+
+  // Hack to fix white-space in icon files
+  .ri {
+    margin-top: -2px;
+  }
+}
