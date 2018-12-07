@@ -1,0 +1,57 @@
+// Sidebar Container
+//
+// Markup:
+// <div class="sidebar-container">
+//   <a class="sidebar-container__title" id="subnav-section" href="/open-data/">
+//     <h4>Container title</h4>
+//   </a>
+//   <div class="sidebar-container__section">
+//     <h4 class="sidebar-container__section-heading">Section heading</h4>
+//     <div>Other components to go here&hellip;</div>
+//   </div>
+//   <div class="sidebar-container__section">
+//     <h4 class="sidebar-container__section-heading">Section heading</h4>
+//     <div>Other components to go here&hellip;</div>
+//   </div>
+// </div>
+//
+// Styleguide: Layout.SidebarContainer
+
+.sidebar-container {
+  border-top: border('solid');
+  border-bottom: border('solid');
+
+  &__title {
+      display: block;
+      border-bottom: border('solid');
+      color: color('gray-dark');
+      text-decoration: none;
+      padding: rem(18 0);
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          font-size: rem(19);
+          margin: 0;
+      }
+  }
+
+  &__section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: border('dot');
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__section-heading {
+    margin: 0 0 15px 0;
+    font-size: rem(18);
+    font-weight: $font-weight-medium;
+  }
+}

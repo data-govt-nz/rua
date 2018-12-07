@@ -1,0 +1,40 @@
+// Sidebar Menu
+//
+// Markup:
+// <ul class="menu vertical sidebar-menu">
+//   <li><a href="#" class="menu-item sidebar-menu__item current">What is open data?</a></li>
+//   <li><a href="#" class="menu-item sidebar-menu__item link">Learn more about open data</a></li>
+//   <li><a href="#" class="menu-item sidebar-menu__item link">Open government data programme</a></li>
+//   <li><a href="#" class="menu-item sidebar-menu__item link">Open Data Maturity Dashboard</a></li>
+//   <li><a href="#" class="menu-item sidebar-menu__item link">Open licensing</a></li>
+//   <li>
+//     <a href="#" class="menu-item sidebar-menu__item link">Open data policy</a>
+//     <ul class="menu vertical">
+//       <li><a href="#" class="menu-item sidebar-menu__item">Sub item</a></li>
+//     </ul>
+//   </li>
+//   <li><a href="#" class="menu-item sidebar-menu__item link">Formats for open data, machine readable and human readable</a></li>
+// </ul>
+//
+// Styleguide: NavigationComponents.SidebarMenu
+
+.sidebar-menu {
+  font-size: rem(16);
+  padding: em(8 0);
+
+  a {
+    line-height: 1.4;
+  }
+
+  .menu {
+    padding-left: 30px;
+  }
+
+  &__item {
+    padding: em(8 0);
+
+    &.current {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
