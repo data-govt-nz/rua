@@ -1,0 +1,46 @@
+// Post Details
+//
+// @todo
+//
+// Markup:
+// <div class="post-details">
+//   <div class="avatar">
+//     <div class="avatar__image">
+//       <img src="/rua-assets/assets/avatar-placeholder@2x.png" alt="Author Name">
+//     </div>
+//   </div>
+//   <div class="post-details__info">
+//     <div class="post-details__published-by">Published by</div>
+//     <div class="post-details__author">John Smith</div>
+//     <div class="post-details__date">on 25 Oct 2018</div>
+//   </div>
+// </div>
+//
+// Styleguide: InformationComponents.PostDetails
+
+
+.post-details {
+  display: flex;
+}
+
+.post-details__info {
+  margin-left: 20px;
+}
+
+.post-details__published-by {
+  margin: 5px 0;
+  font-size: rem(18);
+  line-height: 1.4;
+  font-weight: $font-weight-medium;
+}
+
+.post-details__author {
+  font-size: rem(16);
+  line-height: 1.4;
+}
+
+.post-details__date {
+  font-size: rem(14);
+  line-height: 1.4;
+  color: color('pale-sky');
+}
