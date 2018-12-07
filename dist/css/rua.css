@@ -3440,7 +3440,8 @@ a.tag {
   margin: 0; }
 
 .social-share-menu__item {
-  margin-right: 10px; }
+  margin-right: 10px;
+  padding: 0; }
 
 .social-share-menu__link {
   display: -webkit-box;
@@ -4368,7 +4369,7 @@ td {
       font-size: 1.1875rem;
       margin: 0; }
   .sidebar-container__section {
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
     border-bottom: 1px dotted #C3CED8; }
     .sidebar-container__section:last-child {
