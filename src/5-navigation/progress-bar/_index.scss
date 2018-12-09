@@ -92,11 +92,15 @@ $progress-bar--button-size: 32px;
   &:first-child {
     text-align: left;
     flex-grow: 1;
+    // Add half button width for even spacing:
+    padding-right: $progress-bar--button-size/2;
   }
 
   &:last-child {
     text-align: right;
     flex-grow: 1;
+    // Add half button width for even spacing:
+    padding-left: $progress-bar--button-size/2;
   }
 }
 
