@@ -107,30 +107,41 @@ $tags-alignment: (
   margin: 0 -$tags-gap;
   clear: both;
   width: calc(100% + #{$tags-gap * 2});
-  &:first-child{
+
+  &:first-child {
     margin-top: -$tags-gap;
   }
-  &:last-child{
+
+  &:last-child {
     margin-bottom: -$tags-gap;
   }
-  li{
+
+  small {
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  li {
     display: inline-block;
     padding: 0;
     margin: 0;
   }
+
   a,
-  .tag{
+  .tag {
     margin: 0;
     display: block;
   }
+
   & > select,
-  & > input{
+  & > input {
     width: auto;
     margin: $tags-gap;
   }
+
   & > li,
   & > a,
-  & > .tag{
+  & > .tag {
     margin: $tags-gap;
   }
 
