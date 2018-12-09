@@ -3247,12 +3247,14 @@ a.tag {
     text-align: left;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-right: 16px; }
   .progress-bar__step:last-child {
     text-align: right;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-left: 16px; }
 
 .progress-bar__step--enabled,
 .progress-bar__step.viewed {
