@@ -35,13 +35,17 @@ $progress-bar--button-size: 32px;
  * - Disabled version gets displayed full-width behind entire element
  * - Active version is applied to individual step items (lis) based on enabled state
  */
-@mixin steps-connecting-line($line-color: $color-heather) {
+@mixin steps-connecting-line(
+  $line-color: $color-heather,
+  $width: 100%,
+  $left: 0
+) {
   content: '';
   display: block;
-  width: 100%;
+  width: $width;
   height: 3px;
   position: absolute;
-  left: 0;
+  left: $left;
   top: $progress-bar--button-size/2;
   z-index: 0;
   background-color: $line-color;
@@ -71,7 +75,7 @@ $progress-bar--button-size: 32px;
   }
 
   &:after {
-    @include steps-connecting-line;
+    @include steps-connecting-line($width: calc(100% - 10px), $left: 5px);
   }
 }
 
@@ -96,11 +100,16 @@ $progress-bar--button-size: 32px;
   }
 }
 
-.progress-bar__step--enabled {
+.progress-bar__step--enabled,
+.progress-bar__step.viewed {
 
   .progress-bar__button {
     border-color: $color-astral;
     color: $color-astral;
+  }
+
+  .ri {
+    display: inline-block;
   }
 
   /**
@@ -116,7 +125,8 @@ $progress-bar--button-size: 32px;
 /**
  * Disable connecting line for first element.
  */
-.progress-bar__step--enabled:first-child:after {
+.progress-bar__step--enabled:first-child:after,
+.progress-bar__step.viewed:first-child:after {
   content: none;
 }
 
@@ -125,7 +135,8 @@ $progress-bar--button-size: 32px;
  * and double width of parent (as parent is half width of other step
  * elements).
  */
-.progress-bar__step--enabled:last-child:after {
+.progress-bar__step--enabled:last-child:after,
+.progress-bar__step.viewed:last-child:after {
   left: auto;
   right: 0;
   width: 200%;
@@ -145,10 +156,15 @@ $progress-bar--button-size: 32px;
   border-color: $color-heather;
   background-color: #fff;
   text-align: center;
+
+  .ri {
+    display: none;
+  }
 }
 
 // Filled state for currently active step button
-.progress-bar__button--active:after {
+.progress-bar__button--active:after,
+.progress-bar__step.current .progress-bar__button:after {
   content: '';
   display: block;
   width: 100%;
