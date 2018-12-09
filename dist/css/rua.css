@@ -3223,10 +3223,10 @@ a.tag {
   .progress-bar__list:after {
     content: '';
     display: block;
-    width: 100%;
+    width: calc(100% - 10px);
     height: 3px;
     position: absolute;
-    left: 0;
+    left: 5px;
     top: 16px;
     z-index: 0;
     background-color: #C3CED8; }
@@ -3254,14 +3254,20 @@ a.tag {
     -ms-flex-positive: 1;
     flex-grow: 1; }
 
-.progress-bar__step--enabled {
+.progress-bar__step--enabled,
+.progress-bar__step.viewed {
   /**
    * Display active connecting line between enabled elements.
    */ }
-  .progress-bar__step--enabled .progress-bar__button {
+  .progress-bar__step--enabled .progress-bar__button,
+  .progress-bar__step.viewed .progress-bar__button {
     border-color: #307D99;
     color: #307D99; }
-  .progress-bar__step--enabled:after {
+  .progress-bar__step--enabled .ri,
+  .progress-bar__step.viewed .ri {
+    display: inline-block; }
+  .progress-bar__step--enabled:after,
+  .progress-bar__step.viewed:after {
     content: '';
     display: block;
     width: 100%;
@@ -3277,7 +3283,8 @@ a.tag {
 /**
  * Disable connecting line for first element.
  */
-.progress-bar__step--enabled:first-child:after {
+.progress-bar__step--enabled:first-child:after,
+.progress-bar__step.viewed:first-child:after {
   content: none; }
 
 /**
@@ -3285,7 +3292,8 @@ a.tag {
  * and double width of parent (as parent is half width of other step
  * elements).
  */
-.progress-bar__step--enabled:last-child:after {
+.progress-bar__step--enabled:last-child:after,
+.progress-bar__step.viewed:last-child:after {
   left: auto;
   right: 0;
   width: 200%; }
@@ -3304,8 +3312,11 @@ a.tag {
   border-color: #C3CED8;
   background-color: #fff;
   text-align: center; }
+  .progress-bar__button .ri {
+    display: none; }
 
-.progress-bar__button--active:after {
+.progress-bar__button--active:after,
+.progress-bar__step.current .progress-bar__button:after {
   content: '';
   display: block;
   width: 100%;
