@@ -1,0 +1,141 @@
+// Checklist
+//
+// @todo
+//
+// Markup:
+// <div class="checklist" id="group-1" data-toggle="class: state-standard, state-active">
+//   <div class="checklist__header">
+//     <div class="checklist__status">
+//       <button class="button-icon sbs-summary-checkbox checklist__check-toggle checked" aria-label="Have you checked the data for any Personal Information?">
+//         <span id="status-1-icon" class="checklist__check-toggle-icon ri ri-check" aria-checked="true"></span>
+//       </button>
+//     </div>
+//     <div class="checklist__middle">
+//       <div class="checklist__summary">
+//         <h4>1. Have you checked the data for any Personal Information?</h4>
+//         <div class="checklist__response sbs-response">
+//           You answered: Yes
+//         </div>
+//       </div>
+//       <div class="checklist__content" id="group-1-content" style="display: none" data-toggle="slide" aria-expanded="false">
+//         <div class="tagged-hor-rule">
+//           <hr>
+//           <span class="tagged-hor-rule__tag">Guidance expected</span>
+//         </div>
+//         <p>
+//           <a href="#" title="View guidance page">What is personal information and the Privacy Act?</a>
+//         </p>
+//         <div class="checklist__content-body">
+//           Data can contain values that identify a specific individual. This is called 'personal information' in New
+//           Zealand but is sometimes referred to as Personal Identifiable Information (PII). The Privacy Act 1993
+//           controls how 'agencies' collect, use, disclose, store and give access to personal information. The Privacy
+//           Act applies to almost every person, business or organisation in New Zealand.
+//         </div>
+//       </div>
+//     </div>
+//     <div class="checklist__actions">
+//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-1, #group-1-content, #group-1-icon">
+//         <span class="ri ri-chevron-down" id="group-1-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//       </button>
+//     </div>
+//   </div>
+// </div>
+// <div class="checklist" id="group-2" data-toggle="class: state-standard, state-active">
+//   <div class="checklist__header">
+//     <div class="checklist__status">
+//       <button class="button-icon sbs-summary-checkbox checklist__check-toggle checked" aria-label="Have you checked the data for any Personal Information?">
+//         <span id="status-2-icon" class="checklist__check-toggle-icon ri ri-check" aria-checked="true"></span>
+//       </button>
+//     </div>
+//     <div class="checklist__middle">
+//       <div class="checklist__summary">
+//         <h4>2. Do you know whether you should carry out a full Privacy Impact assessment or not before publicly releasing the data?</h4>
+//         <div class="checklist__response sbs-response">
+//           You answered: Yes
+//         </div>
+//       </div>
+//       <div class="checklist__content" id="group-2-content" style="display: none" data-toggle="slide" aria-expanded="false">
+//         <div class="tagged-hor-rule">
+//           <hr>
+//           <span class="tagged-hor-rule__tag">Guidance expected</span>
+//         </div>
+//         <p>
+//           <a href="#" title="View guidance page">What is personal information and the Privacy Act?</a>
+//         </p>
+//         <div class="checklist__content-body">
+//           Data can contain values that identify a specific individual. This is called 'personal information' in New
+//           Zealand but is sometimes referred to as Personal Identifiable Information (PII). The Privacy Act 1993
+//           controls how 'agencies' collect, use, disclose, store and give access to personal information. The Privacy
+//           Act applies to almost every person, business or organisation in New Zealand.
+//         </div>
+//       </div>
+//     </div>
+//     <div class="checklist__actions">
+//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-2, #group-2-content, #group-2-icon">
+//         <span class="ri ri-chevron-down" id="group-2-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+//       </button>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide: InformationComponents.Checklist
+
+.checklist {
+  background-color: color('gray-lighter');
+  border: 2px solid color('gray-lighter');
+  border-radius: rem(42 42 42 0);
+  padding: spacing('sm');
+  margin-bottom: spacing('sm') / 2;
+
+  .checklist__check-toggle-icon {
+      display: none;
+  }
+
+  .checklist__check-toggle.checked .checklist__check-toggle-icon {
+      display: inline-block;
+  }
+
+  &.state-active {
+      background-color: transparent;
+  }
+
+  &__header {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  &__status {
+      padding-right: spacing('sm');
+  }
+
+  &__actions {
+      padding-left: spacing('sm');
+  }
+
+  &__middle {
+      flex-grow: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+      font-size: rem(18);
+      line-height: 1.4;
+      margin: 0 0 10px 0;
+  }
+
+  &__response {
+      font-size: rem(16);
+      font-weight: $font-weight-regular;
+  }
+
+  .tagged-hor-rule {
+      margin: 30px 0 20px;
+  }
+
+  &__content-body {
+      font-size: rem(16);
+      line-height: 1.5;
+  }
+}
