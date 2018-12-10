@@ -3709,7 +3709,8 @@ a.tag {
   .link-tile:hover {
     background-color: #307D99;
     color: #fff; }
-    .link-tile:hover .link-tile__header {
+    .link-tile:hover .link-tile__header,
+    .link-tile:hover small {
       color: #fff; }
 
 .link-tile__header {
