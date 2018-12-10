@@ -138,4 +138,25 @@
       font-size: rem(16);
       line-height: 1.5;
   }
+
+  @include breakpoint(sm down) {
+
+    .checklist__status {
+      display: none;
+    }
+
+    .checklist {
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-size: rem(14);
+      }
+
+    }
+
+  }
 }
+
+
