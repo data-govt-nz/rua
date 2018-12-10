@@ -3,10 +3,13 @@
 // @todo
 //
 // Markup:
-// <div class="share-link">
-//   <input type="text" readonly="readonly" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
-//   <div class="button-icon" data-clipboard data-clipboard-target="#clipboard-copy">
-//     <span class="ri ri-copy"></span>
+// <div class="share-link-container">
+//   <label for="clipboard-copy" class="share-link__label">Share this summary or save the link to return later</label>
+//   <div class="share-link">
+//     <input type="text" readonly="readonly" id="clipboard-copy" value="https://data.govt.nz/manage-data/step-by-step-guides/releasing-open-data-on-data-govt-nz/" />
+//     <div class="button-icon" data-clipboard data-clipboard-target="#clipboard-copy">
+//       <span class="ri ri-copy"></span>
+//     </div>
 //   </div>
 // </div>
 //
@@ -23,6 +26,7 @@ $share-link-padding: em(6) !default;
   display: flex;
   align-items: center;
   padding: $share-link-padding;
+
   input {
     &,
     &:focus,
@@ -34,16 +38,26 @@ $share-link-padding: em(6) !default;
       cursor: text;
     }
   }
+
   &:focus-within {
     box-shadow: $button-shadow-hover;
   }
+
   .button-icon {
     color: $share-link-button-color;
     background-color: $share-link-button-background;
     border-color: $share-link-button-background;
   }
+
   .ri {
     font-size: 1.3em;
     line-height: inherit;
   }
+}
+
+.share-link__label {
+  margin-bottom: 5px;
+  font-size: rem(16);
+  line-height: 1.4;
+  font-weight: $font-weight-medium;
 }
