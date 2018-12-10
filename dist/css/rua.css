@@ -4059,6 +4059,14 @@ td {
   .checklist__content-body {
     font-size: 1rem;
     line-height: 1.5; }
+  @media screen and (max-width: 991px) {
+    .checklist .checklist__status {
+      display: none; }
+    .checklist .checklist h1,
+    .checklist .checklist h2,
+    .checklist .checklist h3,
+    .checklist .checklist h4 {
+      font-size: 0.875rem; } }
 
 .site-header {
   position: relative;
