@@ -79,6 +79,7 @@
       width: 55%;
     }
   }
+
   &__title {
       margin-top: 0;
       margin-bottom: rem(10);
@@ -91,6 +92,10 @@
       }
   }
 
+  &__title--no-crumbs {
+    margin-top: 30px;
+  }
+
   &__lead {
       margin-top: 0;
       margin-bottom: 1em;
@@ -98,40 +103,43 @@
   }
 
   &__style-1 {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-attachment: fixed;
+    width: 18%;
+
+    @include breakpoint(md) {
+      width: 30%;
+    }
+
+    @include breakpoint(lg) {
+      width: 45%;
+    }
+
+    &:before {
+      content: '';
       position: absolute;
-      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("#{$images-path}blue-banner-edge.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      max-width: rem(505);
+    }
+
+    &:after {
+      content: '';
+      background-image: url("#{$images-path}blue-banner-repeat.png");
+      position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      z-index: 1;
-
-      background-attachment: fixed;
-      width: 18%;
-      @include breakpoint(md) {
-        width: 30%;
-      }
-      @include breakpoint(lg) {
-        width: 45%;
-      }
-      &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          background-image: url("#{$images-path}blue-banner-edge.png");
-          background-repeat: no-repeat;
-          width: 100%;
-          max-width: rem(505);
-      }
-      &:after {
-          content: '';
-          background-image: url("#{$images-path}blue-banner-repeat.png");
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: rem(505);
-      }
+      left: rem(505);
+    }
   }
 }
