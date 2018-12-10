@@ -29,7 +29,7 @@
 //          <span class="link-tile__header-text">Releasing open data on data.govt.nz</span>
 //          <span class="link-tile__icon ri ri-arrow-right"></span>
 //        </span>
-//        <span class="link-tile__content">Guide to reviewing and safely releasing open data for reuse.</span>
+//        <span class="link-tile__content">Guide to reviewing and safely releasing open data for reuse.<br><small>(9 hours ago)</small></span>
 //      </a>
 //     </div>
 //   </div>
@@ -51,7 +51,8 @@
     background-color: $color-astral;
     color: #fff;
 
-    .link-tile__header {
+    .link-tile__header,
+    small {
       color: #fff;
     }
   }
