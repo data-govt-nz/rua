@@ -73,3 +73,35 @@ $tab-radius: em(2) !default;
     }
   }
 }
+
+.secondary-one {
+
+  .tabs {
+    border-color: $color-pacific-blue;
+  }
+
+}
+
+.secondary-two {
+
+  .tabs {
+    border-color: $color-red-ribbon;
+  }
+
+}
+
+.secondary-three {
+
+  .tabs {
+    border-color: $color-apple;
+  }
+
+}
+
+.secondary-four {
+
+  .tabs {
+    border-color: $color-eminence;
+  }
+
+}
