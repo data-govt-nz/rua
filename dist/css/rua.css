@@ -3148,6 +3148,15 @@ a.tag {
       -ms-flex-direction: column;
       flex-direction: column; } }
 
+/**
+ * Handle display of tab content (styles to be used in conjunction
+ * with the toggler plugin
+ **/
+.tab-content {
+  display: none; }
+  .tab-content.tab-content--active {
+    display: block; }
+
 .secondary-one .tabs {
   border-color: #01B3C4; }
 
