@@ -320,3 +320,8 @@
       }
   }
 }
+
+// Override any theming applied to page
+body .site-footer hr {
+  border-color: $color-pacific-blue
+}
