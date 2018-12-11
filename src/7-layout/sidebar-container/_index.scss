@@ -55,3 +55,39 @@
     font-weight: $font-weight-medium;
   }
 }
+
+.secondary-one {
+
+  .sidebar-container,
+  .sidebar-container__title {
+    border-color: $color-pacific-blue;
+  }
+
+}
+
+.secondary-two {
+
+  .sidebar-container,
+  .sidebar-container__title {
+    border-color: $color-red-ribbon;
+  }
+
+}
+
+.secondary-three {
+
+  .sidebar-container,
+  .sidebar-container__title {
+    border-color: $color-apple;
+  }
+
+}
+
+.secondary-four {
+
+  .sidebar-container,
+  .sidebar-container__title {
+    border-color: $color-eminence;
+  }
+
+}
