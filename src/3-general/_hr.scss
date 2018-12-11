@@ -63,3 +63,51 @@ hr {
   line-height: 1;
   color: $color-big-stone;
 }
+
+.secondary-one {
+
+  hr {
+    border-color: $color-pacific-blue;
+  }
+
+  .tagged-hor-rule__tag {
+    background-color: rgba($color-pacific-blue, .1);
+  }
+
+}
+
+.secondary-two {
+
+  hr {
+    border-color: $color-red-ribbon;
+  }
+
+  .tagged-hor-rule__tag {
+    background-color: rgba($color-red-ribbon, .1);
+  }
+
+}
+
+.secondary-three {
+
+  hr {
+    border-color: $color-apple;
+  }
+
+  .tagged-hor-rule__tag {
+    background-color: rgba($color-apple, .1);
+  }
+
+}
+
+.secondary-four {
+
+  hr {
+    border-color: $color-eminence;
+  }
+
+  .tagged-hor-rule__tag {
+    background-color: rgba($color-eminence, .1);
+  }
+
+}
