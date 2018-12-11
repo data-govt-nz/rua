@@ -4509,6 +4509,9 @@ td {
         -ms-transform-origin: top right;
         transform-origin: top right; } }
 
+body .site-footer hr {
+  border-color: #01B3C4; }
+
 .site-back-to-top {
   display: -webkit-box;
   display: -ms-flexbox;
