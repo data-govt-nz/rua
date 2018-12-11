@@ -67,11 +67,11 @@ hr {
 .secondary-one {
 
   hr {
-    border-color: $color-pacific-blue;
+    border-color: $theme-option-1;
   }
 
   .tagged-hor-rule__tag {
-    background-color: rgba($color-pacific-blue, .1);
+    background-color: rgba($theme-option-1, .1);
   }
 
 }
@@ -79,11 +79,11 @@ hr {
 .secondary-two {
 
   hr {
-    border-color: $color-red-ribbon;
+    border-color: $theme-option-2;
   }
 
   .tagged-hor-rule__tag {
-    background-color: rgba($color-red-ribbon, .1);
+    background-color: rgba($theme-option-2, .1);
   }
 
 }
@@ -91,11 +91,11 @@ hr {
 .secondary-three {
 
   hr {
-    border-color: $color-apple;
+    border-color: $theme-option-3;
   }
 
   .tagged-hor-rule__tag {
-    background-color: rgba($color-apple, .1);
+    background-color: rgba($theme-option-3, .1);
   }
 
 }
@@ -103,11 +103,11 @@ hr {
 .secondary-four {
 
   hr {
-    border-color: $color-eminence;
+    border-color: $theme-option-4;
   }
 
   .tagged-hor-rule__tag {
-    background-color: rgba($color-eminence, .1);
+    background-color: rgba($theme-option-4, .1);
   }
 
 }

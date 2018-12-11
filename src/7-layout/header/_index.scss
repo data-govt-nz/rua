@@ -327,12 +327,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
   .site-header__menu-item {
     &:after {
-      background-color: $color-pacific-blue;
+      background-color: $theme-option-1;
     }
 
     &:focus,
     &:hover {
-      color: $color-pacific-blue;
+      color: $theme-option-1;
     }
   }
 
@@ -342,12 +342,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
   .site-header__menu-item {
     &:after {
-      background-color: $color-red-ribbon;
+      background-color: $theme-option-2;
     }
 
     &:focus,
     &:hover {
-      color: $color-red-ribbon;
+      color: $theme-option-2;
     }
   }
 
@@ -357,12 +357,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
   .site-header__menu-item {
     &:after {
-      background-color: $color-apple;
+      background-color: $theme-option-3;
     }
 
     &:focus,
     &:hover {
-      color: $color-apple;
+      color: $theme-option-3;
     }
   }
 
@@ -372,12 +372,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
   .site-header__menu-item {
     &:after {
-      background-color: $color-eminence;
+      background-color: $theme-option-4;
     }
 
     &:focus,
     &:hover {
-      color: $color-eminence;
+      color: $theme-option-4;
     }
   }
 
