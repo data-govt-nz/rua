@@ -1036,6 +1036,12 @@ html {
 .color-red-ribbon {
   color: #EE1846; }
 
+.bg-tango {
+  background-color: #ed7218; }
+
+.color-tango {
+  color: #ed7218; }
+
 .bg-primary {
   background-color: #307D99; }
 
@@ -2611,6 +2617,12 @@ hr {
 .secondary-four .tagged-hor-rule__tag {
   background-color: rgba(111, 43, 145, 0.1); }
 
+.secondary-five hr {
+  border-color: #ed7218; }
+
+.secondary-five .tagged-hor-rule__tag {
+  background-color: rgba(237, 114, 24, 0.1); }
+
 .tag {
   outline: 0;
   display: inline-block;
@@ -3168,6 +3180,9 @@ a.tag {
 
 .secondary-four .tabs {
   border-color: #6F2B91; }
+
+.secondary-five .tabs {
+  border-color: #ed7218; }
 
 .iterator {
   display: -webkit-box;
@@ -3827,6 +3842,9 @@ a.tag {
 .secondary-four .accordion {
   border-color: #6F2B91; }
 
+.secondary-five .accordion {
+  border-color: #ed7218; }
+
 blockquote,
 .blockquote {
   margin: 2.4em 0;
@@ -3882,6 +3900,10 @@ blockquote,
 .secondary-four blockquote,
 .secondary-four .blockquote {
   border-color: #6F2B91; }
+
+.secondary-five blockquote,
+.secondary-five .blockquote {
+  border-color: #ed7218; }
 
 .message {
   display: block;
@@ -4301,6 +4323,12 @@ td {
 .secondary-four .site-header__menu-item:focus, .secondary-four .site-header__menu-item:hover {
   color: #6F2B91; }
 
+.secondary-five .site-header__menu-item:after {
+  background-color: #ed7218; }
+
+.secondary-five .site-header__menu-item:focus, .secondary-five .site-header__menu-item:hover {
+  color: #ed7218; }
+
 .site-banner {
   background: #ECEFF2 url("../assets/tic-tac-toe.png");
   padding: 20px;
@@ -4404,6 +4432,15 @@ td {
 
 .secondary-four .site-banner__pattern:after {
   background-image: url("../assets/purple-banner-repeat.png"); }
+
+.secondary-five .site-banner__breadcrumbs .ri-home {
+  color: #ed7218; }
+
+.secondary-five .site-banner__pattern:before {
+  background-image: url("../assets/orange-banner-edge.png"); }
+
+.secondary-five .site-banner__pattern:after {
+  background-image: url("../assets/orange-banner-repeat.png"); }
 
 .site-footer {
   position: relative;
@@ -4616,3 +4653,7 @@ body .site-footer hr {
 .secondary-four .sidebar-container,
 .secondary-four .sidebar-container__title {
   border-color: #6F2B91; }
+
+.secondary-five .sidebar-container,
+.secondary-five .sidebar-container__title {
+  border-color: #ed7218; }
