@@ -22,7 +22,7 @@
 //        Helping you understand what data is, and what you can do with it.
 //      </p>
 //   </div>
-//   <div class="site-banner__style-1"></div>
+//   <div class="site-banner__pattern"></div>
 // </div>
 //
 // Styleguide: Layout.Banner
@@ -61,7 +61,7 @@
 //        Helping you understand what data is, and what you can do with it.
 //      </p>
 //   </div>
-//   <div class="site-banner__style-1"></div>
+//   <div class="site-banner__pattern"></div>
 // </div>
 //
 // Styleguide: Layout.Banner.DeepNest
@@ -77,6 +77,20 @@
   &__breadcrumbs {
     @include breakpoint(lg) {
       width: 55%;
+    }
+
+    .ri-home {
+      display: inline-block;
+      margin-top: 4px; // Fix space at top of icon
+      text-decoration: none;
+      font-size: rem(16);
+      line-height: 1;
+      // Default to blue theme if none applied
+      color: $color-pacific-blue;
+
+      &:before {
+        display: block;
+      }
     }
   }
 
@@ -102,7 +116,7 @@
       max-width: rem(750);
   }
 
-  &__style-1 {
+  &__pattern {
     position: absolute;
     display: block;
     top: 0;
@@ -120,6 +134,7 @@
       width: 45%;
     }
 
+    // Default to blue theme if none applied
     &:before {
       content: '';
       position: absolute;
@@ -142,4 +157,88 @@
       left: rem(505);
     }
   }
+}
+
+.secondary-one {
+
+  .site-banner__breadcrumbs .ri-home {
+    color: $color-pacific-blue;
+  }
+
+  .site-banner__pattern {
+
+    &:before {
+      background-image: url("#{$images-path}blue-banner-edge.png");
+    }
+
+    &:after {
+      background-image: url("#{$images-path}blue-banner-repeat.png");
+    }
+
+
+  }
+
+}
+
+.secondary-two {
+
+  .site-banner__breadcrumbs .ri-home {
+    color: $color-red-ribbon;
+  }
+
+  .site-banner__pattern {
+
+    &:before {
+      background-image: url("#{$images-path}red-banner-edge.png");
+    }
+
+    &:after {
+      background-image: url("#{$images-path}red-banner-repeat.png");
+    }
+
+
+  }
+
+}
+
+.secondary-three {
+
+  .site-banner__breadcrumbs .ri-home {
+    color: $color-apple;
+  }
+
+  .site-banner__pattern {
+
+    &:before {
+      background-image: url("#{$images-path}green-banner-edge.png");
+    }
+
+    &:after {
+      background-image: url("#{$images-path}green-banner-repeat.png");
+    }
+
+
+  }
+
+}
+
+.secondary-four {
+
+  .site-banner__breadcrumbs .ri-home {
+    color: $color-eminence;
+  }
+
+  .site-banner__pattern {
+
+    &:before {
+      background-image: url("#{$images-path}purple-banner-edge.png");
+    }
+
+    &:after {
+      background-image: url("#{$images-path}purple-banner-repeat.png");
+    }
+
+
+  }
+
 }
