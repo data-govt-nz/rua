@@ -60,7 +60,7 @@
 
   .sidebar-container,
   .sidebar-container__title {
-    border-color: $color-pacific-blue;
+    border-color: $theme-option-1;
   }
 
 }
@@ -69,7 +69,7 @@
 
   .sidebar-container,
   .sidebar-container__title {
-    border-color: $color-red-ribbon;
+    border-color: $theme-option-2;
   }
 
 }
@@ -78,7 +78,7 @@
 
   .sidebar-container,
   .sidebar-container__title {
-    border-color: $color-apple;
+    border-color: $theme-option-3;
   }
 
 }
@@ -87,7 +87,16 @@
 
   .sidebar-container,
   .sidebar-container__title {
-    border-color: $color-eminence;
+    border-color: $theme-option-4;
+  }
+
+}
+
+.secondary-five {
+
+  .sidebar-container,
+  .sidebar-container__title {
+    border-color: $theme-option-5;
   }
 
 }

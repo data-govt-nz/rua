@@ -52,7 +52,7 @@ blockquote,
 
   blockquote,
   .blockquote {
-    border-color: $color-pacific-blue;
+    border-color: $theme-option-1;
   }
 
 }
@@ -61,7 +61,7 @@ blockquote,
 
   blockquote,
   .blockquote {
-    border-color: $color-red-ribbon;
+    border-color: $theme-option-2;
   }
 
 }
@@ -70,7 +70,7 @@ blockquote,
 
   blockquote,
   .blockquote {
-    border-color: $color-apple;
+    border-color: $theme-option-3;
   }
 
 }
@@ -79,7 +79,17 @@ blockquote,
 
   blockquote,
   .blockquote {
-    border-color: $color-eminence;
+    border-color: $theme-option-4;
   }
 
 }
+
+.secondary-five {
+
+  blockquote,
+  .blockquote {
+    border-color: $theme-option-5;
+  }
+
+}
+
