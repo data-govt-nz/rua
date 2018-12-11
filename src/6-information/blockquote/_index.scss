@@ -47,3 +47,39 @@ blockquote,
     margin: 0;
   }
 }
+
+.secondary-one {
+
+  blockquote,
+  .blockquote {
+    border-color: $color-pacific-blue;
+  }
+
+}
+
+.secondary-two {
+
+  blockquote,
+  .blockquote {
+    border-color: $color-red-ribbon;
+  }
+
+}
+
+.secondary-three {
+
+  blockquote,
+  .blockquote {
+    border-color: $color-apple;
+  }
+
+}
+
+.secondary-four {
+
+  blockquote,
+  .blockquote {
+    border-color: $color-eminence;
+  }
+
+}

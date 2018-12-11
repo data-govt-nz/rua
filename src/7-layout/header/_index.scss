@@ -322,3 +322,63 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 .site-search .site-search__visibility {
     box-shadow: 0 0 40px rgba(#000, .1);
 }
+
+.secondary-one {
+
+  .site-header__menu-item {
+    &:after {
+      background-color: $theme-option-1;
+    }
+
+    &:focus,
+    &:hover {
+      color: $theme-option-1;
+    }
+  }
+
+}
+
+.secondary-two {
+
+  .site-header__menu-item {
+    &:after {
+      background-color: $theme-option-2;
+    }
+
+    &:focus,
+    &:hover {
+      color: $theme-option-2;
+    }
+  }
+
+}
+
+.secondary-three {
+
+  .site-header__menu-item {
+    &:after {
+      background-color: $theme-option-3;
+    }
+
+    &:focus,
+    &:hover {
+      color: $theme-option-3;
+    }
+  }
+
+}
+
+.secondary-four {
+
+  .site-header__menu-item {
+    &:after {
+      background-color: $theme-option-4;
+    }
+
+    &:focus,
+    &:hover {
+      color: $theme-option-4;
+    }
+  }
+
+}
