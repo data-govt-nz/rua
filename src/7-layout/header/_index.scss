@@ -382,3 +382,18 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
   }
 
 }
+
+.secondary-five {
+
+  .site-header__menu-item {
+    &:after {
+      background-color: $theme-option-5;
+    }
+
+    &:focus,
+    &:hover {
+      color: $theme-option-5;
+    }
+  }
+
+}

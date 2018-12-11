@@ -90,7 +90,7 @@ $tab-radius: em(2) !default;
 .secondary-one {
 
   .tabs {
-    border-color: $color-pacific-blue;
+    border-color: $theme-option-1;
   }
 
 }
@@ -98,7 +98,7 @@ $tab-radius: em(2) !default;
 .secondary-two {
 
   .tabs {
-    border-color: $color-red-ribbon;
+    border-color: $theme-option-2;
   }
 
 }
@@ -106,7 +106,7 @@ $tab-radius: em(2) !default;
 .secondary-three {
 
   .tabs {
-    border-color: $color-apple;
+    border-color: $theme-option-3;
   }
 
 }
@@ -114,7 +114,15 @@ $tab-radius: em(2) !default;
 .secondary-four {
 
   .tabs {
-    border-color: $color-eminence;
+    border-color: $theme-option-4;
+  }
+
+}
+
+.secondary-five {
+
+  .tabs {
+    border-color: $theme-option-5;
   }
 
 }

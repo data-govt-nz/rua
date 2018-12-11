@@ -111,3 +111,15 @@ hr {
   }
 
 }
+
+.secondary-five {
+
+  hr {
+    border-color: $theme-option-5;
+  }
+
+  .tagged-hor-rule__tag {
+    background-color: rgba($theme-option-5, .1);
+  }
+
+}

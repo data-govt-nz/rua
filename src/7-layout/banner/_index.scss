@@ -242,3 +242,24 @@
   }
 
 }
+
+.secondary-five {
+
+  .site-banner__breadcrumbs .ri-home {
+    color: $theme-option-5;
+  }
+
+  .site-banner__pattern {
+
+    &:before {
+      background-image: url("#{$images-path}orange-banner-edge.png");
+    }
+
+    &:after {
+      background-image: url("#{$images-path}orange-banner-repeat.png");
+    }
+
+
+  }
+
+}
