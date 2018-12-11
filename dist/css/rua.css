@@ -3148,6 +3148,18 @@ a.tag {
       -ms-flex-direction: column;
       flex-direction: column; } }
 
+.secondary-one .tabs {
+  border-color: #01B3C4; }
+
+.secondary-two .tabs {
+  border-color: #EE1846; }
+
+.secondary-three .tabs {
+  border-color: #51AE32; }
+
+.secondary-four .tabs {
+  border-color: #6F2B91; }
+
 .iterator {
   display: -webkit-box;
   display: -ms-flexbox;
