@@ -74,6 +74,19 @@ $tab-radius: em(2) !default;
   }
 }
 
+/**
+ * Handle display of tab content (styles to be used in conjunction
+ * with the toggler plugin
+ **/
+.tab-content {
+  display: none;
+
+  &.tab-content--active {
+      display: block;
+  }
+}
+
+
 .secondary-one {
 
   .tabs {
