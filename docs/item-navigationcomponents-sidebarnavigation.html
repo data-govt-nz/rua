@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rua pattern library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="./rua-assets/css/rua.css">
+<link rel="stylesheet" href="./rua-assets/css/rua-font.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Rua pattern library</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Rua pattern library</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-core.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Core</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-general.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">General</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-icons.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Icons</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-navigationcomponents.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Navigation components</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-informationcomponents.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Information components</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Layout</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-plugins.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Plugins</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-navigationcomponents-sidebarnavigation">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>5-navigation/sidebar-nav/_index.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-navigationcomponents-sidebarnavigation">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.12</span>
+                  <span class="kss-section__name">Sidebar Navigation</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><nav class="sidebar-nav" role="navigation" aria-labelledby="subnav-section">
+  <a id="subnav-section" href="/open-data/" title="Go to the Open data page" class="sidebar-nav__title">
+    <h4>Open data</h4>
+  </a>
+  <ul class="menu vertical sidebar-nav__menu">
+    <li><a href="#" class="menu-item sidebar-nav__menu-item current">What is open data?</a></li>
+    <li><a href="#" class="menu-item sidebar-nav__menu-item link">Learn more about open data</a></li>
+    <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open government data programme</a></li>
+    <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open Data Maturity Dashboard</a></li>
+    <li><a href="#" class="menu-item sidebar-nav__menu-item link">Open licensing</a></li>
+    <li>
+      <a href="#" class="menu-item sidebar-nav__menu-item link">Open data policy</a>
+      <ul class="menu vertical">
+        <li><a href="#" class="menu-item sidebar-nav__menu-item">Sub item</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="menu-item sidebar-nav__menu-item link">Formats for open data, machine readable and human readable</a></li>
+  </ul>
+</nav></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;nav class&#x3D;&quot;sidebar-nav&quot; role&#x3D;&quot;navigation&quot; aria-labelledby&#x3D;&quot;subnav-section&quot;&gt;
+  &lt;a id&#x3D;&quot;subnav-section&quot; href&#x3D;&quot;/open-data/&quot; title&#x3D;&quot;Go to the Open data page&quot; class&#x3D;&quot;sidebar-nav__title&quot;&gt;
+    &lt;h4&gt;Open data&lt;/h4&gt;
+  &lt;/a&gt;
+  &lt;ul class&#x3D;&quot;menu vertical sidebar-nav__menu&quot;&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item current&quot;&gt;What is open data?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Learn more about open data&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Open government data programme&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Open Data Maturity Dashboard&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Open licensing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Open data policy&lt;/a&gt;
+      &lt;ul class&#x3D;&quot;menu vertical&quot;&gt;
+        &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item&quot;&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;menu-item sidebar-nav__menu-item link&quot;&gt;Formats for open data, machine readable and human readable&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="./rua-assets/js/rua.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>
