@@ -27,3 +27,7 @@ $form-label-line-height: 1.8 !default;
 label {
   @include form-label;
 }
+
+.required {
+  color: #EE1846;
+}
