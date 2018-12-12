@@ -4573,6 +4573,12 @@ td {
         -ms-transform-origin: top right;
         transform-origin: top right; } }
 
+.site-footer--minimal {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); }
+  .site-footer--minimal .site-footer__style-1 {
+    width: 50%; }
+
 body .site-footer hr {
   border-color: #01B3C4; }
 
