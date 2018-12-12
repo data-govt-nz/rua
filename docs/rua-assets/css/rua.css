@@ -1773,7 +1773,7 @@ p {
   line-height: 1.5em; }
 
 .lead {
-  margin-top: 1.42em;
+  margin-top: 0;
   margin-bottom: 2.4em;
   font-size: 1rem;
   font-weight: 400;
