@@ -234,6 +234,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
         }
 
         &.#{$menu-item-active-class},
+        &.section,
         &:focus,
         &:hover {
             &:after {
