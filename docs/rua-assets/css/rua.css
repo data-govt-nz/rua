@@ -4244,6 +4244,10 @@ td {
       width: calc(100% - 1.875rem);
       opacity: 1; }
 
+@media screen and (max-width: 991px) {
+  .site-header--back-link-extra-text {
+    display: none; } }
+
 .navigation-toggle {
   color: #307D99;
   -webkit-box-ordinal-group: 0;
