@@ -4336,8 +4336,7 @@ td {
   background: #ECEFF2 url("../assets/tic-tac-toe.png");
   padding: 20px;
   position: relative;
-  overflow: hidden;
-  min-height: 12.5rem; }
+  overflow: hidden; }
   @media screen and (min-width: 1200px) {
     .site-banner__breadcrumbs {
       width: 55%; } }
