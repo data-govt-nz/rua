@@ -159,6 +159,27 @@
 //
 // Styleguide: Layout.Header
 
+// Minimal Header
+//
+// @todo
+//
+// Markup:
+// <header class="site-header site-header--minimal">
+//   <div class="container site-header__nav-container">
+//     <div class="site-header__inner">
+//       <a href="#" aria-label="Return to home page">
+//         <img src="http://via.placeholder.com/324x58" alt="data.govt.nz" width="164">
+//       </a>
+//       <a href="#" class="site-header--back-link button secondary">
+//         <span class="ri ri-chevron-left"></span>
+//         Back<span class="site-header--back-link-extra-text"> to Step by step guides</span>
+//       </a>
+//     </div>
+//   </div>
+// </header>
+//
+// Styleguide: Layout.Header.Minimal
+
 $site-header-menu-item-padding: rem(20 15) !default;
 $menu-item-padding-right: get-side($site-header-menu-item-padding, 'right');
 $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
@@ -243,6 +264,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
             }
         }
     }
+}
+
+.site-header--back-link-extra-text {
+  @include breakpoint(sm down) {
+    display: none;
+  }
 }
 
 .navigation-toggle {
