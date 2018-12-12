@@ -2002,6 +2002,9 @@ label {
   line-height: 1.8;
   color: inherit; }
 
+.required {
+  color: #EE1846; }
+
 select {
   width: 100%;
   margin: 0 0 4px;
@@ -4237,7 +4240,7 @@ td {
       border-radius: 100px; }
     .site-header__menu-item:focus, .site-header__menu-item:hover {
       color: #01B3C4; }
-    .site-header__menu-item.current:after, .site-header__menu-item:focus:after, .site-header__menu-item:hover:after {
+    .site-header__menu-item.current:after, .site-header__menu-item.section:after, .site-header__menu-item:focus:after, .site-header__menu-item:hover:after {
       width: calc(100% - 1.875rem);
       opacity: 1; }
 
