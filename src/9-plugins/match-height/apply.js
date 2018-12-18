@@ -4,6 +4,7 @@ import parseOptions from './parseOptions'
 import rowsCalc from './rowsCalc'
 
 export default function (elements, options) {
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
   var opts = parseOptions(options),
     $elements = $(elements),
     rows = [$elements]
@@ -18,7 +19,7 @@ export default function (elements, options) {
   // cache the original inline style
   $hiddenParents.each(function () {
     var $that = $(this)
-    $that.data('style-cache', $that.attr('style'))
+    $that.data(namespace + 'style-cache', $that.attr('style'))
   })
 
   // temporarily must force hidden parents visible
@@ -38,7 +39,7 @@ export default function (elements, options) {
       }
 
       // cache the original inline style
-      $that.data('style-cache', $that.attr('style'))
+      $that.data(namespace + 'style-cache', $that.attr('style'))
 
       $that.css({
         'display': display,
@@ -59,7 +60,7 @@ export default function (elements, options) {
     // revert original inline styles
     $elements.each(function () {
       var $that = $(this);
-      $that.attr('style', $that.data('style-cache') || '')
+      $that.attr('style', $that.data(namespace + 'style-cache') || '')
     })
   }
 
@@ -133,7 +134,7 @@ export default function (elements, options) {
   // revert hidden parents
   $hiddenParents.each(function () {
     var $that = $(this)
-    $that.attr('style', $that.data('style-cache') || null)
+    $that.attr('style', $that.data(namespace + 'style-cache') || null)
   })
 
   // restore scroll position if enabled

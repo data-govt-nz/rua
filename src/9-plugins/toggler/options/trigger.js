@@ -33,13 +33,15 @@ export function run({
   state,
   variables
 }) {
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
+
   variables.forEach(function (selector) {
     const o = selector.split('=>')
     const elements = $(o[0])
     state = (o[1]) ? (o[1] == 'true') : state
 
     elements.each(function (index, element) {
-      const data = parseData(element, 'toggle', {
+      const data = parseData(element, namespace + 'toggle', {
         forceState: state
       })
       data.functions.forEach(function(parameter) {

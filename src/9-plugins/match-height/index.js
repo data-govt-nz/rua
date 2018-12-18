@@ -99,15 +99,16 @@ function bindUpdate(throttle, event) {
 
 export default function () {
   const groups = {}
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
 
   /*
    *  bind events
    */
 
   // generate groups by their groupId set by elements using data-match-height
-  $('[data-mh]').each(function () {
+  $('[data-' + namespace + 'mh]').each(function () {
     const element = $(this),
-      groupId = element.data('mh')
+      groupId = element.data(namespace + 'mh')
 
     if (groupId in groups) {
       groups[groupId] = groups[groupId].add(element)

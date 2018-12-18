@@ -48,6 +48,8 @@ gulp
 ```
 
 ```js
+// Optionally set window.dataTargetNamespace to a custom value (e.g. 'rua-' would mean you'd use `data-rua-toggle="..."`)
+
 import {
     toggler,
     matchHeight,
