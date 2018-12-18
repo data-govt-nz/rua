@@ -1,0 +1,150 @@
+// Metrics Bubbles
+//
+// @todo
+//
+// Markup:
+// <div class="metrics-bubbles">
+//   <div class="metrics-bubble">
+//     <span class="metrics-bubble__stat">6.4k</span>
+//     <span class="metrics-bubble__label">Datasets</span>
+//   </div>
+//   <div class="metrics-bubble">
+//     <span class="metrics-bubble__stat">158</span>
+//     <span class="metrics-bubble__label">Organisations</span>
+//   </div>
+//   <div class="metrics-bubble">
+//     <span class="metrics-bubble__stat">38</span>
+//     <span class="metrics-bubble__label">Groups</span>
+//   </div>
+// </div>
+//
+// Styleguide: InformationComponents.MetricsBubbles
+
+.metrics-bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.metrics-bubbles:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color-pacific-blue;
+  margin-top: -1px;
+}
+
+.metrics-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 3px solid $color-pacific-blue;
+  text-align: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include breakpoint(sm) {
+    width: 112px;
+    height: 112px;
+    margin: 0 6px;
+  }
+}
+
+.metrics-bubble__stat {
+  font-size: rem(22);
+  line-height: 1.2;
+  color: $color-astral;
+
+  @include breakpoint(sm) {
+    font-size: rem(40);
+  }
+}
+
+.metrics-bubble__label {
+  font-size: rem(10);
+  line-height: 1;
+  color: $color-pale-sky;
+
+  @include breakpoint(sm) {
+    font-size: rem(12);
+  }
+}
+
+.secondary-one {
+
+  .metrics-bubbles:after {
+    background-color: $theme-option-1;
+  }
+
+  .metrics-bubble {
+    border-color:  $theme-option-1;
+  }
+
+}
+
+.secondary-two {
+
+  .metrics-bubbles:after {
+    background-color: $theme-option-2;
+  }
+
+  .metrics-bubble {
+    border-color:  $theme-option-2;
+  }
+
+}
+
+.secondary-three {
+
+  .metrics-bubbles:after {
+    background-color: $theme-option-3;
+  }
+
+  .metrics-bubble {
+    border-color:  $theme-option-3;
+  }
+
+}
+
+.secondary-four {
+
+  .metrics-bubbles:after {
+    background-color: $theme-option-4;
+  }
+
+  .metrics-bubble {
+    border-color:  $theme-option-4;
+  }
+
+}
+
+.secondary-five {
+
+  .metrics-bubbles:after {
+    background-color: $theme-option-5;
+  }
+
+  .metrics-bubble {
+    border-color:  $theme-option-5;
+  }
+
+}
