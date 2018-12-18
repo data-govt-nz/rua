@@ -4167,6 +4167,106 @@ td {
     .checklist .checklist h4 {
       font-size: 0.875rem; } }
 
+.metrics-bubbles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+
+.metrics-bubbles:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #01B3C4;
+  margin-top: -1px; }
+
+.metrics-bubble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 3px solid #01B3C4;
+  text-align: center; }
+  .metrics-bubble:first-child {
+    margin-left: 0; }
+  .metrics-bubble:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .metrics-bubble {
+      width: 112px;
+      height: 112px;
+      margin: 0 6px; } }
+
+.metrics-bubble__stat {
+  font-size: 1.375rem;
+  line-height: 1.2;
+  color: #307D99; }
+  @media screen and (min-width: 768px) {
+    .metrics-bubble__stat {
+      font-size: 2.5rem; } }
+
+.metrics-bubble__label {
+  font-size: 0.625rem;
+  line-height: 1;
+  color: #666C7F; }
+  @media screen and (min-width: 768px) {
+    .metrics-bubble__label {
+      font-size: 0.75rem; } }
+
+.secondary-one .metrics-bubbles:after {
+  background-color: #01B3C4; }
+
+.secondary-one .metrics-bubble {
+  border-color: #01B3C4; }
+
+.secondary-two .metrics-bubbles:after {
+  background-color: #EE1846; }
+
+.secondary-two .metrics-bubble {
+  border-color: #EE1846; }
+
+.secondary-three .metrics-bubbles:after {
+  background-color: #51AE32; }
+
+.secondary-three .metrics-bubble {
+  border-color: #51AE32; }
+
+.secondary-four .metrics-bubbles:after {
+  background-color: #6F2B91; }
+
+.secondary-four .metrics-bubble {
+  border-color: #6F2B91; }
+
+.secondary-five .metrics-bubbles:after {
+  background-color: #ed7218; }
+
+.secondary-five .metrics-bubble {
+  border-color: #ed7218; }
+
 .site-header {
   position: relative;
   z-index: 3;
