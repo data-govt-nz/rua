@@ -17,7 +17,7 @@
 //     <span class="metrics-bubble__label">Groups</span>
 //   </div>
 // </div>
-//
+
 // Styleguide: InformationComponents.MetricsBubbles
 
 .metrics-bubbles {
@@ -53,6 +53,7 @@
   background-color: #fff;
   border: 3px solid $color-pacific-blue;
   text-align: center;
+  text-decoration: none;
 
   &:first-child {
     margin-left: 0;
