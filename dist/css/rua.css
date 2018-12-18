@@ -4210,7 +4210,8 @@ td {
   border-radius: 100%;
   background-color: #fff;
   border: 3px solid #01B3C4;
-  text-align: center; }
+  text-align: center;
+  text-decoration: none; }
   .metrics-bubble:first-child {
     margin-left: 0; }
   .metrics-bubble:last-child {
