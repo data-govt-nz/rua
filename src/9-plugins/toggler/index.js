@@ -73,13 +73,14 @@ const attributes = [
 ].concat(events)
 
 export default function () {
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
 
   attributes.forEach(function ({
     name,
     forceState
   }) {
-    $('[data-' + name + ']').each(function() {
-      const data = parseData(this, name, {
+    $('[data-' + namespace + name + ']').each(function() {
+      const data = parseData(this, namespace + name, {
         forceState
       })
 
@@ -94,9 +95,9 @@ export default function () {
     type,
     forceState
   }) {
-    $(document).on(type, '[data-' + name + ']', function (event) {
+    $(document).on(type, '[data-' + namespace + name + ']', function (event) {
       event.preventDefault()
-      const data = parseData(this, name, {
+      const data = parseData(this, namespace + name, {
         forceState
       })
       data.functions.forEach(function(parameter) {

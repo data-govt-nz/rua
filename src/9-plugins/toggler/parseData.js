@@ -2,9 +2,6 @@
 
 import split from './split'
 
-const optionDelimiter = ';',
-  funcDelimiter = ':',
-  tsAttr = 'toggle-state'
 
 export default function (
   element,
@@ -17,6 +14,10 @@ export default function (
     functions: [],
     state: true
   }
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
+  const optionDelimiter = ';',
+    funcDelimiter = ':',
+    tsAttr = namespace + 'toggle-state'
 
   if (typeof forceState !== typeof undefined) {
     data.state = forceState
@@ -44,7 +45,7 @@ export default function (
     })
   } else {
     console.log(
-      'No options defined',
+      'No options defined for data-' + dataAttribute,
       element
     )
   }

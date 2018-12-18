@@ -18,15 +18,16 @@
 
 import tooltip from 'tooltip.js'
 
-const placementAttr = 'tooltip-placement',
-  triggerAttr = 'tooltip-trigger',
-  defaultplacement = 'top', // End refers to right or bottom
-  defaultTrigger = 'hover focus'
-
 export default function () {
-  $('[data-tooltip]').each(function(index, element){
+  const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
+  const placementAttr = namespace + 'tooltip-placement',
+    triggerAttr = namespace + 'tooltip-trigger',
+    defaultplacement = 'top', // End refers to right or bottom
+    defaultTrigger = 'hover focus'
+
+  $('[data-' + namespace + 'tooltip]').each(function(index, element){
     const $element = $(element),
-      title = $element.data('tooltip'),
+      title = $element.data(namespace + 'tooltip'),
       placement = ($element.data(placementAttr)) ? $element.data(placementAttr) : defaultplacement,
       trigger = ($element.data(triggerAttr)) ? $element.data(triggerAttr) : defaultTrigger
 
