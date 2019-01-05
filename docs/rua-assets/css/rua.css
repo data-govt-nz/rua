@@ -4167,6 +4167,31 @@ td {
     .checklist .checklist h4 {
       font-size: 0.875rem; } }
 
+.bubble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  text-align: center;
+  text-decoration: none;
+  float: left; }
+  @media screen and (min-width: 768px) {
+    .bubble {
+      width: 112px;
+      height: 112px; } }
+
 .metrics-bubbles {
   display: -webkit-box;
   display: -ms-flexbox;
