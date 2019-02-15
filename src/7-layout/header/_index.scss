@@ -204,7 +204,12 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
     &__nav-container {
       position: relative;
-      z-index: 2;;
+      z-index: 2;
+      @include breakpoint(md down) {
+        width: 100%;
+        padding-left: 34px;
+        padding-right: 18px;
+      }
     }
 
     &__inner {
@@ -219,11 +224,11 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 
     &__navigation {
         display: none;
-        @include breakpoint(lg) {
+        @include breakpoint(md) {
             flex-grow: 1;
             display: flex;
             flex-direction: row-reverse;
-            padding: rem(0 10);
+            padding-right: rem(5);
         }
     }
 
@@ -275,7 +280,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, 'left');
 .navigation-toggle {
     color: color('primary');
     order: -1;
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
         display: none;
     }
 }
