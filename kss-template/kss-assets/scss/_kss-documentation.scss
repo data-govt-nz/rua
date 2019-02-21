@@ -212,3 +212,12 @@ $kss-modifiers-name-color: $eminence;
 }
 
 .kss-section__markup pre[class*=language-] { margin: 0; }
+
+.kss-section__markup {
+  display: none;
+}
+
+.kss-html-button {
+  width: 100%;
+  text-align: left;
+}
