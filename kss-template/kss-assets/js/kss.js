@@ -126,5 +126,8 @@
     }
   })();
 
+  $('.kss-html-button').on('click', function () {
+    $(this).parent().find('.kss-section__markup').slideToggle();
+  });
 
 })();
