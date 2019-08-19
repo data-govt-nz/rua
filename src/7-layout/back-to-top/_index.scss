@@ -3,14 +3,14 @@
 // @todo
 //
 // Markup:
-// <a class="site-back-to-top" href="#top">
+// <a class="site-go-back-to-top" href="#top">
 //   <span class="ri ri-arrow-up"></span>
 //   Top
 // </a>
 //
 // Styleguide: Layout.BackToTop
 
-.site-back-to-top {
+.site-go-back-to-top {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +43,7 @@
 @include breakpoint(sm down) {
   // Remove back to top while keyboard is active on mobile.
   body:focus-within {
-    .site-back-to-top {
+    .site-go-back-to-top {
       display: none;
     }
   }
