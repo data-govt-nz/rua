@@ -48,3 +48,69 @@
     }
   }
 }
+
+// Hide from Android Mobile devices (where possible)
+// - Due to an gnarly issue where the back-to-top button is not clickable in Chrome on Android OS
+
+// Portrait orientation up to current largest common mobile device-width
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+    .site-go-back-to-top {
+        display: none;
+    }
+}
+
+// Landscape orientation up to one pixel below smallest common desktop resolution width (1024px)
+@media screen and (max-device-width: 1023px) and (orientation: landscape){
+    .site-go-back-to-top {
+        display: none;
+    }
+}
+
+// Show if userAgent string matches ipad/iphone
+.js-is_iPad-iPhone .site-go-back-to-top {
+    display: flex;
+}
+
+// Show if iPad 1, 2, Mini and Air Landscape
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .site-go-back-to-top {
+        display: flex;
+    }
+}
+
+// Show if iPad 3, 4 and Pro 9.7 Landscape
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .site-go-back-to-top {
+        display: flex;
+    }
+}
+
+// Show if iPad Pro 10.5" Landscape
+@media only screen
+and (min-device-width: 1112px)
+and (max-device-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .site-go-back-to-top {
+        display: flex;
+    }
+}
+
+// Show if iPad Pro 12.9" Landscape
+@media only screen
+and (min-device-width: 1366px)
+and (max-device-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .site-go-back-to-top {
+        display: flex;
+    }
+}
