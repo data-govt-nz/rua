@@ -60,6 +60,7 @@
 .comment {
   background-color: color('iceberg');
   border-radius: border-radius('full');
+  border-top-left-radius: 0;
   margin-bottom: spacing('sm');
   padding: spacing('sm') spacing('md');
   font-size: rem(16);
@@ -81,15 +82,6 @@
 
   &.even {
       background-color: color('loafer');
-      border-top-right-radius: 0;
-      text-align: right;
-
-      .comment__info {
-          flex-direction: row-reverse;
-      }
   }
-
-  &.odd {
-      border-top-left-radius: 0;
-  }
+  
 }
