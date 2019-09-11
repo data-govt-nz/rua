@@ -3996,6 +3996,7 @@ td {
 .comment {
   background-color: #D8EDF2;
   border-radius: 100px;
+  border-top-left-radius: 0;
   margin-bottom: 20px;
   padding: 20px 35px;
   font-size: 1rem; }
@@ -4013,16 +4014,7 @@ td {
   .comment .datetime {
     margin: 0 20px; }
   .comment.even {
-    background-color: #F0F2D8;
-    border-top-right-radius: 0;
-    text-align: right; }
-    .comment.even .comment__info {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse; }
-  .comment.odd {
-    border-top-left-radius: 0; }
+    background-color: #F0F2D8; }
 
 .tooltip {
   position: absolute;
@@ -4713,7 +4705,7 @@ td {
 body .site-footer hr {
   border-color: #01B3C4; }
 
-.site-back-to-top {
+.site-go-back-to-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4745,13 +4737,50 @@ body .site-footer hr {
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease; }
-  .site-back-to-top:focus, .site-back-to-top:hover {
+  .site-go-back-to-top:focus, .site-go-back-to-top:hover {
     color: #fff;
     background-color: #1e4d5f; }
 
 @media screen and (max-width: 951px) {
-  body:focus-within .site-back-to-top {
+  body:focus-within .site-go-back-to-top {
     display: none; } }
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .site-go-back-to-top {
+    display: none; } }
+
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .site-go-back-to-top {
+    display: none; } }
+
+.js-is_iPad-iPhone .site-go-back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .site-go-back-to-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-go-back-to-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-go-back-to-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-go-back-to-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 .sidebar-container {
   border-top: 3px solid #01B3C4;
