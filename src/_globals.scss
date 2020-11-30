@@ -260,11 +260,11 @@ $zindex-modal: 1050 !default;
 
 /// A list of named breakpoints. You can use these with the `breakpoint()` mixin to quickly create media queries.
 $breakpoints: (
-  default: 0,
-  xs: 480px,
-  sm:768px,
-  md: 975px,
-  lg: 1053px
+  'default': 0,
+  'xs': 480px,
+  'sm':768px,
+  'md': 975px,
+  'lg': 1053px
 ) !default;
 
 /// The largest named breakpoint in which to include print as a media type

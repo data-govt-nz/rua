@@ -7,7 +7,7 @@ const rename = require('gulp-rename')
 const copy = require('gulp-copy')
 const clean = require('gulp-clean')
 const sass = require('gulp-sass')
-const tildeImporter = require('node-sass-tilde-importer');
+const tildeImporter = require('node-sass-tilde-importer')
 
 const watch = require('gulp-watch')
 
@@ -23,16 +23,13 @@ const async = require('async')
 const iconfont = require('gulp-iconfont')
 const consolidate = require('gulp-consolidate')
 
-const notifier = require('node-notifier');
+const notifier = require('node-notifier')
 
 const config = {
   path: {
     css: './dist/css',
     js: './dist/js'
-  },
-  browsers: [
-    'last 5 versions'
-  ]
+  }
 }
 
 const tasks = [
@@ -50,11 +47,11 @@ const runTimestamp = Math.round(Date.now()/1000)
 gulp.task('styles', function () {
   return gulp.src('./src/rua.scss', { base: './src' })
     .pipe(sass.sync({ importer: tildeImporter }).on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: config.browsers, cascade: false }))
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest(config.path.css))
     .pipe(cleanCSS())
     .pipe(rename(function (path) {
-      path.basename += '.min';
+      path.basename += '.min'
     }))
     .pipe(gulp.dest(config.path.css))
 })
@@ -140,9 +137,12 @@ gulp.task('docs:assets', function () {
     }))
 })
 
-gulp.task('docs:reload', function() {
-  browserSync.reload
+gulp.task('docs:reload', function(cb) {
+  browserSync.reload()
+  cb()
 })
+
+gulp.task('default', gulp.series(tasks))
 
 gulp.task('watch', function () {
   browserSync.init({
@@ -153,13 +153,10 @@ gulp.task('watch', function () {
 
   tasks.push('docs:reload')
 
-  watch(
+  watch('gulpfile.js', () => process.exit(0))
+
+  gulp.watch(
     './src/**/*',
-    { ignoreInitial: false },
     gulp.series(tasks)
   )
-
-  watch('gulpfile.js').on('change', () => process.exit(0));
 })
-
-gulp.task('default', gulp.series(tasks))
