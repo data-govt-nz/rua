@@ -41,6 +41,10 @@ or
 gulp
 ```
 
+## Contributing
+
+To update this repo, create a PR with **just the src changes** (not dist/ or docs/). Once the changes have been merged, create a commit "Dist and docs" on master and tag with latest version number.
+
 ## Usage
 
 ```scss

@@ -1,5 +1,5 @@
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   entry: './src/rua.js',
@@ -21,7 +21,6 @@ module.exports = {
               {
                 modules: false,
                 targets: {
-                  browsers: ['> 2%'],
                   uglify: true
                 }
               }
@@ -43,16 +42,15 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        sourceMap: true,
-        minify(file, sourceMap) {
+      new TerserPlugin({
+        minify: (file, sourceMap) => {
           // https://github.com/mishoo/UglifyJS2#minify-options
           const uglifyJsOptions = { /* your `uglify-js` package options */ }
 
           if (sourceMap) {
             uglifyJsOptions.sourceMap = {
-              content: sourceMap,
-            };
+              content: sourceMap
+            }
           }
 
           return require('uglify-js').minify(file, uglifyJsOptions)
@@ -60,4 +58,4 @@ module.exports = {
       })
     ]
   }
-};
+}
