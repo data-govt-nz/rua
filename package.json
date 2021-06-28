@@ -39,7 +39,7 @@
     "kss": "^3.0.0-beta.23",
     "node-notifier": "^5.3.0",
     "node-sass-tilde-importer": "^1.0.2",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.24.0",
     "terser-webpack-plugin": "5.0.3",
     "uglify-js": "^3.4.9",
     "webpack": "^5.8.0",
