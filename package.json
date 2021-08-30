@@ -37,7 +37,7 @@
     "gulp-watch": "^5.0.1",
     "jquery": "^3.3.1",
     "kss": "^3.0.0-beta.23",
-    "node-notifier": "^5.3.0",
+    "node-notifier": "^8.0.1",
     "node-sass-tilde-importer": "^1.0.2",
     "prismjs": "^1.24.1",
     "terser-webpack-plugin": "5.0.3",
