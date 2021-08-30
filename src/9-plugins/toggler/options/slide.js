@@ -10,9 +10,6 @@
 
 import ariaexpanded from './ariaexpanded'
 
-const hiddenClass = 'hidden',
-  visibleClass = 'visible'
-
 export function init({
   element,
   state
@@ -28,13 +25,9 @@ export function run({
   state
 }) {
   if (state) {
-    $(element).slideDown(function () {
-      $(element).removeClass(hiddenClass).addClass(visibleClass)
-    })
+    $(element).slideDown()
   } else {
-    $(element).slideUp(function () {
-      $(element).addClass(hiddenClass).removeClass(visibleClass)
-    })
+    $(element).slideUp()
   }
   ariaexpanded.run({
     element,
