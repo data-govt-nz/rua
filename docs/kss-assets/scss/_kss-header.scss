@@ -81,7 +81,7 @@ $bar-width: 30px;
 
   &.kss-state-active:before,
   &.kss-state-active:after {
-    width: $bar-width/2;
+    width: calc($bar-width / 2);
     transition: all 0.5s;
   }
 
