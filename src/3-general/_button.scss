@@ -348,7 +348,7 @@ $buttons-alignment: (
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0;
-  margin: 0 -$buttons-gap;
+  margin: 0 (-$buttons-gap);
   clear: both;
   width: calc(100% + #{$buttons-gap * 2});
   &:first-child{

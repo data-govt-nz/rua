@@ -85,7 +85,7 @@
   border: 2px solid color('gray-lighter');
   border-radius: rem(42 42 42 0);
   padding: spacing('sm');
-  margin-bottom: spacing('sm') / 2;
+  margin-bottom: calc(spacing('sm') / 2);
 
   .checklist__check-toggle-icon {
       display: none;

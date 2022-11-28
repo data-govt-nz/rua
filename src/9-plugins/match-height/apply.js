@@ -139,7 +139,7 @@ export default function (elements, options) {
 
   // restore scroll position if enabled
   if (globals.maintainScroll) {
-    $(window).scrollTop((scrollTop / htmlHeight) * $('html').outerHeight(true))
+    $(window).scrollTop(calc(scrollTop / htmlHeight) * $('html').outerHeight(true))
   }
 
   return this

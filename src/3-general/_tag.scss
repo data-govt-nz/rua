@@ -104,7 +104,7 @@ $tags-alignment: (
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0;
-  margin: 0 -$tags-gap;
+  margin: 0 (-$tags-gap);
   clear: both;
   width: calc(100% + #{$tags-gap * 2});
 

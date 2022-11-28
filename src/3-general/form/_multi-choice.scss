@@ -59,7 +59,7 @@ $mutlichoice-option-border-width: 2px !default;
   & > input {
     position: absolute;
     top: 50%;
-    left: em($mutlichoice-option-height/2);
+    left: em(calc($mutlichoice-option-height / 2));
     z-index: 1;
     margin: 0;
     transform: translateY(-50%) translateX(-50%);

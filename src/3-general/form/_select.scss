@@ -40,7 +40,7 @@ $select-triangle-color: color('black') !default;
 /// @type Color
 $select-radius: 1.5em !default;
 
-$select-arrow-position: get-side($input-padding, 'right')/2;
+$select-arrow-position: calc(get-side($input-padding, 'right') / 2);
 
 @mixin form-select {
   width: 100%;

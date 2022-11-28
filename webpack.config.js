@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/rua.js',
   output: {
     filename: 'rua.js',
-    path: path.resolve(__dirname, 'dist/js')
+    path: path.resolve(__dirname, 'dist/js'),
   },
   devtool: 'source-map',
   module: {
