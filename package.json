@@ -52,8 +52,10 @@
     "defaults",
     ">0.1%"
   ],
-  "overrides": {
+  "resolutions": {
     "svg2ttf": "6.0.3",
-    "webpack": "^5.0"
+    "lodash.template": "^4.5.0",
+    "glob-parent": "^5.1.2",
+    "braces": "^2.3.1"
   }
 }
