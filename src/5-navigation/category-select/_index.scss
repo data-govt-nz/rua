@@ -15,8 +15,8 @@
   display: flex;
   justify-content: space-between;
   height: em(49);
-  margin-left: ceil(($grid-gutter-width / 2));
-  margin-right: floor(($grid-gutter-width / 2));
+  margin-left: ceil(calc($grid-gutter-width / 2));
+  margin-right: floor(calc($grid-gutter-width / 2));
   border-bottom: border('dot');
   text-decoration: none;
   font-size: rem(18);

@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
 const copy = require('gulp-copy')
 const clean = require('gulp-clean')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const tildeImporter = require('node-sass-tilde-importer')
 
 const watch = require('gulp-watch')

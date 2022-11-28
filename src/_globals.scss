@@ -270,7 +270,7 @@ $breakpoints: (
 /// The largest named breakpoint in which to include print as a media type
 $print-breakpoint: lg !default;
 $zero-breakpoint: default !default;
-$breakpoints-keys: map-to-list($breakpoints, 'keys');
+$breakpoints-keys: map-keys($breakpoints);
 /// All of the names in this list will be output as classes in your CSS, like `.--med:12`, `.--med:6`, and so on. Each value in this list must also be in the `$breakpoints` map.
 $breakpoint-classes: (default sm md lg) !default;
 

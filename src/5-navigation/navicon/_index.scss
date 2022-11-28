@@ -109,7 +109,7 @@ $navicon-active-hover-opacity: $navicon-hover-opacity !default;
 .navicon-inner {
   display: block;
   top: 50%;
-  margin-top: $navicon-layer-height / -2;
+  margin-top: calc($navicon-layer-height / -2);
 
   &,
   &::before,

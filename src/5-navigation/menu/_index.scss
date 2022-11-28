@@ -128,14 +128,16 @@ $menu-item-active-class: 'current' !default;
         @include menu-direction(horizontal);
       }
 
-      @include selector(
-        $prefix: '&',
-        $breakpoint: $breakpoint,
-        $label: '2-column'
-      ) {
-        @include menu-direction(horizontal);
-        & > li {
-          width: 50%;
+      @if $breakpoint != 'default' {
+        @include selector(
+          $prefix: '&',
+          $breakpoint: $breakpoint,
+          $label: '2-column'
+        ) {
+          @include menu-direction(horizontal);
+          & > li {
+            width: 50%;
+          }
         }
       }
 

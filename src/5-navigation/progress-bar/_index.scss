@@ -46,7 +46,7 @@ $progress-bar--button-size: 32px;
   height: 3px;
   position: absolute;
   left: $left;
-  top: $progress-bar--button-size/2;
+  top: calc($progress-bar--button-size / 2);
   z-index: 0;
   background-color: $line-color;
 }
@@ -93,14 +93,14 @@ $progress-bar--button-size: 32px;
     text-align: left;
     flex-grow: 1;
     // Add half button width for even spacing:
-    padding-right: $progress-bar--button-size/2;
+    padding-right: calc($progress-bar--button-size / 2);
   }
 
   &:last-child {
     text-align: right;
     flex-grow: 1;
     // Add half button width for even spacing:
-    padding-left: $progress-bar--button-size/2;
+    padding-left: calc($progress-bar--button-size / 2);
   }
 }
 
