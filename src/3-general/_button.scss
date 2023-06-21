@@ -59,7 +59,8 @@ $button-border-width: 2px;
   cursor: pointer;
   &:hover,
   &:focus{
-    box-shadow: $button-shadow-hover;
+    box-shadow: 0 0 0 2px color('white'), 0 0 0 4px $button-color;
+    outline: none;
   }
 
   // button icon styles
@@ -79,6 +80,8 @@ $button-border-width: 2px;
   &:focus{
     color: $button-color;
     background-color: $button-background-hover;
+    box-shadow: 0 0 0 2px color('white'), 0 0 0 4px $button-background-hover;
+    outline: none;
   }
 }
 
@@ -90,6 +93,8 @@ $button-border-width: 2px;
   &:focus{
     color: $button-background-hover;
     border-color: $button-background-hover;
+    box-shadow: 0 0 0 2px color('white'), 0 0 0 4px $button-background-hover;
+    outline: none;
   }
 }
 
@@ -259,7 +264,8 @@ input[type='button'] {
 
   &:hover,
   &:focus{
-    box-shadow: $button-shadow-hover;
+    box-shadow: 0 0 0 2px color('white'), 0 0 0 4px $button-background-hover;
+    outline: none;
   }
 
   &.state-active {

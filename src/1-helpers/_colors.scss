@@ -1,10 +1,11 @@
 // Global colors
-$color-astral: #307D99 !default;
+$color-astral: #2D758F !default;
 $color-big-stone: #182B46 !default;
 $color-pale-sky: #666C7F !default;
+$color-manatee: #9192A1 !default;
 $color-french-gray: #B7B8C4 !default;
 $color-heather: #C3CED8 !default;
-$color-athens-gray: #ECEFF2 !default;
+$color-athens-gray: #F2F2F2 !default;
 $color-iceberg: #D8EDF2 !default;
 $color-loafer: #F0F2D8 !default;
 $color-harp: #DAEDDF !default;
@@ -18,12 +19,17 @@ $color-apple: #51AE32 !default;
 $color-red-ribbon: #EE1846 !default;
 $color-tango: #ed7218 !default;
 
+// Icon accessible secondary colors = 3.0:1 contrast ratio
+$color-bondi-blue: #019EAD !default;
+$color-green-apple: #4CA22F !default;
+$color-christine: #E46911 !default;
+
 // Theming colors:
-$theme-option-1: $color-pacific-blue;
+$theme-option-1: $color-bondi-blue;
 $theme-option-2: $color-red-ribbon;
-$theme-option-3: $color-apple;
+$theme-option-3: $color-green-apple;
 $theme-option-4: $color-eminence;
-$theme-option-5: $color-tango;
+$theme-option-5: $color-christine;
 
 // Grays
 $gray-darker: $color-big-stone !default;
@@ -56,6 +62,9 @@ $colors: (
   'apple': $color-apple,
   'red-ribbon': $color-red-ribbon,
   'tango': $color-tango,
+  'bondi-blue': $color-bondi-blue,
+  'green-apple': $color-green-apple,
+  'christine': $color-christine,
   'primary': $brand-primary,
   'secondary': $brand-secondary,
   'success': $brand-success,
@@ -68,6 +77,7 @@ $colors: (
   'gray': $gray,
   'gray-light': $gray-light,
   'gray-lighter': $gray-lighter,
+  'manatee': $color-manatee,
   'white': #fff
 ) !default;
 
