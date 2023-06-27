@@ -14,10 +14,6 @@ export function init({
   element,
   state
 }) {
-  ariaexpanded.init({
-    element,
-    state
-  })
 }
 
 export function run({

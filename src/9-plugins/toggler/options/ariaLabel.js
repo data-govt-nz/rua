@@ -1,14 +1,14 @@
-// AriaLabel
+// Aria Label
 //
 // Toggles the aria-label of the element between 2 strings
 //
 // Markup:
-// <button class="button-icon" data-click="trigger: #toggle__icon, #aria-text; ariaLabel: 'Open', 'Close'" aria-label="Open">
+// <button class="button-icon" data-click="trigger: #toggle__icon, #aria-text; arialabel: 'Open', 'Close'" aria-label="Open">
 //  <span id="toggle__icon" class="ri ri-chevron-down" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
 //  </button>
 //  <p>Open inspector to check aria-label</p>
 //
-// Styleguide: Plugins.Toggler.AriaLabel
+// Styleguide: Plugins.Toggler.arialabel
 
 export function init({
   element,

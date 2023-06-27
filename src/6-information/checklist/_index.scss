@@ -17,7 +17,7 @@
 //           You answered: Yes
 //         </div>
 //       </div>
-//       <div class="checklist__content" id="group-1-content" style="display: none" data-toggle="slide" aria-expanded="false">
+//       <div class="checklist__content" id="group-1-content" style="display: none" data-toggle="slide">
 //         <div class="tagged-hor-rule">
 //           <hr>
 //           <span class="tagged-hor-rule__tag">Guidance expected</span>
@@ -34,7 +34,7 @@
 //       </div>
 //     </div>
 //     <div class="checklist__actions">
-//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-1, #group-1-content, #group-1-icon">
+//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-1, #group-1-content, #group-1-icon; ariaexpanded: 'true', 'false'; arialabel: Show guidance on question 1, Hide guidance on question 1" aria-expanded="false" aria-controls="group-1-content"">
 //         <span class="ri ri-chevron-down" id="group-1-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
 //       </button>
 //     </div>
@@ -54,7 +54,7 @@
 //           You answered: Yes
 //         </div>
 //       </div>
-//       <div class="checklist__content" id="group-2-content" style="display: none" data-toggle="slide" aria-expanded="false">
+//       <div class="checklist__content" id="group-2-content" style="display: none" data-toggle="slide">
 //         <div class="tagged-hor-rule">
 //           <hr>
 //           <span class="tagged-hor-rule__tag">Guidance expected</span>
@@ -71,7 +71,7 @@
 //       </div>
 //     </div>
 //     <div class="checklist__actions">
-//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-2, #group-2-content, #group-2-icon">
+//       <button class="button-icon" data-click="class: state-standard, state-active;  trigger: #group-2, #group-2-content, #group-2-icon; ariaexpanded: 'true', 'false'; arialabel: Show guidance on question 2, Hide guidance on question 2" aria-expanded="false" aria-controls="group-2-content">
 //         <span class="ri ri-chevron-down" id="group-2-icon" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
 //       </button>
 //     </div>
