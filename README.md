@@ -58,7 +58,8 @@ import {
     toggler,
     matchHeight,
     clipboard,
-    tooltip
+    tooltip,
+    backToTop
 } from 'rua-pattern-library/src/9-plugins'
 
 $(document).ready(function(){
@@ -66,5 +67,6 @@ $(document).ready(function(){
     toggler()
     clipboard()
     tooltip()
+    backToTop()
 })
 ```
