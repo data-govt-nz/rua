@@ -3,7 +3,7 @@
 // @todo
 //
 // Markup:
-// <a class="site-go-back-to-top" href="#top">
+// <a class="site-go-back-to-top js-scroll-top" href="#top">
 //   <span class="ri ri-arrow-up"></span>
 //   Top
 // </a>
@@ -29,7 +29,7 @@
   position: fixed;
   right: 45px;
   bottom: 45px;
-  z-index: 2;
+  z-index: 10;
 
   transition: background-color 0.3s ease;
 
@@ -38,6 +38,10 @@
     color: color('white');
     background-color: $link-hover-color;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 @include breakpoint(sm down) {

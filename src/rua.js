@@ -2,10 +2,12 @@ import {
   toggler,
   matchHeight,
   clipboard,
-  tooltip
+  tooltip,
+  backToTop
 } from './9-plugins'
 
 toggler()
 matchHeight()
 clipboard()
 tooltip()
+backToTop()
