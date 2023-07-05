@@ -14,11 +14,11 @@ export default function () {
 
   function onScroll(currentScrollTop) {
     const t = $(this);
-    console.log(t.scrollTop());
+    const SCROLL_UP_DISTANCE_WITH_VISIBLE_BUTTON = 150
     // only show scroll to top button at the very bottom and little bit of scrolling up.
     if (
       t.scrollTop() + t.height() == $(document).height() ||
-      t.scrollTop() + 150 + t.height() > $(document).height()
+      t.scrollTop() + SCROLL_UP_DISTANCE_WITH_VISIBLE_BUTTON + t.height() > $(document).height()
     ) {
       prevScrollTop = currentScrollTop;
       showTopTrigger();
