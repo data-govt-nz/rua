@@ -58,7 +58,8 @@ $tag-shadow-hover: $box-shadow-hover !default;
     color: $tag-color;
     text-decoration: none;
     background-color: $tag-background-hover;
-    box-shadow: $tag-shadow-hover;
+    box-shadow: 0 0 0 2px color('white'), 0 0 0 4px $tag-background;
+    outline: none;
   }
 }
 

@@ -24,31 +24,24 @@ $navicon-active-hover-opacity: $navicon-hover-opacity !default;
 
 .navicon {
   outline: 0;
-  padding: $navicon-padding-y $navicon-padding-x;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
+  transition: box-shadow 0.3s ease, background-color 0.25s ease-out, color 0.25s ease-out;
 
   // Normalize (<button>)
   font: inherit;
   color: inherit;
   text-transform: none;
-  background-color: transparent;
-  border: 0;
+  border: none;
   overflow: visible;
 
-  &:hover {
-    opacity: $navicon-hover-opacity;
-  }
-
   &.is-active {
-    &:hover {
-      opacity: $navicon-active-hover-opacity;
-    }
-
     .navicon-inner,
     .navicon-inner::before,
     .navicon-inner::after {

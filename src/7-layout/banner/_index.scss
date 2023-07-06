@@ -84,8 +84,8 @@
       text-decoration: none;
       font-size: rem(16);
       line-height: 1;
-      // Default to blue theme if none applied
-      color: $color-pacific-blue;
+      // Default to gray-darker theme if none applied
+      color: $gray-darker;
 
       &:before {
         display: block;
@@ -161,7 +161,7 @@
 .secondary-one {
 
   .site-banner__breadcrumbs .ri-home {
-    color: $theme-option-1;
+    color: color('gray-darker');
   }
 
   .site-banner__pattern {
@@ -182,7 +182,7 @@
 .secondary-two {
 
   .site-banner__breadcrumbs .ri-home {
-    color: $theme-option-2;
+    color: color('gray-darker');
   }
 
   .site-banner__pattern {
@@ -203,7 +203,7 @@
 .secondary-three {
 
   .site-banner__breadcrumbs .ri-home {
-    color: $theme-option-3;
+    color: color('gray-darker');
   }
 
   .site-banner__pattern {
@@ -224,7 +224,7 @@
 .secondary-four {
 
   .site-banner__breadcrumbs .ri-home {
-    color: $theme-option-4;
+    color: color('gray-darker');
   }
 
   .site-banner__pattern {
@@ -245,7 +245,7 @@
 .secondary-five {
 
   .site-banner__breadcrumbs .ri-home {
-    color: $theme-option-5;
+    color: color('gray-darker');
   }
 
   .site-banner__pattern {
