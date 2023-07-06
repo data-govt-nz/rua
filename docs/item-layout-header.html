@@ -118,6 +118,11 @@
                 <div class="kss-modifiers__example"><header class="site-header">
   <div class="container site-header__nav-container">
     <div class="site-header__inner">
+      <button class="button-icon navigation-toggle navicon" aria-label="Open menu" data-click="trigger: #site-navigation; class: in-active, is-active; arialabel: Open menu, Close menu">
+				<span class="navicon-box">
+					<span class="navicon-inner"></span>
+				</span>
+			</button>
       <a href="#" aria-label="Return to home page">
         <img src="http://via.placeholder.com/324x58" alt="data.govt.nz" width="164">
       </a>
@@ -160,25 +165,15 @@
           </li>
         </ul>
       </nav>
-      <div class="navigation-toggle navicon in-active" data-click="trigger: #site-navigation; class: in-active, is-active">
-        <span class="navicon-box">
-          <span class="navicon-inner"></span>
-        </span>
-      </div>
-      <div class="search-toggle in-active" data-click="trigger: #site-search; class: in-active, active">
-        <div class="search-toggle__search">
-          <span class="ri ri-search"></span>
-        </div>
-        <div class="button search-toggle__in-active">
-          <span class="ri ri-chevron-down"></span>
-          <span>
-            Search
-          </span>
-        </div>
-        <div class="button-icon search-toggle__active">
-          <span class="ri ri-chevron-up"></span>
-        </div>
-      </div>
+      <div id="site-search-wrap" class="search-toggle">
+	     <button class="button-icon search-toggle__mob-search" data-click="trigger: #site-search; arialabel: 'Open search form', 'Close search form'; ariaexpanded: true, false" aria-label="Open search form" aria-controls="site-search" aria-expanded="false">
+		      <span id="" class="ri ri-search"></span>
+	      </button>
+	      <button class="button search-toggle__desk-search" data-click="trigger: #site-search, #search-toggle__icon, #search-toggle__text; arialabel: '', 'Close search form'; class: 'button', 'button-icon secondary'; ariaexpanded: true, false" aria-controls="site-search" aria-expanded="false">
+         <span id="search-toggle__icon" class="ri ri-chevron-down" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+         <span id="search-toggle__text" data-toggle="text: Search, ''">Search</span>
+       </button>
+     </div>
     </div>
   </div>
   <div class="site-search">
@@ -276,6 +271,11 @@
                   <pre><code class="language-markup">&lt;header class&#x3D;&quot;site-header&quot;&gt;
   &lt;div class&#x3D;&quot;container site-header__nav-container&quot;&gt;
     &lt;div class&#x3D;&quot;site-header__inner&quot;&gt;
+      &lt;button class&#x3D;&quot;button-icon navigation-toggle navicon&quot; aria-label&#x3D;&quot;Open menu&quot; data-click&#x3D;&quot;trigger: #site-navigation; class: in-active, is-active; arialabel: Open menu, Close menu&quot;&gt;
+				&lt;span class&#x3D;&quot;navicon-box&quot;&gt;
+					&lt;span class&#x3D;&quot;navicon-inner&quot;&gt;&lt;/span&gt;
+				&lt;/span&gt;
+			&lt;/button&gt;
       &lt;a href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Return to home page&quot;&gt;
         &lt;img src&#x3D;&quot;http://via.placeholder.com/324x58&quot; alt&#x3D;&quot;data.govt.nz&quot; width&#x3D;&quot;164&quot;&gt;
       &lt;/a&gt;
@@ -318,25 +318,15 @@
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
-      &lt;div class&#x3D;&quot;navigation-toggle navicon in-active&quot; data-click&#x3D;&quot;trigger: #site-navigation; class: in-active, is-active&quot;&gt;
-        &lt;span class&#x3D;&quot;navicon-box&quot;&gt;
-          &lt;span class&#x3D;&quot;navicon-inner&quot;&gt;&lt;/span&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;search-toggle in-active&quot; data-click&#x3D;&quot;trigger: #site-search; class: in-active, active&quot;&gt;
-        &lt;div class&#x3D;&quot;search-toggle__search&quot;&gt;
-          &lt;span class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;button search-toggle__in-active&quot;&gt;
-          &lt;span class&#x3D;&quot;ri ri-chevron-down&quot;&gt;&lt;/span&gt;
-          &lt;span&gt;
-            Search
-          &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;button-icon search-toggle__active&quot;&gt;
-          &lt;span class&#x3D;&quot;ri ri-chevron-up&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+      &lt;div id&#x3D;&quot;site-search-wrap&quot; class&#x3D;&quot;search-toggle&quot;&gt;
+	     &lt;button class&#x3D;&quot;button-icon search-toggle__mob-search&quot; data-click&#x3D;&quot;trigger: #site-search; arialabel: &#x27;Open search form&#x27;, &#x27;Close search form&#x27;; ariaexpanded: true, false&quot; aria-label&#x3D;&quot;Open search form&quot; aria-controls&#x3D;&quot;site-search&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+		      &lt;span id&#x3D;&quot;&quot; class&#x3D;&quot;ri ri-search&quot;&gt;&lt;/span&gt;
+	      &lt;/button&gt;
+	      &lt;button class&#x3D;&quot;button search-toggle__desk-search&quot; data-click&#x3D;&quot;trigger: #site-search, #search-toggle__icon, #search-toggle__text; arialabel: &#x27;&#x27;, &#x27;Close search form&#x27;; class: &#x27;button&#x27;, &#x27;button-icon secondary&#x27;; ariaexpanded: true, false&quot; aria-controls&#x3D;&quot;site-search&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+         &lt;span id&#x3D;&quot;search-toggle__icon&quot; class&#x3D;&quot;ri ri-chevron-down&quot; data-toggle&#x3D;&quot;class: ri-chevron-down, ri-chevron-up&quot;&gt;&lt;/span&gt;
+         &lt;span id&#x3D;&quot;search-toggle__text&quot; data-toggle&#x3D;&quot;text: Search, &#x27;&#x27;&quot;&gt;Search&lt;/span&gt;
+       &lt;/button&gt;
+     &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;site-search&quot;&gt;
