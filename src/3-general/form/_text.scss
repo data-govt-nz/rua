@@ -122,7 +122,6 @@
   border-radius: $input-radius;
   background-color: $input-background;
   transition: $input-transition;
-  box-shadow: $input-shadow;
 
   font-family: $input-font-family;
   font-size: $input-font-size;
@@ -135,7 +134,6 @@
     outline: none;
     border: $input-border-focus;
     background-color: $input-background-focus;
-    box-shadow: $input-shadow-focus;
   }
 }
 
