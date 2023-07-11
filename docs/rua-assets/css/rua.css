@@ -2588,8 +2588,7 @@ small,
   border: 2px solid #9192A1;
   border-radius: 1.5em;
   background-color: #fff;
-  transition: box-shadow 0.3s ease, box-shadow 0.5s, border-color 0.25s ease-in-out;
-  box-shadow: none;
+  transition: border-color 0.25s ease-in-out;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
@@ -2618,7 +2617,6 @@ small,
   outline: none;
   border: 2px solid #666C7F;
   background-color: #fff;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 textarea {
@@ -2630,8 +2628,7 @@ textarea {
   border: 2px solid #9192A1;
   border-radius: 1.5em;
   background-color: #fff;
-  transition: box-shadow 0.3s ease, box-shadow 0.5s, border-color 0.25s ease-in-out;
-  box-shadow: none;
+  transition: border-color 0.25s ease-in-out;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
@@ -2645,7 +2642,6 @@ textarea:focus {
   outline: none;
   border: 2px solid #666C7F;
   background-color: #fff;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 textarea[rows] {
   height: auto;
@@ -2742,7 +2738,6 @@ select:focus {
   outline: none;
   border: 2px solid #666C7F;
   background-color: #fff;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 select:disabled {
   color: #666C7F;
@@ -2795,7 +2790,7 @@ select[multiple] {
   height: 2.5em;
 }
 .field-option > label:hover, .field-option > label:focus {
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #26637a;
 }
 .field-option > input:checked + label {
   background-color: #2D758F;
@@ -2820,8 +2815,7 @@ select[multiple] {
   border: 2px solid #9192A1;
   border-radius: 1.5em;
   background-color: #fff;
-  transition: box-shadow 0.3s ease, box-shadow 0.5s, border-color 0.25s ease-in-out;
-  box-shadow: none;
+  transition: border-color 0.25s ease-in-out;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
@@ -2835,7 +2829,6 @@ select[multiple] {
   outline: none;
   border: 2px solid #666C7F;
   background-color: #fff;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
@@ -5047,6 +5040,9 @@ td {
 
 .search-toggle {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 60px;
 }
 .search-toggle__search {
   padding: 0.625em;
@@ -5062,6 +5058,9 @@ td {
   display: none;
 }
 @media print, screen and (min-width: 1200px) {
+  .search-toggle {
+    flex: 0 1 120px;
+  }
   .search-toggle__desk-search {
     display: block;
   }
