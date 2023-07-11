@@ -292,6 +292,10 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, "left");
 
 .search-toggle {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 60px;    
+
   &__search {
     padding: em(10);
     color: color("primary");
@@ -309,6 +313,7 @@ $menu-item-padding-left: get-side($site-header-menu-item-padding, "left");
   }
 
   @include breakpoint(lg) {
+    flex: 0 1 120px;    
     &__desk-search {
       display: block;
     }

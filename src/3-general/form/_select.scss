@@ -83,7 +83,6 @@ $select-arrow-position: calc(get-side($input-padding, 'right') / 2);
     outline: none;
     border: $input-border-focus;
     background-color: $input-background-focus;
-    box-shadow: $input-shadow-focus;
   }
 
   // Disabled state

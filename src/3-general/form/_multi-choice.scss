@@ -46,7 +46,7 @@ $mutlichoice-option-radius: border-radius('full') !default;
 $mutlichoice-option-font-size: rem(16);
 $mutlichoice-option-opacity-disabled: 0.25 !default;
 $mutlichoice-option-transition: $box-shadow-transition, background-color 0.25s ease-out, color 0.25s ease-out !default;
-$mutlichoice-option-shadow-hover: 0 3px 0 rgba(#000, .1) !default;
+$mutlichoice-option-shadow-hover: 0 0 0 2px color('white'), 0 0 0 4px $mutlichoice-background-hover !default;
 $mutlichoice-option-height: 40px !default;
 $mutlichoice-option-border-width: 2px !default;
 

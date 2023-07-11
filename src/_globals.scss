@@ -165,6 +165,13 @@ $button-transition: $box-shadow-transition, background-color 0.25s ease-out, col
 $button-types: $colors !default;
 $button-shadow-hover: $box-shadow-hover !default;
 
+//=== Multichoice
+//
+
+$mutlichoice-background: color('primary') !default;
+$mutlichoice-background-hover: scale-color($mutlichoice-background, $lightness: -15%) !default;
+
+
 //== Forms
 //
 //##
@@ -187,7 +194,7 @@ $input-padding: 0.9em !default;
 $input-shadow: none !default;
 $input-shadow-focus: $box-shadow-hover !default;
 $input-cursor-disabled: not-allowed !default;
-$input-transition: $box-shadow-transition, box-shadow 0.5s, border-color 0.25s ease-in-out !default;
+$input-transition: border-color 0.25s ease-in-out !default;
 $input-radius: 1.5em !default;
 $form-button-radius: 1.5em !default;
 
