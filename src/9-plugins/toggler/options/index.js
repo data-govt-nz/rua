@@ -4,7 +4,7 @@ import text from './text'
 import html from './html'
 import trigger from './trigger'
 import ariaexpanded from './ariaexpanded'
-import arialabel from './arialabel'
+import arialabel from './ariaLabel'
 import dirty from './dirty'
 
 export default {
