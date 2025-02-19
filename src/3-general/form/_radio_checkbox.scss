@@ -82,6 +82,10 @@ input[type="checkbox"] {
   background-color: $brand-primary;
 }
 
+.field.round-checkbox input[type="checkbox"]:focus-visible + label::before {
+  box-shadow: 0 0 0 2px color("white"), 0 0 0 4px $brand-primary;
+}
+
 // Create the checkmark/indicator (hidden when not checked) using ::after
 .field.round-checkbox label::after {
   content: "";
