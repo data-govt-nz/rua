@@ -20,6 +20,10 @@
 //      <input type="checkbox" id="checkbox-disabled" disabled>
 //      <label for="checkbox-disabled">checkbox disabled</label>
 //    </div>
+//    <div class="field field--inline-label round-checkbox">
+//      <input type="checkbox" id="checkbox-round" class="checkbox round-checkbox">
+//      <label for="checkbox-round">A round checkbox</label>
+//    </div>
 //  </div>
 //
 // Styleguide: General.Form.RadioCheckbox
@@ -31,4 +35,74 @@ input[type="checkbox"] {
   width: $check-radio-size;
   height: $check-radio-size;
   margin-right: 0.6em;
+}
+
+// ROUND CHECKBOX
+.field.round-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Hide the browser's default checkbox
+.field.round-checkbox input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  // Ensure the input is focusable and above the custom styles
+  // so that required field validation works as expected
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  padding: 0;
+  margin-left: -35px; // Align the input with the custom checkbox
+  margin-top: 2px; // Align the input with the custom checkbox
+}
+
+// Create a custom checkbox using ::before
+.field.round-checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 2px; // Center the checkbox alongside the text
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid 2px $color-manatee;
+  border-radius: 100%;
+  z-index: 0; // Ensure the custom styles are below the input
+}
+
+.field.round-checkbox:hover label::before,
+.field.round-checkbox input[type="checkbox"]:checked + label::before {
+  background-color: $brand-primary;
+}
+
+.field.round-checkbox input[type="checkbox"]:focus-visible + label::before {
+  box-shadow: 0 0 0 2px color("white"), 0 0 0 4px $brand-primary;
+}
+
+// Create the checkmark/indicator (hidden when not checked) using ::after
+.field.round-checkbox label::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 8px;
+  left: 10px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+// Show the checkmark when checked
+.field.round-checkbox input[type="checkbox"]:checked + label::after {
+  display: block;
 }
