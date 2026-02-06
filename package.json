@@ -42,7 +42,7 @@
     "prismjs": "^1.29.0",
     "sass": "^1.56.1",
     "uglify-js": "^3.17.4",
-    "webpack": "^5.0",
+    "webpack": "^5.104",
     "webpack-stream": "^6.1.2"
   },
   "engines": {
