@@ -1,8 +1,8 @@
 // Tooltip
 //
-// Provides and option to copy text to clip board
+// Provides tooltips using @popperjs/core for positioning
 //
-// For more infomation check: https://popper.js.org/tooltip-documentation.html
+// For more information check: https://popper.js.org/docs/v2/
 //
 // Markup:
 // <button class="button" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis mauris augue." data-tooltip-placement="right">Hover/Focus</button>
@@ -16,26 +16,85 @@
 //
 // Styleguide: Plugins.Tooltip
 
-import tooltip from 'tooltip.js'
+import { createPopper } from '@popperjs/core'
 
 export default function () {
   const namespace = typeof window.dataTargetNamespace === 'undefined' ? '' : window.dataTargetNamespace.toString()
   const placementAttr = namespace + 'tooltip-placement',
     triggerAttr = namespace + 'tooltip-trigger',
-    defaultplacement = 'top', // End refers to right or bottom
+    defaultPlacement = 'top',
     defaultTrigger = 'hover focus'
 
-  $('[data-' + namespace + 'tooltip]').each(function(index, element){
-    const $element = $(element),
-      title = $element.data(namespace + 'tooltip'),
-      placement = ($element.data(placementAttr)) ? $element.data(placementAttr) : defaultplacement,
-      trigger = ($element.data(triggerAttr)) ? $element.data(triggerAttr) : defaultTrigger
+  const elements = document.querySelectorAll('[data-' + namespace + 'tooltip]')
 
-    new tooltip(element, {
-      title,
-      placement,
-      trigger,
-      closeOnClickOutside: true
-    })
+  elements.forEach(function (element) {
+    const title = element.getAttribute('data-' + namespace + 'tooltip') || element.dataset[namespace + 'tooltip']
+    const placement = element.dataset[placementAttr] || defaultPlacement
+    const trigger = element.dataset[triggerAttr] || defaultTrigger
+
+    // Create tooltip element
+    const tooltipEl = document.createElement('div')
+    tooltipEl.className = 'tooltip'
+    tooltipEl.setAttribute('role', 'tooltip')
+    tooltipEl.innerHTML = '<div class="tooltip-arrow" data-popper-arrow></div><div class="tooltip-inner">' + escapeHtml(title) + '</div>'
+
+    let popperInstance = null
+
+    function show () {
+      document.body.appendChild(tooltipEl)
+      popperInstance = createPopper(element, tooltipEl, {
+        placement: placement,
+        modifiers: [
+          { name: 'offset', options: { offset: [0, 8] } }
+        ]
+      })
+      tooltipEl.setAttribute('data-show', '')
+    }
+
+    function hide () {
+      tooltipEl.removeAttribute('data-show')
+      if (popperInstance) {
+        popperInstance.destroy()
+        popperInstance = null
+      }
+      if (tooltipEl.parentNode) {
+        tooltipEl.parentNode.removeChild(tooltipEl)
+      }
+    }
+
+    const triggers = trigger.split(' ')
+
+    if (triggers.indexOf('hover') !== -1) {
+      element.addEventListener('mouseenter', show)
+      element.addEventListener('mouseleave', hide)
+    }
+
+    if (triggers.indexOf('focus') !== -1) {
+      element.addEventListener('focus', show)
+      element.addEventListener('blur', hide)
+    }
+
+    if (triggers.indexOf('click') !== -1) {
+      element.addEventListener('click', function () {
+        if (tooltipEl.hasAttribute('data-show')) {
+          hide()
+        } else {
+          show()
+        }
+      })
+
+      // Close on click outside
+      document.addEventListener('click', function (event) {
+        if (tooltipEl.hasAttribute('data-show') && !element.contains(event.target) && !tooltipEl.contains(event.target)) {
+          hide()
+        }
+      })
+    }
   })
+}
+
+function escapeHtml (text) {
+  const div = document.createElement('div')
+  div.appendChild(document.createTextNode(text))
+  return div.innerHTML
 }

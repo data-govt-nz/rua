@@ -46,7 +46,7 @@ const runTimestamp = Math.round(Date.now()/1000)
 // Minify CSS, add vendor prefixes, save to /dist/css folder
 gulp.task('styles', function () {
   return gulp.src('./src/rua.scss', { base: './src' })
-    .pipe(sass.sync({ importer: tildeImporter }).on('error', sass.logError))
+    .pipe(sass.sync({ importer: tildeImporter, includePaths: ['node_modules'] }).on('error', sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest(config.path.css))
     .pipe(cleanCSS())

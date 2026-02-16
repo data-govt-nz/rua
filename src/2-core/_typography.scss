@@ -35,12 +35,12 @@
 // Styleguide: Core.Typography
 
 body{
-  font-size: rem($font-size-base);
+  font-size: rem($font-size-base-px);
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   color: $text-color;
 
-  @media (min-width: $screen-md-min) {
+  @include breakpoint(md) {
     font-size: rem(18);
   }
 }
@@ -109,7 +109,7 @@ abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted $abbr-border-color;
+  border-bottom: 1px dotted $gray-light;
 }
 .initialism {
   font-size: 90%;

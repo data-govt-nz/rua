@@ -47,21 +47,24 @@ $font-weight-regular: $font-weight-base !default;
 $font-weight-medium: 500 !default;
 $font-weight-bold: 700 !default;
 
-$font-size-base: 14px !default;
-$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+// BS5 expects $font-size-base in rem units for compatibility with its computed variables.
+// RUA base font size = 14px = 0.875rem (assuming 16px root).
+$font-size-base-px: 14px !default;
+$font-size-base: 0.875rem !default;
+$font-size-large: 18px !default;
+$font-size-small: 12px !default;
 
-$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5: $font-size-base !default;
-$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h1: 36px !default;
+$font-size-h2: 30px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 14px !default;
+$font-size-h6: 12px !default;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed: 20px !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family: inherit !default;
@@ -281,6 +284,17 @@ $breakpoints-keys: map-keys($breakpoints);
 /// All of the names in this list will be output as classes in your CSS, like `.--med:12`, `.--med:6`, and so on. Each value in this list must also be in the `$breakpoints` map.
 $breakpoint-classes: (default sm md lg) !default;
 
+//== Bootstrap 5 Grid Breakpoints
+//
+//## Map RUA's breakpoints to BS5's $grid-breakpoints format.
+//## BS5 uses 'xs' as the zero breakpoint (RUA uses 'default').
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 975px,
+  lg: 1053px
+) !default;
+
 //== Grid system
 //
 //## Define your custom responsive grid.
@@ -289,31 +303,26 @@ $breakpoint-classes: (default sm md lg) !default;
 $grid-columns: 12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width: 35px !default;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint: breakpoint('sm') !default;
-//** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
-
 
 //== Container sizes
 //
 //## Define the maximum width of `.container` for different screen sizes.
+//## BS5 uses a $container-max-widths map instead of individual variables.
 
-// Small screen / tablet
 $container-tablet: (720px + $grid-gutter-width) !default;
-//** For `$screen-sm-min` and up.
 $container-sm: $container-tablet !default;
 
-// Medium screen / desktop
 $container-desktop: (940px + $grid-gutter-width) !default;
-//** For `$screen-md-min` and up.
 $container-md: $container-desktop !default;
 
-// Large screen / wide desktop
 $container-large-desktop: (1018px + $grid-gutter-width) !default;
-//** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop !default;
+
+$container-max-widths: (
+  sm: $container-sm,
+  md: $container-md,
+  lg: $container-lg
+) !default;
 
 //== Navs
 //

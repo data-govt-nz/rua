@@ -94,19 +94,19 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-plugins-matchheight-inception">
+            <header class="kss-section kss-section--depth-3" id="kssref-plugins-toggler-arialabel">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>src/9-plugins/match-height/index.js</span>, line <span>41</span></p>
+                <p class="kss-section__source">Source: <span>src/9-plugins/toggler/options/ariaLabel.js</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-plugins-matchheight-inception">
+              <a class="kss-section__permalink" href="#kssref-plugins-toggler-arialabel">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">7.2.1</span>
-                  <span class="kss-section__name">Inception</span>
+                  <span class="kss-section__ref">7.3.2</span>
+                  <span class="kss-section__name">Aria Label</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Below is an example of using match height within another match height.</p>
+                <div class="kss-section__description"><p>Toggles the aria-label of the element between 2 strings</p>
 </div>
 
             </article>
@@ -115,59 +115,19 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><div class="row margin-b-sm">
-  <div class="col-md-6">
-    <div class="bg-french-gray padding-sm" data-mh="inception-1">
-      <div class="bg-secondary padding-sm margin-b-sm" data-mh="inception-2">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-        fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
-        consectetur ac, vestibulum at eros.
-      </div>
-      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-      fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
-      consectetur ac, vestibulum at eros.
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="bg-french-gray padding-sm" data-mh="inception-1">
-      <div class="bg-secondary padding-sm margin-b-sm" data-mh="inception-2">
-        Maecenas sed diam eget risus varius blandit sit amet non magna.
-      </div>
-      Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-    </div>
-  </div>
-</div></div>
+                <div class="kss-modifiers__example"><button class="button-icon" data-click="trigger: #toggle__icon, #aria-text; arialabel: 'Open', 'Close'" aria-label="Open">
+ <span id="toggle__icon" class="ri ri-chevron-down" data-toggle="class: ri-chevron-down, ri-chevron-up"></span>
+ </button>
+ <p>Open inspector to check aria-label</p></div>
 
               </article>
 
                 <button class="kss-html-button">Show/Hide HTML example</button>
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;row margin-b-sm&quot;&gt;
-  &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
-    &lt;div class&#x3D;&quot;bg-french-gray padding-sm&quot; data-mh&#x3D;&quot;inception-1&quot;&gt;
-      &lt;div class&#x3D;&quot;bg-secondary padding-sm margin-b-sm&quot; data-mh&#x3D;&quot;inception-2&quot;&gt;
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-        fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
-        consectetur ac, vestibulum at eros.
-      &lt;/div&gt;
-      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-      fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
-      consectetur ac, vestibulum at eros.
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
-    &lt;div class&#x3D;&quot;bg-french-gray padding-sm&quot; data-mh&#x3D;&quot;inception-1&quot;&gt;
-      &lt;div class&#x3D;&quot;bg-secondary padding-sm margin-b-sm&quot; data-mh&#x3D;&quot;inception-2&quot;&gt;
-        Maecenas sed diam eget risus varius blandit sit amet non magna.
-      &lt;/div&gt;
-      Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button-icon&quot; data-click&#x3D;&quot;trigger: #toggle__icon, #aria-text; arialabel: &#x27;Open&#x27;, &#x27;Close&#x27;&quot; aria-label&#x3D;&quot;Open&quot;&gt;
+ &lt;span id&#x3D;&quot;toggle__icon&quot; class&#x3D;&quot;ri ri-chevron-down&quot; data-toggle&#x3D;&quot;class: ri-chevron-down, ri-chevron-up&quot;&gt;&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;p&gt;Open inspector to check aria-label&lt;/p&gt;</code></pre>
                 </article>
 
             </header>

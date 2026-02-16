@@ -37,13 +37,13 @@ p {
 .lead {
   margin-top: 0;
   margin-bottom: 2.4em;
-  font-size: rem(floor(($font-size-base * 1.15)));
+  font-size: rem(floor(($font-size-base-px * 1.15)));
   font-weight: 400;
   line-height: 1.45;
   color: #6F768B;
 
-  @media (min-width: $screen-sm-min) {
-    font-size: rem($font-size-base * 1.5);
+  @include breakpoint(sm) {
+    font-size: rem($font-size-base-px * 1.5);
   }
 }
 

@@ -1,57 +1,26 @@
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap v5.3 (https://getbootstrap.com)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-// Core variables and mixins
-// @todo figure out why shorthand node_modules paths aren't working
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+// 1. Functions (required first - provides subtract(), divide(), etc.)
+@import "bootstrap/scss/functions";
 
-// // Reset and dependencies
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/print";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+// 2. Variables and maps
+// RUA's _globals.scss (loaded before this file) defines $grid-breakpoints,
+// $container-max-widths, $grid-columns, $grid-gutter-width etc. with !default.
+// BS5's variables also use !default, so RUA's values take precedence.
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
 
-// // Core CSS
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/type";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/tables";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/forms";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+// 3. Reboot (replaces BS3's normalize + print)
+@import "bootstrap/scss/reboot";
 
-// // Components
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/navs";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/navbar";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/pagination";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/pager";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/labels";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/badges";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/alerts";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/media";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/list-group";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/panels";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/wells";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/close";
+// 4. Grid system
+@import "bootstrap/scss/grid";
 
-// // Components w/ JavaScript
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/modals";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/popovers";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
-
-// // Utility classes
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+// 5. Utilities (replaces BS3's responsive-utilities)
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";

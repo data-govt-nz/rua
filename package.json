@@ -12,10 +12,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bootstrap-sass": "^3.4.3",
-    "clipboard": "^2.0.4",
-    "popper.js": "^1.16.0",
-    "tooltip.js": "^1.3.1"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3",
+    "clipboard": "^2.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -237,7 +237,7 @@
 /// @return {em} - Em value
 @function vertical-padding(
   $height: 40px,
-  $font-size: $font-size-base,
+  $font-size: $font-size-base-px,
   $line-height: $line-height-base,
   $border-width: 0,
   $horizontal-padding: 0,

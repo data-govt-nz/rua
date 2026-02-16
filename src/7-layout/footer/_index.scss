@@ -226,7 +226,7 @@
       width: 100%;
       z-index: 1;
       position: relative;
-      @media (min-width: $screen-lg-min) {
+      @include breakpoint(lg) {
           max-width: $container-lg;
       }
   }
