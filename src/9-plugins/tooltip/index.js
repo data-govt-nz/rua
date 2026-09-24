@@ -27,14 +27,16 @@ export default function () {
 
   const elements = document.querySelectorAll('[data-' + namespace + 'tooltip]')
 
-  elements.forEach(function (element) {
+  elements.forEach(function (element, index) {
     const title = element.getAttribute('data-' + namespace + 'tooltip') || element.dataset[namespace + 'tooltip']
-    const placement = element.dataset[placementAttr] || defaultPlacement
-    const trigger = element.dataset[triggerAttr] || defaultTrigger
+    const placement = element.getAttribute('data-' + placementAttr) || defaultPlacement
+    const trigger = element.getAttribute('data-' + triggerAttr) || defaultTrigger
 
     // Create tooltip element
     const tooltipEl = document.createElement('div')
+    const tooltipId = 'tooltip-' + index
     tooltipEl.className = 'tooltip'
+    tooltipEl.id = tooltipId
     tooltipEl.setAttribute('role', 'tooltip')
     tooltipEl.innerHTML = '<div class="tooltip-arrow" data-popper-arrow></div><div class="tooltip-inner">' + escapeHtml(title) + '</div>'
 
@@ -49,10 +51,14 @@ export default function () {
         ]
       })
       tooltipEl.setAttribute('data-show', '')
+      tooltipEl.classList.add('show')
+      element.setAttribute('aria-describedby', tooltipId)
     }
 
     function hide () {
       tooltipEl.removeAttribute('data-show')
+      tooltipEl.classList.remove('show')
+      element.removeAttribute('aria-describedby')
       if (popperInstance) {
         popperInstance.destroy()
         popperInstance = null
