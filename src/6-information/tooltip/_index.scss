@@ -19,7 +19,7 @@
     padding: 0;
     transform: rotate(45deg);
   }
-  &[x-placement^="top"] {
+  &[data-popper-placement^="top"] {
     margin-bottom: rem(10);
     .tooltip-arrow {
       border-left: none;
@@ -28,7 +28,7 @@
       left: calc(50% - rem(10));
     }
   }
-  &[x-placement^="right"] {
+  &[data-popper-placement^="right"] {
     margin-left: rem(10);
     .tooltip-arrow {
       border-top: none;
@@ -37,7 +37,7 @@
       top: calc(50% - rem(10));
     }
   }
-  &[x-placement^="bottom"] {
+  &[data-popper-placement^="bottom"] {
     margin-top: rem(10);
     .tooltip-arrow {
       border-right: none;
@@ -46,7 +46,7 @@
       left: calc(50% - rem(10));
     }
   }
-  &[x-placement^="left"] {
+  &[data-popper-placement^="left"] {
     margin-right: rem(10);
     .tooltip-arrow {
       border-bottom: none;

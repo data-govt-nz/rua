@@ -9,8 +9,6 @@
       "./rua-assets/css/rua-font.css"
     ],
   "js" : [
-      "./rua-assets/js/rua.js",
-      "https://code.jquery.com/jquery-2.2.4.js",
-      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      "./rua-assets/js/rua.js"
     ]
 }

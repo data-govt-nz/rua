@@ -11,21 +11,41 @@
 // Styleguide: Plugins.Clipboard
 
 import ClipboardJS from 'clipboard'
-import tooltip from 'tooltip.js'
+import { createPopper } from '@popperjs/core'
 
 export default function () {
-  $('[data-clipboard]').each(function(index, element){
-    const tipInstance = new tooltip(element, {
-      title: 'Copied!',
-      placement: 'top',
-      trigger: 'manual'
-    })
+  const elements = document.querySelectorAll('[data-clipboard]')
 
-    new ClipboardJS(element).on('success', function(event) {
-      tipInstance.show()
-      setTimeout(function(){
-        tipInstance.hide();
-      }, 3000);
+  elements.forEach(function (element, index) {
+    new ClipboardJS(element).on('success', function (event) {
+      // Create and show tooltip
+      var tooltipEl = document.createElement('div')
+      var tooltipId = 'clipboard-tooltip-' + index
+      tooltipEl.className = 'tooltip'
+      tooltipEl.id = tooltipId
+      tooltipEl.setAttribute('role', 'tooltip')
+      tooltipEl.innerHTML = '<div class="tooltip-arrow" data-popper-arrow></div><div class="tooltip-inner">Copied!</div>'
+      document.body.appendChild(tooltipEl)
+
+      var popperInstance = createPopper(element, tooltipEl, {
+        placement: 'top',
+        modifiers: [
+          { name: 'offset', options: { offset: [0, 8] } }
+        ]
+      })
+      tooltipEl.setAttribute('data-show', '')
+      tooltipEl.classList.add('show')
+      element.setAttribute('aria-describedby', tooltipId)
+
+      setTimeout(function () {
+        tooltipEl.removeAttribute('data-show')
+        tooltipEl.classList.remove('show')
+        element.removeAttribute('aria-describedby')
+        popperInstance.destroy()
+        if (tooltipEl.parentNode) {
+          tooltipEl.parentNode.removeChild(tooltipEl)
+        }
+      }, 3000)
     })
   })
 }

@@ -42,12 +42,15 @@
 // Screen reader visibility classes
 // Need a "hide-for-sr" class? Add aria-hidden='true' to the element
 .sr-only,
-.sr-only-focusable {
+.sr-only-focusable,
+.visually-hidden,
+.visually-hidden-focusable {
   @include invisible;
 }
 
 // Only display the element when it's focused
-.sr-only-focusable {
+.sr-only-focusable,
+.visually-hidden-focusable {
   &:active,
   &:focus {
     @include invisible-off;
